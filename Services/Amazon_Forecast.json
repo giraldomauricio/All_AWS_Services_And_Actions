@@ -1,0 +1,2114 @@
+[
+  {
+    "name": "CreateAutoPredictor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDatasetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDatasetImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetImportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateExplainability",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateExplainabilityExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "explainability"
+    ],
+    "supportedResources": [
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateForecastExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePredictor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePredictorBacktestExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDatasetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDatasetImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetImportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteExplainability",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "explainability"
+    ],
+    "supportedResources": [
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteExplainabilityExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "explainabilityExport"
+    ],
+    "supportedResources": [
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteForecastExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecastExport"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "monitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePredictor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePredictorBacktestExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictorBacktestExportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourceTree",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast",
+      "dataset",
+      "predictor",
+      "explainabilityExport",
+      "explainability",
+      "forecastExport",
+      "monitor",
+      "datasetGroup",
+      "datasetImportJob",
+      "predictorBacktestExportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAutoPredictor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDatasetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDatasetImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasetImportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExplainability",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "explainability"
+    ],
+    "supportedResources": [
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExplainabilityExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "explainabilityExport"
+    ],
+    "supportedResources": [
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeForecastExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecastExport"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "monitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePredictor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePredictorBacktestExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictorBacktestExportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccuracyMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "predictor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatasetGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDatasetImportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDatasets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExplainabilities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExplainabilityExports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListForecastExportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListForecasts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMonitorEvaluations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "monitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMonitors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPredictorBacktestExportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPredictors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "QueryForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResumeResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "monitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "forecast",
+      "predictor",
+      "explainabilityExport",
+      "explainability",
+      "forecastExport",
+      "monitor",
+      "datasetImportJob",
+      "predictorBacktestExportJob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "monitor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:monitor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "datasetImportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-import-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainability",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictorBacktestExportJob",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor-backtest-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecast",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "predictor",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:predictor/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "explainabilityExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:explainability-export/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "forecastExport",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:forecast-export-job/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDatasetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "forecast",
+    "service": "Amazon Forecast",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset",
+      "datasetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "datasetGroup",
+        "ARN": "arn:aws:forecast:${Region}:${Account}:dataset-group/${ResourceId}",
+        "RegEx": "^arn:aws:forecast:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

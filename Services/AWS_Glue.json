@@ -1,0 +1,5526 @@
+[
+  {
+    "name": "BatchCreatePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:glue:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeletePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteTableVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetBlueprints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetCrawlers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetCustomEntityTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchGetDevEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "devendpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetPartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetTriggers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetWorkflows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchStopJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchUpdatePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelMLTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelStatement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CheckSchemaVersionValidity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateBlueprint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCustomEntityType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDevEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMLTransform",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreatePartitionIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRegistry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSchema",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateScript",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUserDefinedFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBlueprint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteColumnStatisticsForPartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteColumnStatisticsForTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:glue:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomEntityType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "userdefinedfunction",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "userdefinedfunction",
+        "ARN": "arn:aws:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDevEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "devendpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMLTransform",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePartitionIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRegistry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSchema",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSchemaVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTableVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUserDefinedFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "userdefinedfunction",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "userdefinedfunction",
+        "ARN": "arn:aws:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBlueprint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBlueprintRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBlueprintRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCatalogImportStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetClassifiers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetColumnStatisticsForPartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetColumnStatisticsForTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:glue:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:glue:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCrawlerMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCrawlers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCustomEntityType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDataCatalogEncryptionSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataflowGraph",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDevEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "devendpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDevEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJobBookmark",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJobRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMLTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMLTaskRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMLTransform",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMLTransforms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPartitionIndexes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPartitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRegistry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourcePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSchema",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSchemaByDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSchemaVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSchemaVersionsDiff",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSecurityConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStatement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTableVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTableVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTriggers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetUserDefinedFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "userdefinedfunction",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "userdefinedfunction",
+        "ARN": "arn:aws:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUserDefinedFunctions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "userdefinedfunction",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "userdefinedfunction",
+        "ARN": "arn:aws:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWorkflowRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWorkflowRunProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWorkflowRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportCatalogToGlue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBlueprints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCrawlers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCustomEntityTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDevEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMLTransforms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListRegistries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSchemaVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSchemas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListStatements",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTriggers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWorkflows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "NotifyEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDataCatalogEncryptionSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutSchemaVersionMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutWorkflowRunProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "QuerySchemaVersionMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterSchemaVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveSchemaVersionMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetJobBookmark",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ResumeWorkflowRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RunStatement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBlueprintRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartCrawlerSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartExportLabelsTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartImportLabelsTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartMLEvaluationTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartMLLabelingSetGenerationTaskRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartWorkflowRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopCrawlerSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:glue:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopWorkflowRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateBlueprint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "blueprint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "blueprint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:blueprint/${BlueprintName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateColumnStatisticsForPartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateColumnStatisticsForTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "catalog",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:glue:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCrawler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "crawler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "crawler",
+        "ARN": "arn:aws:glue:${Region}:${Account}:crawler/${CrawlerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCrawlerSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDevEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "devendpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "devendpoint",
+        "ARN": "arn:aws:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:glue:${Region}:${Account}:job/${JobName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "glue:VpcIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/glue/latest/dg/using-identity-based-policies.html#glue-identity-based-policy-condition-keys",
+        "Description": "Filters access by the ID of the VPC configured for the Glue job"
+      },
+      {
+        "Name": "glue:SubnetIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/glue/latest/dg/using-identity-based-policies.html#glue-identity-based-policy-condition-keys",
+        "Description": "Filters access by the ID of subnets configured for the Glue job"
+      },
+      {
+        "Name": "glue:SecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/glue/latest/dg/using-identity-based-policies.html#glue-identity-based-policy-condition-keys",
+        "Description": "Filters access by the ID of security groups configured for the Glue job"
+      }
+    ]
+  },
+  {
+    "name": "UpdateMLTransform",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePartition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRegistry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSchema",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "registry",
+      "schema"
+    ],
+    "supportedResources": [
+      {
+        "Name": "registry",
+        "ARN": "arn:aws:glue:${Region}:${Account}:registry/${RegistryName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "schema",
+        "ARN": "arn:aws:glue:${Region}:${Account}:schema/${SchemaName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTrigger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trigger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trigger",
+        "ARN": "arn:aws:glue:${Region}:${Account}:trigger/${TriggerName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUserDefinedFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "userdefinedfunction",
+      "database",
+      "catalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "userdefinedfunction",
+        "ARN": "arn:aws:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "database",
+        "ARN": "arn:aws:glue:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:glue:${Region}:${Account}:catalog",
+        "RegEx": "^arn:aws:glue:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:glue:${Region}:${Account}:workflow/${WorkflowName}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UseMLTransforms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glue",
+    "service": "AWS Glue",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlTransform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlTransform",
+        "ARN": "arn:aws:glue:${Region}:${Account}:mlTransform/${TransformId}",
+        "RegEx": "^arn:aws:glue:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

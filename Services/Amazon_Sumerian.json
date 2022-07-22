@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Login",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sumerian",
+    "service": "Amazon Sumerian",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ViewRelease",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sumerian",
+    "service": "Amazon Sumerian",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:sumerian:${Region}:${Account}:project:${ProjectName}",
+        "RegEx": "^arn:aws:sumerian:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

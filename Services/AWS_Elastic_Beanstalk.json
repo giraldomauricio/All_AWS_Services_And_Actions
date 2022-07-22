@@ -1,0 +1,1879 @@
+[
+  {
+    "name": "AbortEnvironmentUpdate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "ApplyEnvironmentManagedAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateEnvironmentOperationsRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CheckDNSAvailability",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ComposeEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "applicationversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateApplicationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "applicationversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "configurationtemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticbeanstalk:FromApplicationVersion",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application version as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromEnvironment",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an environment as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromConfigurationTemplate",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a configuration template as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromPlatform",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a platform as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "elasticbeanstalk:FromApplication",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromSolutionStack",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a solution stack as a dependency or a constraint on an input parameter"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticbeanstalk:FromApplicationVersion",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application version as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromConfigurationTemplate",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a configuration template as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromPlatform",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a platform as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "elasticbeanstalk:FromSolutionStack",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a solution stack as a dependency or a constraint on an input parameter"
+      }
+    ]
+  },
+  {
+    "name": "CreatePlatformVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "platform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStorageLocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApplicationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applicationversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "configurationtemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePlatformVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "platform"
+    ],
+    "supportedResources": [
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccountAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeApplicationVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConfigurationOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "solutionstack",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::solutionstack/${SolutionStackName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConfigurationSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironmentHealth",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironmentManagedActionHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironmentManagedActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironmentResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInstancesHealth",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePlatformVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateEnvironmentOperationsRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAvailableSolutionStacks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "solutionstack",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::solutionstack/${SolutionStackName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPlatformBranches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPlatformVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutInstanceStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebuildEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "RequestEnvironmentInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestartAppServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RetrieveEnvironmentInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SwapEnvironmentCNAMEs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticbeanstalk:FromEnvironment",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an environment as a dependency or a constraint on an input parameter"
+      }
+    ]
+  },
+  {
+    "name": "TerminateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApplicationResourceLifecycle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApplicationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applicationversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "configurationtemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticbeanstalk:FromApplicationVersion",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application version as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromEnvironment",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an environment as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromConfigurationTemplate",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a configuration template as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromPlatform",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a platform as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromApplication",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromSolutionStack",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a solution stack as a dependency or a constraint on an input parameter"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticbeanstalk:FromApplicationVersion",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by an application version as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromConfigurationTemplate",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a configuration template as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromPlatform",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a platform as a dependency or a constraint on an input parameter"
+      },
+      {
+        "Name": "elasticbeanstalk:FromSolutionStack",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters access by a solution stack as a dependency or a constraint on an input parameter"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "applicationversion",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:applicationversion/${ApplicationName}/${VersionLabel}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "platform",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}::platform/${PlatformNameWithVersion}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/AWSHowTo.iam.policies.actions.html#AWSHowTo.iam.policies.conditions",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "ValidateConfigurationSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticbeanstalk",
+    "service": "AWS Elastic Beanstalk",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationtemplate",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:configurationtemplate/${ApplicationName}/${TemplateName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:elasticbeanstalk:${Region}:${Account}:environment/${ApplicationName}/${EnvironmentName}",
+        "RegEx": "^arn:aws:elasticbeanstalk:.+",
+        "ContextKeys": [
+          "elasticbeanstalk:InApplication"
+        ],
+        "ContextKeyStrings": [
+          "elasticbeanstalk:inapplication"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

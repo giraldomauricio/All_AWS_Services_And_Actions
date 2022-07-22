@@ -1,0 +1,1126 @@
+[
+  {
+    "name": "Backup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ClientMount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticfilesystem:AccessedViaMountTarget",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html",
+        "Description": "Filters access by whether the file system is accessed via mount targets"
+      },
+      {
+        "Name": "elasticfilesystem:AccessPointArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html",
+        "Description": "Filters access by the ARN of the access point used to mount the file system"
+      }
+    ]
+  },
+  {
+    "name": "ClientRootAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticfilesystem:AccessedViaMountTarget",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html",
+        "Description": "Filters access by whether the file system is accessed via mount targets"
+      },
+      {
+        "Name": "elasticfilesystem:AccessPointArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html",
+        "Description": "Filters access by the ARN of the access point used to mount the file system"
+      }
+    ]
+  },
+  {
+    "name": "ClientWrite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticfilesystem:AccessedViaMountTarget",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html",
+        "Description": "Filters access by whether the file system is accessed via mount targets"
+      },
+      {
+        "Name": "elasticfilesystem:AccessPointArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html",
+        "Description": "Filters access by the ARN of the access point used to mount the file system"
+      }
+    ]
+  },
+  {
+    "name": "CreateAccessPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMountTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccessPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "access-point"
+    ],
+    "supportedResources": [
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFileSystemPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMountTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccessPoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccountPreferences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeBackupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFileSystemPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFileSystems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLifecycleConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMountTargetSecurityGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMountTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyMountTargetSecurityGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAccountPreferences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutBackupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutFileSystemPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutLifecycleConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Restore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "access-point",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticfilesystem",
+    "service": "Amazon Elastic File System",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:elasticfilesystem:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

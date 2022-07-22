@@ -1,0 +1,392 @@
+[
+  {
+    "name": "CancelJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "preset",
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "preset",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:preset/${PresetId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreatePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreatePreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "preset",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:preset/${PresetId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "preset",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:preset/${PresetId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobsByPipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobsByStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPipelines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPresets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ReadJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReadPipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReadPreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "preset",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:preset/${PresetId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TestRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdatePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePipelineNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePipelineStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elastictranscoder",
+    "service": "Amazon Elastic Transcoder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:elastictranscoder:${Region}:${Account}:pipeline/${PipelineId}",
+        "RegEx": "^arn:aws:elastictranscoder:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

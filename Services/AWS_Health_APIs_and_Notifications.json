@@ -1,0 +1,305 @@
+[
+  {
+    "name": "DescribeAffectedAccountsForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAffectedEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event",
+        "ARN": "arn:aws:health:*::event/${Service}/${EventTypeCode}/*",
+        "RegEx": "^arn:aws:health:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "health:service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/health/latest/ug/controlling-access.html",
+        "Description": "Filters access by impacted service"
+      },
+      {
+        "Name": "health:eventTypeCode",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/health/latest/ug/controlling-access.html",
+        "Description": "Filters access by event type"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAffectedEntitiesForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEntityAggregates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventAggregates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event",
+        "ARN": "arn:aws:health:*::event/${Service}/${EventTypeCode}/*",
+        "RegEx": "^arn:aws:health:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "health:service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/health/latest/ug/controlling-access.html",
+        "Description": "Filters access by impacted service"
+      },
+      {
+        "Name": "health:eventTypeCode",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/health/latest/ug/controlling-access.html",
+        "Description": "Filters access by event type"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventDetailsForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventsForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeHealthServiceStatusForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisableHealthServiceAccessForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableHealthServiceAccessForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "health",
+    "service": "AWS Health APIs and Notifications",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

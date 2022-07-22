@@ -1,0 +1,1207 @@
+[
+  {
+    "name": "CreateAnomalyMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAnomalySubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCostCategoryDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateNotificationSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAnomalyMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalymonitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAnomalySubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalysubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCostCategoryDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "costcategory"
+    ],
+    "supportedResources": [
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteNotificationSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCostCategoryDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "costcategory"
+    ],
+    "supportedResources": [
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeNotificationSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAnomalies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalymonitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetAnomalyMonitors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalymonitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetAnomalySubscriptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalysubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetCostAndUsage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCostAndUsageWithResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCostCategories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCostForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDimensionValues",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPreferences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetReservationCoverage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetReservationPurchaseRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetReservationUtilization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRightsizingRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSavingsPlansCoverage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSavingsPlansPurchaseRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSavingsPlansUtilization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSavingsPlansUtilizationDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetUsageForecast",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCostAllocationTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCostCategoryDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ProvideAnomalyFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAnomalyMonitor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalymonitor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalymonitor",
+        "ARN": "arn:aws:ce::${Account}:anomalymonitor/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAnomalySubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "anomalysubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "anomalysubscription",
+        "ARN": "arn:aws:ce::${Account}:anomalysubscription/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCostAllocationTagsStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateCostCategoryDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "costcategory"
+    ],
+    "supportedResources": [
+      {
+        "Name": "costcategory",
+        "ARN": "arn:aws:ce::${Account}:costcategory/${Identifier}",
+        "RegEx": "^arn:aws:ce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateNotificationSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdatePreferences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ce",
+    "service": "AWS Cost Explorer Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

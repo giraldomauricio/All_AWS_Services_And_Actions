@@ -1,0 +1,1380 @@
+[
+  {
+    "name": "CreateAlertManagerAlerts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateAlertManagerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateRuleGroupsNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroupsnamespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWorkspace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAlertManagerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAlertManagerSilence",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteRuleGroupsNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroupsnamespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteWorkspace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAlertManagerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeRuleGroupsNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroupsnamespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetAlertManagerSilence",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetAlertManagerStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetMetricMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetSeries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAlertManagerAlertGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAlertManagerAlerts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAlertManagerReceivers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAlertManagerSilences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAlerts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListRuleGroupsNamespaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAlertManagerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutAlertManagerSilences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutRuleGroupsNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroupsnamespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "QueryMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "RemoteWrite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroupsnamespace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:rulegroupsnamespace/${WorkspaceId}/${Namespace}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateWorkspaceAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aps",
+    "service": "Amazon Managed Service for Prometheus",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspace",
+        "ARN": "arn:aws:aps:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:aps:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  }
+]

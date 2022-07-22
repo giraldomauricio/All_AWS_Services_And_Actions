@@ -1,0 +1,831 @@
+[
+  {
+    "name": "AssociateAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "billinggroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "billinggroup",
+        "ARN": "arn:aws:billingconductor::${Account}:billinggroup/${BillingGroupId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociatePricingRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan",
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchAssociateResourcesToCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customlineitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customlineitem",
+        "ARN": "arn:aws:billingconductor::${Account}:customlineitem/${CustomLineItemId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDisassociateResourcesFromCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customlineitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customlineitem",
+        "ARN": "arn:aws:billingconductor::${Account}:customlineitem/${CustomLineItemId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBillingGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePricingPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePricingRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBillingGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "billinggroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "billinggroup",
+        "ARN": "arn:aws:billingconductor::${Account}:billinggroup/${BillingGroupId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customlineitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customlineitem",
+        "ARN": "arn:aws:billingconductor::${Account}:customlineitem/${CustomLineItemId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePricingPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePricingRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "billinggroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "billinggroup",
+        "ARN": "arn:aws:billingconductor::${Account}:billinggroup/${BillingGroupId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociatePricingRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan",
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccountAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBillingGroupCostReports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBillingGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCustomLineItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPricingPlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPricingPlansAssociatedWithPricingRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan",
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPricingRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPricingRulesAssociatedToPricingPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan",
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListResourcesAssociatedToCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customlineitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customlineitem",
+        "ARN": "arn:aws:billingconductor::${Account}:customlineitem/${CustomLineItemId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateBillingGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "billinggroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "billinggroup",
+        "ARN": "arn:aws:billingconductor::${Account}:billinggroup/${BillingGroupId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomLineItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customlineitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customlineitem",
+        "ARN": "arn:aws:billingconductor::${Account}:customlineitem/${CustomLineItemId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePricingPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingplan",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingplan/${PricingPlanId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePricingRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "billingconductor",
+    "service": "AWS Billing Conductor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pricingrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pricingrule",
+        "ARN": "arn:aws:billingconductor::${Account}:pricingrule/${PricingRuleId}",
+        "RegEx": "^arn:aws:billingconductor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

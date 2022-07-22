@@ -1,0 +1,875 @@
+[
+  {
+    "name": "AssociateCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Job",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateJobTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteJobTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "JobTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeletePreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Job",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJobTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "JobTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPresets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListQueues",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/tags.html",
+        "Description": "Filters access by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateJobTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "JobTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "JobTemplate",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePreset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Preset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Preset",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:presets/${PresetName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediaconvert",
+    "service": "AWS Elemental MediaConvert",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Queue",
+        "ARN": "arn:aws:mediaconvert:${Region}:${Account}:queues/${QueueName}",
+        "RegEx": "^arn:aws:mediaconvert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

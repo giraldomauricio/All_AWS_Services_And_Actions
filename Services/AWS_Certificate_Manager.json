@@ -1,0 +1,447 @@
+[
+  {
+    "name": "AddTagsToCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filter access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExportCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccountConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filter access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutAccountConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveTagsFromCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filter access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "RenewCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RequestCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ResendValidationEmail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCertificateOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "acm",
+    "service": "AWS Certificate Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "certificate",
+        "ARN": "arn:aws:acm:${Region}:${Account}:certificate/${CertificateId}",
+        "RegEx": "^arn:aws:acm:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

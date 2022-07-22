@@ -1,0 +1,695 @@
+[
+  {
+    "name": "CreateActivity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "activity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStateMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteActivity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "activity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStateMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeActivity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "activity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "execution",
+        "ARN": "arn:aws:states:${Region}:${Account}:execution:${StateMachineName}:${ExecutionId}",
+        "RegEx": "^arn:aws:states:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStateMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStateMachineForExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "execution",
+        "ARN": "arn:aws:states:${Region}:${Account}:execution:${StateMachineName}:${ExecutionId}",
+        "RegEx": "^arn:aws:states:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetActivityTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "activity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExecutionHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "execution",
+        "ARN": "arn:aws:states:${Region}:${Account}:execution:${StateMachineName}:${ExecutionId}",
+        "RegEx": "^arn:aws:states:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListActivities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStateMachines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendTaskFailure",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendTaskHeartbeat",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendTaskSuccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartSyncExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "execution",
+        "ARN": "arn:aws:states:${Region}:${Account}:execution:${StateMachineName}:${ExecutionId}",
+        "RegEx": "^arn:aws:states:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "activity",
+        "ARN": "arn:aws:states:${Region}:${Account}:activity:${ActivityName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStateMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "states",
+    "service": "AWS Step Functions",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "statemachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "statemachine",
+        "ARN": "arn:aws:states:${Region}:${Account}:stateMachine:${StateMachineName}",
+        "RegEx": "^arn:aws:states:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  }
+]

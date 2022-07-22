@@ -1,0 +1,1644 @@
+[
+  {
+    "name": "ActivateEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelReplay",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replay"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replay",
+        "ARN": "arn:aws:events:${Region}:${Account}:replay/${ReplayName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApiDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "api-destination",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "api-destination",
+        "ARN": "arn:aws:events:${Region}:${Account}:api-destination/${ApiDestinationName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-bus",
+      "archive"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "archive",
+        "ARN": "arn:aws:events:${Region}:${Account}:archive/${ArchiveName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:events:${Region}:${Account}:endpoint/${EndpointName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:EventBusArn",
+        "Type": "ArrayOfARN",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#limiting-access-to-event-buses",
+        "Description": "Filters access by the ARN of the event buses that can be associated with an endpoint to CreateEndpoint and UpdateEndpoint actions"
+      }
+    ]
+  },
+  {
+    "name": "CreateEventBus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-bus"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tags in the request to event bus and rule actions"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags to event bus and rule actions"
+      }
+    ]
+  },
+  {
+    "name": "CreatePartnerEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeactivateEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeauthorizeConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApiDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "api-destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "api-destination",
+        "ARN": "arn:aws:events:${Region}:${Account}:api-destination/${ApiDestinationName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "archive"
+    ],
+    "supportedResources": [
+      {
+        "Name": "archive",
+        "ARN": "arn:aws:events:${Region}:${Account}:archive/${ArchiveName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:events:${Region}:${Account}:endpoint/${EndpointName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventBus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-bus"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePartnerEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      }
+    ]
+  },
+  {
+    "name": "DescribeApiDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "api-destination",
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "api-destination",
+        "ARN": "arn:aws:events:${Region}:${Account}:api-destination/${ApiDestinationName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "archive"
+    ],
+    "supportedResources": [
+      {
+        "Name": "archive",
+        "ARN": "arn:aws:events:${Region}:${Account}:archive/${ArchiveName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:events:${Region}:${Account}:endpoint/${EndpointName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEventBus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePartnerEventSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplay",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replay"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replay",
+        "ARN": "arn:aws:events:${Region}:${Account}:replay/${ReplayName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      }
+    ]
+  },
+  {
+    "name": "DisableRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      }
+    ]
+  },
+  {
+    "name": "EnableRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      }
+    ]
+  },
+  {
+    "name": "InvokeApiDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "api-destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "api-destination",
+        "ARN": "arn:aws:events:${Region}:${Account}:api-destination/${ApiDestinationName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApiDestinations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListArchives",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEventBuses",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEventSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPartnerEventSourceAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-source"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-source",
+        "ARN": "arn:aws:events:${Region}::event-source/${EventSourceName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPartnerEventSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReplays",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRuleNamesByTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      }
+    ]
+  },
+  {
+    "name": "ListTargetsByRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      }
+    ]
+  },
+  {
+    "name": "PutEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-bus"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:source",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-limit-access-control",
+        "Description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions. Matches the literal string of the source field of the event"
+      },
+      {
+        "Name": "events:eventBusInvocation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-bus-invocation",
+        "Description": "Filters access by whether the event was generated via API or cross-account bus invocation to PutEvents actions"
+      },
+      {
+        "Name": "events:detail-type",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-pattern-detail-type",
+        "Description": "Filters access by the literal string of the detail-type of the event to PutEvents and PutRule actions"
+      }
+    ]
+  },
+  {
+    "name": "PutPartnerEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tags in the request to event bus and rule actions"
+      },
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:source",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-limit-access-control",
+        "Description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions. Matches the literal string of the source field of the event"
+      },
+      {
+        "Name": "events:detail.eventTypeCode",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#limit-rule-by-type-code",
+        "Description": "Filters access by the literal string for the detail.eventTypeCode field of the event to PutRule actions"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags to event bus and rule actions"
+      },
+      {
+        "Name": "events:detail.service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#limit-rule-by-service",
+        "Description": "Filters access by the literal string for the detail.service field of the event to PutRule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      },
+      {
+        "Name": "events:detail.userIdentity.principalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#consume-specific-events",
+        "Description": "Filters access by the literal string for the detail.useridentity.principalid field of the event to PutRule actions"
+      },
+      {
+        "Name": "events:detail-type",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-pattern-detail-type",
+        "Description": "Filters access by the literal string of the detail-type of the event to PutEvents and PutRule actions"
+      }
+    ]
+  },
+  {
+    "name": "PutTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      },
+      {
+        "Name": "events:TargetArn",
+        "Type": "ArrayOfARN",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#limiting-access-to-targets",
+        "Description": "Filters access by the ARN of a target that can be put to a rule to PutTargets actions"
+      }
+    ]
+  },
+  {
+    "name": "RemovePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "events:ManagedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html",
+        "Description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule"
+      }
+    ]
+  },
+  {
+    "name": "StartReplay",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "archive"
+    ],
+    "supportedResources": [
+      {
+        "Name": "archive",
+        "ARN": "arn:aws:events:${Region}:${Account}:archive/${ArchiveName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tags in the request to event bus and rule actions"
+      },
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags to event bus and rule actions"
+      }
+    ]
+  },
+  {
+    "name": "TestEventPattern",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "event-bus",
+        "ARN": "arn:aws:events:${Region}:${Account}:event-bus/${EventBusName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:events:${Region}:${Account}:rule/[${EventBusName}/]${RuleName}",
+        "RegEx": "^arn:aws:events:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tags in the request to event bus and rule actions"
+      },
+      {
+        "Name": "events:creatorAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#events-creator-account",
+        "Description": "Filters access by the account the rule was created in to rule actions"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApiDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "api-destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "api-destination",
+        "ARN": "arn:aws:events:${Region}:${Account}:api-destination/${ApiDestinationName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "archive"
+    ],
+    "supportedResources": [
+      {
+        "Name": "archive",
+        "ARN": "arn:aws:events:${Region}:${Account}:archive/${ArchiveName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:events:${Region}:${Account}:connection/${ConnectionName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "events",
+    "service": "Amazon EventBridge",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:events:${Region}:${Account}:endpoint/${EndpointName}",
+        "RegEx": "^arn:aws:events:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "events:EventBusArn",
+        "Type": "ArrayOfARN",
+        "DocPageRel": "https://docs.aws.amazon.com/eventbridge/latest/userguide/policy-keys-eventbridge.html#limiting-access-to-event-buses",
+        "Description": "Filters access by the ARN of the event buses that can be associated with an endpoint to CreateEndpoint and UpdateEndpoint actions"
+      }
+    ]
+  }
+]

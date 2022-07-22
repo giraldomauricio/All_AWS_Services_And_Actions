@@ -1,0 +1,2032 @@
+[
+  {
+    "name": "AddLeaderboardAccessPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "AdminGetAccountConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AdminListAssociatedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AdminListAssociatedUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AdminManageUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AdminSetAccountConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CloneReinforcementLearningModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model",
+      "track"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "track",
+        "ARN": "arn:aws:deepracer:${Region}::track/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCar",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLeaderboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLeaderboardAccessToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "CreateLeaderboardSubmission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model",
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateReinforcementLearningModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "track"
+    ],
+    "supportedResources": [
+      {
+        "Name": "track",
+        "ARN": "arn:aws:deepracer:${Region}::track/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLeaderboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "EditLeaderboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetAccountConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAssetUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetCar",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "car"
+    ],
+    "supportedResources": [
+      {
+        "Name": "car",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:car/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetCars",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "evaluation_job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}: evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetLatestUserSubmission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetLeaderboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetPrivateLeaderboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetRankedUserSubmission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "GetTrack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "track"
+    ],
+    "supportedResources": [
+      {
+        "Name": "track",
+        "ARN": "arn:aws:deepracer:${Region}::track/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTrainingJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "training_job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "training_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:training_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "ImportModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEvaluations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "ListLeaderboardSubmissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "ListLeaderboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPrivateLeaderboardParticipants",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "ListPrivateLeaderboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSubscribedPrivateLeaderboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "car",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:car/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard_evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:leaderboard_evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "training_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:training_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}: evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTracks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTrainingJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "MigrateModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PerformLeaderboardOperation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "RemoveLeaderboardAccessPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "leaderboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "SetAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model",
+      "track"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "track",
+        "ARN": "arn:aws:deepracer:${Region}::track/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "evaluation_job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}: evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "StopTrainingReinforcementLearningModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reinforcement_learning_model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "car",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:car/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard_evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:leaderboard_evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "training_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:training_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}: evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "TestRewardFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "car",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:car/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard",
+        "ARN": "arn:aws:deepracer:${Region}::leaderboard/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "leaderboard_evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:leaderboard_evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "training_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:training_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reinforcement_learning_model",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:model/reinforcement_learning/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "evaluation_job",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}: evaluation_job/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCar",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepracer",
+    "service": "AWS DeepRacer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "car"
+    ],
+    "supportedResources": [
+      {
+        "Name": "car",
+        "ARN": "arn:aws:deepracer:${Region}:${Account}:car/${ResourceId}",
+        "RegEx": "^arn:aws:deepracer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "deepracer:UserToken",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-usertoken",
+        "Description": "Filters access by user token in the request"
+      },
+      {
+        "Name": "deepracer:MultiUser",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/deepracer/latest/developerguide/reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "DocPage": "${ConceptsDocRoot}reference_policies_iam-condition-keys.html#condition-keys-multiuser",
+        "Description": "Filters access by multiuser flag"
+      }
+    ]
+  }
+]

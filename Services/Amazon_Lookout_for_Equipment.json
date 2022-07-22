@@ -1,0 +1,790 @@
+[
+  {
+    "name": "CreateDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model",
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model",
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDataIngestionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataIngestionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatasets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInferenceExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInferenceSchedulers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSensorStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartDataIngestionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${AccountId}:dataset/${DatasetName}/${DatasetId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:model/${ModelName}/${ModelId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateInferenceScheduler",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutequipment",
+    "service": "Amazon Lookout for Equipment",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "inference-scheduler"
+    ],
+    "supportedResources": [
+      {
+        "Name": "inference-scheduler",
+        "ARN": "arn:aws:lookoutequipment:${Region}:${Account}:inference-scheduler/${InferenceSchedulerName}/${InferenceSchedulerId}",
+        "RegEx": "^arn:aws:lookoutequipment:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

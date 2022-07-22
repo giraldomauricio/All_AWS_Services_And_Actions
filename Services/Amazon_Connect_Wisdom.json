@@ -1,0 +1,974 @@
+[
+  {
+    "name": "CreateAssistant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAssistantAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateKnowledgeBase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAssistant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAssistantAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant",
+      "AssistantAssociation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "AssistantAssociation",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:association/${AssistantId}/${AssistantAssociationId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:association/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Content",
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Content",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:content/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteKnowledgeBase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAssistant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAssistantAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant",
+      "AssistantAssociation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "AssistantAssociation",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:association/${AssistantId}/${AssistantAssociationId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:association/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Content",
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Content",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:content/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetContentSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Content",
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Content",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:content/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetKnowledgeBase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant",
+      "Session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Session",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:session/${AssistantId}/${SessionId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:session/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssistantAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssistants",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListContents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListKnowledgeBases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "NotifyRecommendationsReceived",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "QueryAssistant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveKnowledgeBaseTemplateUri",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Assistant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Assistant",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:assistant/${AssistantId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:assistant/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartContentUpload",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Content",
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Content",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:content/${KnowledgeBaseId}/${ContentId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:content/.+?/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateKnowledgeBaseTemplateUri",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wisdom",
+    "service": "Amazon Connect Wisdom",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KnowledgeBase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KnowledgeBase",
+        "ARN": "arn:aws:wisdom:${Region}:${Account}:knowledge-base/${KnowledgeBaseId}",
+        "RegEx": "^arn:aws:wisdom:${Region}:${Account}:knowledge-base/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,699 @@
+[
+  {
+    "name": "AddTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventDataStore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventdatastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateTrail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventDataStore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventdatastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTrail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTrails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetEventDataStore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetEventSelectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInsightSelectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetQueryResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetTrail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetTrailStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEventDataStores",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPublicKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListQueries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTrails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "LookupEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutEventSelectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutInsightSelectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreEventDataStore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventdatastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartLogging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopLogging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEventDataStore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventdatastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventdatastore",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:eventdatastore/${EventDataStoreId}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTrail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudtrail",
+    "service": "AWS CloudTrail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "trail"
+    ],
+    "supportedResources": [
+      {
+        "Name": "trail",
+        "ARN": "arn:aws:cloudtrail:${Region}:${Account}:trail/${TrailName}",
+        "RegEx": "^arn:aws:cloudtrail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

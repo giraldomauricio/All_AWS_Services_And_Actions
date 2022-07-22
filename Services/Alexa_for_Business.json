@@ -1,0 +1,2387 @@
+[
+  {
+    "name": "ApproveSkill",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AssociateContactWithAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "contact",
+      "addressbook"
+    ],
+    "supportedResources": [
+      {
+        "Name": "contact",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:contact/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "addressbook",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:address-book/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateDeviceWithNetworkProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device",
+      "networkprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "networkprofile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:network-profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateDeviceWithRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateSkillGroupWithRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room",
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateSkillWithSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateSkillWithUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CompleteRegistration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateBusinessReportSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConferenceProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateGatewayGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateNetworkProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "profile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addressbook"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addressbook",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:address-book/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBusinessReportSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "schedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "schedule",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:schedule/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConferenceProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "conferenceprovider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "conferenceprovider",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:conference-provider/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "contact"
+    ],
+    "supportedResources": [
+      {
+        "Name": "contact",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:contact/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDeviceUsageData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGatewayGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewaygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewaygroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNetworkProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "networkprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "networkprofile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:network-profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "profile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRoomSkillParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSkillAuthorization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateContactFromAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "contact",
+      "addressbook"
+    ],
+    "supportedResources": [
+      {
+        "Name": "contact",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:contact/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "addressbook",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:address-book/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateDeviceFromRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateSkillFromSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateSkillFromUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateSkillGroupFromRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room",
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ForgetSmartHomeAppliances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addressbook"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addressbook",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:address-book/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConferencePreference",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetConferenceProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "conferenceprovider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "conferenceprovider",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:conference-provider/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "contact"
+    ],
+    "supportedResources": [
+      {
+        "Name": "contact",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:contact/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGatewayGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewaygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewaygroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInvitationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetNetworkProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "networkprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "networkprofile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:network-profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "profile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRoomSkillParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBusinessReportSchedules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConferenceProviders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDeviceEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGatewayGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewaygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewaygroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSkills",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSkillsStoreCategories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSkillsStoreSkillsByCategory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSmartHomeAppliances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutConferencePreference",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutDeviceSetupEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutInvitationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutRoomSkillParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutSkillAuthorization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterAVSDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RegisterDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RejectSkill",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ResolveRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RevokeInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchAddressBooks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchContacts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchNetworkProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchRooms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchSkillGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendAnnouncement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartDeviceSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartSmartHomeApplianceDiscovery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:user/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAddressBook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addressbook"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addressbook",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:address-book/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBusinessReportSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "schedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "schedule",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:schedule/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConferenceProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "conferenceprovider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "conferenceprovider",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:conference-provider/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "contact"
+    ],
+    "supportedResources": [
+      {
+        "Name": "contact",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:contact/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:device/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGatewayGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewaygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewaygroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:gateway-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNetworkProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "networkprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "networkprofile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:network-profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "profile",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:profile/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRoom",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "room"
+    ],
+    "supportedResources": [
+      {
+        "Name": "room",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:room/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSkillGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "a4b",
+    "service": "Alexa for Business",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "skillgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "skillgroup",
+        "ARN": "arn:aws:a4b:${Region}:${Account}:skill-group/${Resource_id}",
+        "RegEx": "^arn:aws:a4b:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

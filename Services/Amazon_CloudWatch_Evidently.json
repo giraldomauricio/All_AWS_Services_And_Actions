@@ -1,0 +1,831 @@
+[
+  {
+    "name": "BatchEvaluateFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Feature"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Feature",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/feature/${FeatureName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Feature"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Feature",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/feature/${FeatureName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Launch"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Launch",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/launch/${LaunchName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Project",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EvaluateFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Feature"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Feature",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/feature/${FeatureName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExperimentResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Feature"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Feature",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/feature/${FeatureName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Launch"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Launch",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/launch/${LaunchName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Project",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExperiments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFeatures",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLaunches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutProjectEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Project",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Launch"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Launch",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/launch/${LaunchName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Launch"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Launch",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/launch/${LaunchName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Experiment",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/experiment/${ExperimentName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFeature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Feature"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Feature",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/feature/${FeatureName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Launch"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Launch",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}/launch/${LaunchName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Project",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProjectDataDelivery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "evidently",
+    "service": "Amazon CloudWatch Evidently",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Project",
+        "ARN": "arn:aws:evidently:${Region}:${OwnerAccountId}:project/${ProjectName}",
+        "RegEx": "^arn:aws:evidently:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

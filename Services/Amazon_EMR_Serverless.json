@@ -1,0 +1,456 @@
+[
+  {
+    "name": "CancelJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobRun"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobRun",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/.+/jobruns/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobRun"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobRun",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/.+/jobruns/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "noResourceARN": "arn:${Partition}:emr-serverless:${Region}:${Account}:/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListJobRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobRun",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/.+/jobruns/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartJobRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobRun",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/.+/jobruns/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobRun",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/.+/jobruns/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "emr-serverless",
+    "service": "Amazon EMR Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:emr-serverless:${Region}:${Account}:/applications/[^/]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

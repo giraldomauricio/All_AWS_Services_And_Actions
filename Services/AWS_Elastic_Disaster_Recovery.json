@@ -1,0 +1,2415 @@
+[
+  {
+    "name": "AssociateFailbackClientToRecoveryInstanceForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchCreateVolumeSnapshotGroupForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteSnapshotRequestForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConvertedSnapshotForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateExtendedSourceServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRecoveryInstanceForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateReplicationConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSessionForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSourceServerForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "JobResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "JobResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:job/${JobID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:job/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRecoveryInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationConfigurationTemplateResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationConfigurationTemplateResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:replication-configuration-template/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSourceServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJobLogItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "JobResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "JobResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:job/${JobID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:job/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRecoveryInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRecoverySnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationConfigurationTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReplicationServerAssociationsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshotRequestsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSourceServers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisconnectRecoveryInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisconnectSourceServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAgentCommandForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAgentConfirmedResumeInfoForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAgentInstallationAssetsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAgentReplicationInfoForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAgentRuntimeConfigurationForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAgentSnapshotCreditsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetChannelCommandsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFailbackCommandForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFailbackLaunchRequestedForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFailbackReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLaunchConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSuggestedFailbackClientDeviceMappingForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InitializeService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "IssueAgentCertificateForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExtensibleSourceServers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListStagingAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "NotifyAgentAuthenticationForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyAgentConnectedForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyAgentDisconnectedForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyAgentReplicationProgressForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyConsistencyAttainedForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyReplicationServerAuthenticationForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyVolumeEventForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RetryDataReplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendAgentLogsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendAgentMetricsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendChannelCommandResultForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendClientLogsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendClientMetricsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendVolumeStatsForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartFailbackLaunch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartRecovery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopFailback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationConfigurationTemplateResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:replication-configuration-template/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:job/${JobID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:job/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      },
+      {
+        "Name": "drs:CreateAction",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/drs/latest/userguide/supported-iam-actions-tagging.html",
+        "Description": "Filters access by the name of a resource-creating API action"
+      }
+    ]
+  },
+  {
+    "name": "TerminateRecoveryInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationConfigurationTemplateResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:replication-configuration-template/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "JobResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:job/${JobID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:job/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAgentBacklogForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAgentConversionInfoForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAgentReplicationInfoForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAgentReplicationProcessStateForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAgentSourcePropertiesForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource",
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFailbackClientDeviceMappingForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFailbackClientLastSeenForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFailbackReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLaunchConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateReplicationCertificateForDrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RecoveryInstanceResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RecoveryInstanceResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:recovery-instance/${RecoveryInstanceID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:recovery-instance/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "drs:EC2InstanceARN"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "drs:ec2instancearn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateReplicationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SourceServerResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SourceServerResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:source-server/${SourceServerID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:source-server/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateReplicationConfigurationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "drs",
+    "service": "AWS Elastic Disaster Recovery",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationConfigurationTemplateResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationConfigurationTemplateResource",
+        "ARN": "arn:aws:drs:${Region}:${Account}:replication-configuration-template/${ReplicationConfigurationTemplateID}",
+        "RegEx": "^arn:aws:drs:${Region}:${Account}:replication-configuration-template/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

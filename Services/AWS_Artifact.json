@@ -1,0 +1,97 @@
+[
+  {
+    "name": "AcceptAgreement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "artifact",
+    "service": "AWS Artifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "agreement"
+    ],
+    "supportedResources": [
+      {
+        "Name": "agreement",
+        "ARN": "arn:aws:artifact:::agreement/*",
+        "RegEx": "^arn:aws:artifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DownloadAgreement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "artifact",
+    "service": "AWS Artifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "agreement",
+        "ARN": "arn:aws:artifact:::agreement/*",
+        "RegEx": "^arn:aws:artifact:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "customer-agreement",
+        "ARN": "arn:aws:artifact::${Account}:customer-agreement/*",
+        "RegEx": "^arn:aws:artifact:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Get",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "artifact",
+    "service": "AWS Artifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "report-package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "report-package",
+        "ARN": "arn:aws:artifact:::report-package/*",
+        "RegEx": "^arn:aws:artifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TerminateAgreement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "artifact",
+    "service": "AWS Artifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customer-agreement"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customer-agreement",
+        "ARN": "arn:aws:artifact::${Account}:customer-agreement/*",
+        "RegEx": "^arn:aws:artifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

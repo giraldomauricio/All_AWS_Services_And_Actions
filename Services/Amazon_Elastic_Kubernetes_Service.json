@@ -1,0 +1,1250 @@
+[
+  {
+    "name": "AccessKubernetesApi",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateEncryptionConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateIdentityProviderConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      },
+      {
+        "Name": "eks:clientId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "Description": "Filters access by the clientId present in the associateIdentityProviderConfig request the user makes to the EKS service"
+      },
+      {
+        "Name": "eks:issuerUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "Description": "Filters access by the issuerUrl present in the associateIdentityProviderConfig request the user makes to the EKS service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a key that is present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "CreateAddon",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a key that is present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFargateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a key that is present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "CreateNodegroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a key that is present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAddon",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFargateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fargateprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fargateprofile",
+        "ARN": "arn:aws:eks:${Region}:${Account}:fargateprofile/${ClusterName}/${FargateProfileName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNodegroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "nodegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAddon",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAddonVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFargateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fargateprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fargateprofile",
+        "ARN": "arn:aws:eks:${Region}:${Account}:fargateprofile/${ClusterName}/${FargateProfileName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeIdentityProviderConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "identityproviderconfig"
+    ],
+    "supportedResources": [
+      {
+        "Name": "identityproviderconfig",
+        "ARN": "arn:aws:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeNodegroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "nodegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUpdate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateIdentityProviderConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "identityproviderconfig"
+    ],
+    "supportedResources": [
+      {
+        "Name": "identityproviderconfig",
+        "ARN": "arn:aws:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAddons",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFargateProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIdentityProviderConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListNodegroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "fargateprofile",
+        "ARN": "arn:aws:eks:${Region}:${Account}:fargateprofile/${ClusterName}/${FargateProfileName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "identityproviderconfig",
+        "ARN": "arn:aws:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUpdates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "fargateprofile",
+        "ARN": "arn:aws:eks:${Region}:${Account}:fargateprofile/${ClusterName}/${FargateProfileName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "identityproviderconfig",
+        "ARN": "arn:aws:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a key that is present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "fargateprofile",
+        "ARN": "arn:aws:eks:${Region}:${Account}:fargateprofile/${ClusterName}/${FargateProfileName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "identityproviderconfig",
+        "ARN": "arn:aws:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the EKS service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAddon",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "addon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "addon",
+        "ARN": "arn:aws:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateClusterConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateClusterVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:eks:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNodegroupConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "nodegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNodegroupVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "eks",
+    "service": "Amazon Elastic Kubernetes Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "nodegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "nodegroup",
+        "ARN": "arn:aws:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}",
+        "RegEx": "^arn:aws:eks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,913 @@
+[
+  {
+    "name": "AcceptResourceShareInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share-invitation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share-invitation",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "ram:ShareOwnerAccountId"
+        ],
+        "ContextKeyStrings": [
+          "ram:shareowneraccountid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ram:ShareOwnerAccountId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares owned by a specific account. For example, you can use this condition key to specify which resource share invitations can be accepted or rejected based on the resource share owner\u0027s account ID"
+      }
+    ]
+  },
+  {
+    "name": "AssociateResourceShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ram:RequestedResourceType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the specified resource type"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "ram:AllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares that allow or deny sharing with external principals. For example, specify true if the action can only be performed on resource shares that allow sharing with external principals. External principals are AWS accounts that are outside of its AWS organization"
+      },
+      {
+        "Name": "ram:ResourceShareName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource share with the specified name"
+      },
+      {
+        "Name": "ram:ResourceArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource with the specified ARN"
+      },
+      {
+        "Name": "ram:Principal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the format of the specified principal"
+      }
+    ]
+  },
+  {
+    "name": "AssociateResourceSharePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "permission",
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "permission",
+        "ARN": "arn:aws:ram::${Account}:permission/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+:permission/.+",
+        "ContextKeys": [
+          "ram:PermissionArn",
+          "ram:PermissionResourceType"
+        ],
+        "ContextKeyStrings": [
+          "ram:permissionresourcetype",
+          "ram:permissionarn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateResourceShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteResourceShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "ram:AllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares that allow or deny sharing with external principals. For example, specify true if the action can only be performed on resource shares that allow sharing with external principals. External principals are AWS accounts that are outside of its AWS organization"
+      },
+      {
+        "Name": "ram:ResourceShareName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource share with the specified name"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateResourceShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ram:RequestedResourceType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the specified resource type"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "ram:AllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares that allow or deny sharing with external principals. For example, specify true if the action can only be performed on resource shares that allow sharing with external principals. External principals are AWS accounts that are outside of its AWS organization"
+      },
+      {
+        "Name": "ram:ResourceShareName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource share with the specified name"
+      },
+      {
+        "Name": "ram:ResourceArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource with the specified ARN"
+      },
+      {
+        "Name": "ram:Principal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the format of the specified principal"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateResourceSharePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "permission",
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "permission",
+        "ARN": "arn:aws:ram::${Account}:permission/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+:permission/.+",
+        "ContextKeys": [
+          "ram:PermissionArn",
+          "ram:PermissionResourceType"
+        ],
+        "ContextKeyStrings": [
+          "ram:permissionresourcetype",
+          "ram:permissionarn"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableSharingWithAwsOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "permission"
+    ],
+    "supportedResources": [
+      {
+        "Name": "permission",
+        "ARN": "arn:aws:ram::${Account}:permission/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+:permission/.+",
+        "ContextKeys": [
+          "ram:PermissionArn",
+          "ram:PermissionResourceType"
+        ],
+        "ContextKeyStrings": [
+          "ram:permissionresourcetype",
+          "ram:permissionarn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ram:PermissionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the specified Permission ARN"
+      }
+    ]
+  },
+  {
+    "name": "GetResourcePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetResourceShareAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetResourceShareInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetResourceShares",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPendingInvitationResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share-invitation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share-invitation",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "ram:ShareOwnerAccountId"
+        ],
+        "ContextKeyStrings": [
+          "ram:shareowneraccountid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPermissionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPrincipals",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourceSharePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "ram:AllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares that allow or deny sharing with external principals. For example, specify true if the action can only be performed on resource shares that allow sharing with external principals. External principals are AWS accounts that are outside of its AWS organization"
+      },
+      {
+        "Name": "ram:ResourceShareName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource share with the specified name"
+      }
+    ]
+  },
+  {
+    "name": "ListResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PromoteResourceShareCreatedFromPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectResourceShareInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share-invitation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share-invitation",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "ram:ShareOwnerAccountId"
+        ],
+        "ContextKeyStrings": [
+          "ram:shareowneraccountid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ram:ShareOwnerAccountId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares owned by a specific account. For example, you can use this condition key to specify which resource share invitations can be accepted or rejected based on the resource share owner\u0027s account ID"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request when creating or tagging a resource share. If users don\u0027t pass these specific tags, or if they don\u0027t specify tags at all, the request fails"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed when creating or tagging a resource share"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request when creating or tagging a resource share. If users don\u0027t pass these specific tags, or if they don\u0027t specify tags at all, the request fails"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed when creating or tagging a resource share"
+      }
+    ]
+  },
+  {
+    "name": "UpdateResourceShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ram",
+    "service": "AWS Resource Access Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resource-share"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resource-share",
+        "ARN": "arn:aws:ram:${Region}:${Account}:resource-share/${ResourcePath}",
+        "RegEx": "^arn:aws:ram:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ram:ResourceShareName",
+          "ram:AllowsExternalPrincipals"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ram:allowsexternalprincipals",
+          "ram:resourcesharename"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "ram:RequestedAllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on the specified value for \u0027allowExternalPrincipals\u0027. External principals are AWS accounts that are outside of its AWS Organization"
+      },
+      {
+        "Name": "ram:AllowsExternalPrincipals",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on resource shares that allow or deny sharing with external principals. For example, specify true if the action can only be performed on resource shares that allow sharing with external principals. External principals are AWS accounts that are outside of its AWS organization"
+      },
+      {
+        "Name": "ram:ResourceShareName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "DocPage": "${ContextKeysDocRoot}iam-policies.html#iam-policies-condition",
+        "Description": "Filters access based on a resource share with the specified name"
+      }
+    ]
+  }
+]

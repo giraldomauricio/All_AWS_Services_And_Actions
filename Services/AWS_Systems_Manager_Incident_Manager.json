@@ -1,0 +1,943 @@
+[
+  {
+    "name": "CreateReplicationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateResponsePlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateTimelineEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIncidentRecord",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replication-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replication-set",
+        "ARN": "arn:aws:ssm-incidents::${Account}:replication-set/${ReplicationSet}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResponsePlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTimelineEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetIncidentRecord",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetReplicationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replication-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replication-set",
+        "ARN": "arn:aws:ssm-incidents::${Account}:replication-set/${ReplicationSet}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourcePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResponsePlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTimelineEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIncidentRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRelatedItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListReplicationSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResponsePlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTimelineEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartIncident",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDeletionProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replication-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replication-set",
+        "ARN": "arn:aws:ssm-incidents::${Account}:replication-set/${ReplicationSet}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIncidentRecord",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRelatedItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateReplicationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replication-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replication-set",
+        "ARN": "arn:aws:ssm-incidents::${Account}:replication-set/${ReplicationSet}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateResponsePlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTimelineEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm-incidents",
+    "service": "AWS Systems Manager Incident Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "response-plan",
+      "incident-record"
+    ],
+    "supportedResources": [
+      {
+        "Name": "response-plan",
+        "ARN": "arn:aws:ssm-incidents::${Account}:response-plan/${ResponsePlan}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "incident-record",
+        "ARN": "arn:aws:ssm-incidents::${Account}:incident-record/${ResponsePlan}/${IncidentRecord}",
+        "RegEx": "^arn:aws:ssm-incidents:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

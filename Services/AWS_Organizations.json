@@ -1,0 +1,1703 @@
+[
+  {
+    "name": "AcceptHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "handshake"
+    ],
+    "supportedResources": [
+      {
+        "Name": "handshake",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:handshake/o-${OrganizationId}/${HandshakeType}/h-${HandshakeId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "CancelHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "handshake"
+    ],
+    "supportedResources": [
+      {
+        "Name": "handshake",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:handshake/o-${OrganizationId}/${HandshakeType}/h-${HandshakeId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CloseAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateGovCloudAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateOrganizationalUnit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeclineHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "handshake"
+    ],
+    "supportedResources": [
+      {
+        "Name": "handshake",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:handshake/o-${OrganizationId}/${HandshakeType}/h-${HandshakeId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteOrganizationalUnit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "organizationalunit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "DeregisterDelegatedAdministrator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:ServicePrincipal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified service principal names"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCreateAccountStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEffectivePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "DescribeHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "handshake"
+    ],
+    "supportedResources": [
+      {
+        "Name": "handshake",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:handshake/o-${OrganizationId}/${HandshakeType}/h-${HandshakeId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeOrganizationalUnit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "organizationalunit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "DetachPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "DisableAWSServiceAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisablePolicyType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "root"
+    ],
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "EnableAWSServiceAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableAllFeatures",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnablePolicyType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "root"
+    ],
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "InviteAccountToOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "LeaveOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAWSServiceAccessForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAccountsForParent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListChildren",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCreateAccountStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDelegatedAdministrators",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDelegatedServicesForAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListHandshakesForAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHandshakesForOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOrganizationalUnitsForParent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListParents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPoliciesForTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "ListRoots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTargetsForPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  },
+  {
+    "name": "MoveAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterDelegatedAdministrator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:ServicePrincipal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified service principal names"
+      }
+    ]
+  },
+  {
+    "name": "RemoveAccountFromOrganization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "root",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:root/o-${OrganizationId}/r-${RootId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "account",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:account/o-${OrganizationId}/${AccountId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateOrganizationalUnit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "organizationalunit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "organizationalunit",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:ou/o-${OrganizationId}/ou-${OrganizationalUnitId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "organizations",
+    "service": "AWS Organizations",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:organizations::${MasterAccountId}:policy/o-${OrganizationId}/${PolicyType}/p-${PolicyId}",
+        "RegEx": "^arn:aws:organizations:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "organizations:PolicyType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_permissions_overview.html#orgs_permissions_conditionkeys",
+        "Description": "Filters access by the specified policy type names"
+      }
+    ]
+  }
+]

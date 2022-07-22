@@ -1,0 +1,1099 @@
+[
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/route/${RouteId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:RouteCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "refactor-spaces:SourcePath",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount",
+          "refactor-spaces:sourcepath",
+          "refactor-spaces:routecreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "refactor-spaces:SourcePath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the path of the route"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:RouteCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the route within an application"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "DeleteService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/service/${ServiceId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "GetEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/route/${RouteId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:RouteCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "refactor-spaces:SourcePath",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount",
+          "refactor-spaces:sourcepath",
+          "refactor-spaces:routecreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "refactor-spaces:SourcePath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the path of the route"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:RouteCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the route within an application"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "GetService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/service/${ServiceId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentVpcs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/service/${ServiceId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "route",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/route/${RouteId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:RouteCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "refactor-spaces:SourcePath",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount",
+          "refactor-spaces:sourcepath",
+          "refactor-spaces:routecreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "refactor-spaces:SourcePath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the path of the route"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:RouteCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the route within an application"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/service/${ServiceId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:applicationcreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "route",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/route/${RouteId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:RouteCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "refactor-spaces:SourcePath",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount",
+          "refactor-spaces:sourcepath",
+          "refactor-spaces:routecreatedbyaccount"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "refactor-spaces:SourcePath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the path of the route"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:RouteCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the route within an application"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "refactor-spaces",
+    "service": "AWS Migration Hub Refactor Spaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/route/${RouteId}",
+        "RegEx": "^arn:aws:refactor-spaces:.+",
+        "ContextKeys": [
+          "refactor-spaces:ApplicationCreatedByAccount",
+          "refactor-spaces:ServiceCreatedByAccount",
+          "refactor-spaces:RouteCreatedByAccount",
+          "refactor-spaces:CreatedByAccountIds",
+          "refactor-spaces:SourcePath",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "refactor-spaces:createdbyaccountids",
+          "aws:resourcetag/${tagkey}",
+          "refactor-spaces:servicecreatedbyaccount",
+          "refactor-spaces:applicationcreatedbyaccount",
+          "refactor-spaces:sourcepath",
+          "refactor-spaces:routecreatedbyaccount"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "refactor-spaces:ServiceCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the service within an application"
+      },
+      {
+        "Name": "refactor-spaces:SourcePath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the path of the route"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "refactor-spaces:RouteCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the route within an application"
+      },
+      {
+        "Name": "refactor-spaces:CreatedByAccountIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the accounts that created the resource"
+      },
+      {
+        "Name": "refactor-spaces:ApplicationCreatedByAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by restricting the action to only those accounts that created the application within an environment"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1459 @@
+[
+  {
+    "name": "AssociateOriginationIdentity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Pool"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateConfigurationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateOptOutList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePool",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteConfigurationSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDefaultMessageType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDefaultSenderId",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteKeyword",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOptOutList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "OptOutList"
+    ],
+    "supportedResources": [
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOptedOutNumber",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "OptOutList"
+    ],
+    "supportedResources": [
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePool",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Pool"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTextMessageSpendLimitOverride",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteVoiceMessageSpendLimitOverride",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeConfigurationSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeKeywords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOptOutLists",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOptedOutNumbers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "OptOutList"
+    ],
+    "supportedResources": [
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePhoneNumbers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePools",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSenderIds",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSpendLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateOriginationIdentity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Pool"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPoolOriginationIdentities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Pool"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutKeyword",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutOptedOutNumber",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "OptOutList"
+    ],
+    "supportedResources": [
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReleasePhoneNumber",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "PhoneNumber"
+    ],
+    "supportedResources": [
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RequestPhoneNumber",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "SendTextMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendVoiceMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetDefaultMessageType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetDefaultSenderId",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetTextMessageSpendLimitOverride",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetVoiceMessageSpendLimitOverride",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SenderId",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:sender-id/${SenderId}/${IsoCountryCode}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "OptOutList",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:opt-out-list/${OptOutListName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEventDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ConfigurationSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ConfigurationSet",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:configuration-set/${ConfigurationSetName}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePhoneNumber",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "PhoneNumber"
+    ],
+    "supportedResources": [
+      {
+        "Name": "PhoneNumber",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:phone-number/${PhoneNumberId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePool",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sms-voice",
+    "service": "Amazon Pinpoint SMS Voice V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Pool"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Pool",
+        "ARN": "arn:aws:sms-voice:${Region}:${Account}:pool/${PoolId}",
+        "RegEx": "^arn:aws:sms-voice:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

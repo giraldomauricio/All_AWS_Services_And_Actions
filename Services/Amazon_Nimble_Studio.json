@@ -1,0 +1,2096 @@
+[
+  {
+    "name": "AcceptEulas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eula"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eula",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:eula/${EulaId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLaunchProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamingImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamingSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamingSessionStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "CreateStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStudioComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLaunchProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLaunchProfileMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStreamingImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStreamingSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStudioComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio-component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStudioMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEula",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eula"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eula",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:eula/${EulaId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFeatureMap",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLaunchProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLaunchProfileDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLaunchProfileInitialization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLaunchProfileMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStreamingImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStreamingSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "GetStreamingSessionStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "GetStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStudioComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio-component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStudioMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEulaAcceptances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eula-acceptance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eula-acceptance",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:eula-acceptance/${EulaAcceptanceId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEulas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eula"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eula",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:eula/${EulaId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListLaunchProfileMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListLaunchProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:principalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the principalId request parameter"
+      },
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "ListStreamingImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStreamingSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:createdBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the createdBy request parameter or the ID of the creator of the resource"
+      },
+      {
+        "Name": "nimble:ownedBy",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ownedBy request parameter or the ID of the owner of the resource"
+      },
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "ListStudioComponents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStudioMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStudios",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutLaunchProfileMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutStudioLogEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutStudioMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartStreamingSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "StartStudioSSOConfigurationRepair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopStreamingSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "nimble:requesterPrincipalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/nimble-studio/latest/userguide/security-iam-service-with-iam.html",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the ID of the logged in user"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair of a resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-session",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-session/${StreamingSessionId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:createdBy",
+          "nimble:ownedBy"
+        ],
+        "ContextKeyStrings": [
+          "nimble:ownedby",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:createdby",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLaunchProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLaunchProfileMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "launch-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "launch-profile",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:launch-profile/${LaunchProfileId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStreamingImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streaming-image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streaming-image",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:streaming-image/${StreamingImageId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStudioComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "nimble",
+    "service": "Amazon Nimble Studio",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio-component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio-component",
+        "ARN": "arn:aws:nimble:${Region}:${Account}:studio-component/${StudioComponentId}",
+        "RegEx": "^arn:aws:nimble:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "nimble:studioId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "nimble:studioid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

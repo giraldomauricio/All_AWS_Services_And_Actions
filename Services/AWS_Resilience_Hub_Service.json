@@ -1,0 +1,1216 @@
+[
+  {
+    "name": "AddDraftAppVersionResourceMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRecommendationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateResiliencyPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAppAssessment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRecommendationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResiliencyPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resiliency-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAppAssessment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAppVersionResourcesResolutionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAppVersionTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDraftAppVersionResourcesImportStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeResiliencyPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resiliency-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportResourcesToDraftAppVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAlarmRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppAssessments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppComponentCompliances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppComponentRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppVersionResourceMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppVersionResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAppVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecommendationTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListResiliencyPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSopRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSuggestedResiliencyPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTestRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUnsupportedAppVersionResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PublishAppVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDraftAppVersionTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveDraftAppVersionResourceMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResolveAppVersionResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartAppAssessment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "app-assessment",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app-assessment/${AppAssessmentID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recommendation-template",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:recommendation-template/${RecommendationTemplateID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "app-assessment",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app-assessment/${AppAssessmentID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recommendation-template",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:recommendation-template/${RecommendationTemplateID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:app/${AppID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateResiliencyPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "resiliencehub",
+    "service": "AWS Resilience Hub Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resiliency-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resiliency-policy",
+        "ARN": "arn:aws:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyID}",
+        "RegEx": "^arn:aws:resiliencehub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

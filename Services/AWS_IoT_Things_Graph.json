@@ -1,0 +1,841 @@
+[
+  {
+    "name": "AssociateEntityToThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFlowTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSystemInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSystemTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteFlowTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Workflow",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Workflow/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSystemInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SystemInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSystemTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "System"
+    ],
+    "supportedResources": [
+      {
+        "Name": "System",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:System/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeploySystemInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SystemInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeprecateFlowTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Workflow",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Workflow/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeprecateSystemTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "System"
+    ],
+    "supportedResources": [
+      {
+        "Name": "System",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:System/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DissociateEntityFromThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFlowTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Workflow",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Workflow/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFlowTemplateRevisions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Workflow",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Workflow/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNamespaceDeletionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSystemInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SystemInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSystemTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "System"
+    ],
+    "supportedResources": [
+      {
+        "Name": "System",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:System/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSystemTemplateRevisions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "System"
+    ],
+    "supportedResources": [
+      {
+        "Name": "System",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:System/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUploadStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFlowExecutionMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchFlowExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SystemInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchFlowTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchSystemInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchSystemTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchThings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a key that is present in the request the user makes to the thingsgraph service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the thingsgraph service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "UndeploySystemInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SystemInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "SystemInstance",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Deployment/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the thingsgraph service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFlowTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Workflow",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:Workflow/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSystemTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "System"
+    ],
+    "supportedResources": [
+      {
+        "Name": "System",
+        "ARN": "arn:aws:iotthingsgraph:${Region}:${Account}:System/${NamespacePath}",
+        "RegEx": "^arn:aws:iotthingsgraph:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UploadEntityDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotthingsgraph",
+    "service": "AWS IoT Things Graph",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

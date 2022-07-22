@@ -1,0 +1,993 @@
+[
+  {
+    "name": "CancelJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateComputeEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "compute-environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateJobQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "compute-environment",
+      "job-queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSchedulingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduling-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteComputeEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "compute-environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteJobQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job-queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSchedulingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduling-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterJobDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeComputeEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeJobDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeJobQueues",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSchedulingPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSchedulingPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterJobDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "batch:Image",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by on the image used to start a container"
+      },
+      {
+        "Name": "batch:Privileged",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the specified privileged parameter value that determines whether the container is given elevated privileges on the host container instance (similar to the root user)"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "batch:User",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by user name or numeric uid used inside the container"
+      },
+      {
+        "Name": "batch:AWSLogsCreateGroup",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the specified logging driver to determine whether awslogs group will be created for the logs"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "batch:AWSLogsStreamPrefix",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the awslogs log stream prefix"
+      },
+      {
+        "Name": "batch:AWSLogsGroup",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the awslogs group where the logs are located"
+      },
+      {
+        "Name": "batch:LogDriver",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the log driver used for the container"
+      },
+      {
+        "Name": "batch:AWSLogsRegion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the region where the logs are sent to"
+      }
+    ]
+  },
+  {
+    "name": "SubmitJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job-queue",
+      "job-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "batch:ShareIdentifier",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "DocPage": "${DocHomeURL}service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "Description": "Filters access by the shareIdentifier used inside submit job"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TerminateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job/${JobId}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "job-definition",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-definition/${JobDefinitionName}:${Revision}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateComputeEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "compute-environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateJobQueue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "job-queue"
+    ],
+    "supportedResources": [
+      {
+        "Name": "job-queue",
+        "ARN": "arn:aws:batch:${Region}:${Account}:job-queue/${JobQueueName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "compute-environment",
+        "ARN": "arn:aws:batch:${Region}:${Account}:compute-environment/${ComputeEnvironmentName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSchedulingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "batch",
+    "service": "AWS Batch",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduling-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduling-policy",
+        "ARN": "arn:aws:batch:${Region}:${Account}:scheduling-policy/${SchedulingPolicyName}",
+        "RegEx": "^arn:aws:batch:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

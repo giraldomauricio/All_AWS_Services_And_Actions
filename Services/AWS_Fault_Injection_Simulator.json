@@ -1,0 +1,795 @@
+[
+  {
+    "name": "CreateExperimentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "action",
+      "experiment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteExperimentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "action"
+    ],
+    "supportedResources": [
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair of a resource"
+      }
+    ]
+  },
+  {
+    "name": "GetExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair of a resource"
+      }
+    ]
+  },
+  {
+    "name": "GetExperimentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by a tag key and value pair of a resource"
+      }
+    ]
+  },
+  {
+    "name": "GetTargetResourceType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "InjectApiInternalError",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "fis:Percentage",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the percentage of calls being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Operations",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of operations on the AWS service that is being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Targets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of resource ARNs being targeted by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the AWS service that is being affected by the AWS FIS action"
+      }
+    ]
+  },
+  {
+    "name": "InjectApiThrottleError",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "fis:Percentage",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the percentage of calls being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Operations",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of operations on the AWS service that is being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Targets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of resource ARNs being targeted by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the AWS service that is being affected by the AWS FIS action"
+      }
+    ]
+  },
+  {
+    "name": "InjectApiUnavailableError",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "fis:Percentage",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the percentage of calls being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Operations",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of operations on the AWS service that is being affected by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Targets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the list of resource ARNs being targeted by the AWS FIS action"
+      },
+      {
+        "Name": "fis:Service",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fis/latest/userguide/security_iam_service-with-iam.html",
+        "DocPage": "${DocHomeURL}fis/latest/userguide/security_iam_service-with-iam.html",
+        "Description": "Filters access by the AWS service that is being affected by the AWS FIS action"
+      }
+    ]
+  },
+  {
+    "name": "ListActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExperimentTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExperiments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTargetResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment-template",
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopExperiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "experiment",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateExperimentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fis",
+    "service": "AWS Fault Injection Simulator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experiment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experiment-template",
+        "ARN": "arn:aws:fis:${Region}:${Account}:experiment-template/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "action",
+        "ARN": "arn:aws:fis:${Region}:${Account}:action/${Id}",
+        "RegEx": "^arn:aws:fis:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  }
+]

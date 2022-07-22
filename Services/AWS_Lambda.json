@@ -1,0 +1,2033 @@
+[
+  {
+    "name": "AddLayerVersionPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layerVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layerVersion",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      },
+      {
+        "Name": "lambda:Principal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by restricting the AWS service or account that can invoke a function"
+      }
+    ]
+  },
+  {
+    "name": "CreateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventSourceMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "lambda:SecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of security groups configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:SubnetIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of subnets configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:VpcIds",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of the VPC configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:CodeSigningConfigArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda code signing config"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "lambda:Layer",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of a version of an AWS Lambda layer"
+      }
+    ]
+  },
+  {
+    "name": "CreateFunctionUrlConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      },
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventSourceMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventSourceMapping"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventSourceMapping",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:event-source-mapping:${UUID}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      }
+    ]
+  },
+  {
+    "name": "DeleteFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFunctionCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFunctionConcurrency",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFunctionEventInvokeConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFunctionUrlConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      },
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLayerVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layerVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layerVersion",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProvisionedConcurrencyConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "function alias",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Alias}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "function version",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Version}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableReplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableReplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventSourceMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventSourceMapping"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventSourceMapping",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:event-source-mapping:${UUID}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      }
+    ]
+  },
+  {
+    "name": "GetFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionConcurrency",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionEventInvokeConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionUrlConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      },
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  },
+  {
+    "name": "GetLayerVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layerVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layerVersion",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLayerVersionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layerVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layerVersion",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProvisionedConcurrencyConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "function alias",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Alias}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "function version",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Version}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InvokeAsync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InvokeFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InvokeFunctionUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      },
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  },
+  {
+    "name": "ListAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCodeSigningConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEventSourceMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFunctionEventInvokeConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFunctionUrlConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  },
+  {
+    "name": "ListFunctions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFunctionsByCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListLayerVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLayers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProvisionedConcurrencyConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVersionsByFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PublishLayerVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layer",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PublishVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutFunctionCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config",
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:CodeSigningConfigArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda code signing config"
+      }
+    ]
+  },
+  {
+    "name": "PutFunctionConcurrency",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutFunctionEventInvokeConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutProvisionedConcurrencyConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "function alias",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Alias}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "function version",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}:${Version}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveLayerVersionPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "layerVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "layerVersion",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemovePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      },
+      {
+        "Name": "lambda:Principal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by restricting the AWS service or account that can invoke a function"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com//IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEventSourceMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventSourceMapping"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventSourceMapping",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:event-source-mapping:${UUID}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFunctionCode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFunctionCodeSigningConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "code signing config",
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "code signing config",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:code-signing-config:${CodeSigningConfigId}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFunctionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:SecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of security groups configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:SubnetIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of subnets configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:VpcIds",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ID of the VPC configured for the AWS Lambda function"
+      },
+      {
+        "Name": "lambda:Layer",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of a version of an AWS Lambda layer"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFunctionEventInvokeConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFunctionUrlConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lambda",
+    "service": "AWS Lambda",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "function"
+    ],
+    "supportedResources": [
+      {
+        "Name": "function",
+        "ARN": "arn:aws:lambda:${Region}:${Account}:function:${FunctionName}",
+        "RegEx": "^arn:aws:lambda:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "lambda:FunctionArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by the ARN of an AWS Lambda function"
+      },
+      {
+        "Name": "lambda:FunctionUrlAuthType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "Description": "Filters access by authorization type specified in request. Available during CreateFunctionUrlConfig, UpdateFunctionUrlConfig, DeleteFunctionUrlConfig, GetFunctionUrlConfig, ListFunctionUrlConfig, AddPermission and RemovePermission operations"
+      }
+    ]
+  }
+]

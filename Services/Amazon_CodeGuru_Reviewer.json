@@ -1,0 +1,513 @@
+[
+  {
+    "name": "AssociateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codecommit:${Region}:${Account}:${RepositoryName}",
+        "RegEx": "^arn:aws:codecommit:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCodeReview",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectionToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCodeReview",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeRecommendationFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeRepositoryAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetMetricsData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCodeReviews",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecommendationFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListRepositoryAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListThirdPartyRepositories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutRecommendationFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UnTagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeguru-reviewer",
+    "service": "Amazon CodeGuru Reviewer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}",
+        "RegEx": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  }
+]

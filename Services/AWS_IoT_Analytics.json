@@ -1,0 +1,1424 @@
+[
+  {
+    "name": "BatchPutMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CancelPipelineReprocessing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDatasetContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateDatastore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDatasetContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDatastore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeletePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDatastore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoggingOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDatasetContent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDatasetContents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListDatasets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDatastores",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPipelines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutLoggingOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RunPipelineActivity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SampleChannelData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartPipelineReprocessing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:channel/${ChannelName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:dataset/${DatasetName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDatastore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datastore"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datastore",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:datastore/${DatastoreName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdatePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotanalytics",
+    "service": "AWS IoT Analytics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pipeline",
+        "ARN": "arn:aws:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}",
+        "RegEx": "^arn:aws:iotanalytics:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "iotanalytics:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "iotanalytics:resourcetag/${tagkey}",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotanalytics:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  }
+]

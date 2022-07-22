@@ -1,0 +1,4156 @@
+[
+  {
+    "name": "AllocateStaticIp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AttachCertificateToDistribution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Certificate",
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Certificate/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachDisk",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Disk"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachInstancesToLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachLoadBalancerTlsCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachStaticIp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance",
+      "StaticIp"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StaticIp",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:StaticIp/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CloseInstancePublicPorts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CopySnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateBucketAccessKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCloudFormationStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateContactMethod",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateContainerService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateContainerServiceDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ContainerService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateContainerServiceRegistryLogin",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDisk",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDiskFromSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DiskSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DiskSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:DiskSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDiskSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDistribution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDomainEntry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateInstanceSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateInstancesFromSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "InstanceSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "InstanceSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:InstanceSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLoadBalancerTlsCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRelationalDatabaseFromSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabaseSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabaseSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabaseSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRelationalDatabaseSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAlarm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alarm"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alarm",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Alarm/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAutoSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBucketAccessKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Certificate/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteContactMethod",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteContainerImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ContainerService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteContainerService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ContainerService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDisk",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Disk"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDiskSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DiskSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DiskSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:DiskSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDistribution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDomainEntry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInstanceSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "InstanceSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "InstanceSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:InstanceSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "KeyPair"
+    ],
+    "supportedResources": [
+      {
+        "Name": "KeyPair",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:KeyPair/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteKnownHostKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoadBalancerTlsCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRelationalDatabaseSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabaseSnapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabaseSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabaseSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachCertificateFromDistribution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachDisk",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Disk"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachInstancesFromLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachStaticIp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "StaticIp"
+    ],
+    "supportedResources": [
+      {
+        "Name": "StaticIp",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:StaticIp/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableAddOn",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DownloadDefaultKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableAddOn",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExportSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "InstanceSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:InstanceSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DiskSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:DiskSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetActiveNames",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAlarms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAutoSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBlueprints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBucketAccessKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBucketBundles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBucketMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBuckets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBundles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCloudFormationStackRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContactMethods",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerAPIMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerLog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerServiceDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerServiceMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerServicePowers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContainerServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDisk",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDiskSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDiskSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDisks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDistributionBundles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDistributionLatestCacheReset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDistributionMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDistributions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDomains",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetExportSnapshotRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstanceAccessDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInstanceMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstancePortStates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstanceSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstanceSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstanceState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetKeyPairs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLoadBalancerMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLoadBalancerTlsCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLoadBalancerTlsPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLoadBalancers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetOperation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetOperations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetOperationsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRegions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseBlueprints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseBundles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseLogEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseLogStreams",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseMasterUserPassword",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRelationalDatabaseMetricData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabaseSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetRelationalDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetStaticIp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetStaticIps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ImportKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "IsVpcPeered",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "OpenInstancePublicPorts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PeerVpc",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAlarm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alarm"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alarm",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Alarm/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutInstancePublicPorts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebootInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebootRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterContainerImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ContainerService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReleaseStaticIp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "StaticIp"
+    ],
+    "supportedResources": [
+      {
+        "Name": "StaticIp",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:StaticIp/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetDistributionCache",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendContactMethodVerification",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetIpAddressType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetResourceAccessForBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket",
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RelationalDatabaseSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabaseSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StaticIp",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:StaticIp/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "InstanceSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:InstanceSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "KeyPair",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:KeyPair/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Certificate/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DiskSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:DiskSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TestAlarm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alarm"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alarm",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Alarm/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UnpeerVpc",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Disk",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Disk/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Instance",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Instance/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RelationalDatabaseSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabaseSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StaticIp",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:StaticIp/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "InstanceSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:InstanceSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "KeyPair",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:KeyPair/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Certificate/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DiskSnapshot",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:DiskSnapshot/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBucketBundle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Bucket",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Bucket/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateContainerService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ContainerService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ContainerService",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:ContainerService/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDistribution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDistributionBundle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Distribution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Distribution",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Distribution/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDomainEntry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Domain",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:Domain/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLoadBalancerAttribute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "LoadBalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "LoadBalancer",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:LoadBalancer/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRelationalDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRelationalDatabaseParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lightsail",
+    "service": "Amazon Lightsail",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "RelationalDatabase"
+    ],
+    "supportedResources": [
+      {
+        "Name": "RelationalDatabase",
+        "ARN": "arn:aws:lightsail:${Region}:${Account}:RelationalDatabase/${Id}",
+        "RegEx": "^arn:aws:lightsail:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

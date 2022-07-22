@@ -1,0 +1,524 @@
+[
+  {
+    "name": "AddProfilePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "CancelSigningProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSigningJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-job",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-jobs/${JobId}",
+        "RegEx": "^arn:aws:signer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSigningPlatform",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSigningProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "ListProfilePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSigningJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSigningPlatforms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSigningProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutSigningProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveProfilePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "RevokeSignature",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-job",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-jobs/${JobId}",
+        "RegEx": "^arn:aws:signer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "RevokeSigningProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "StartSigningJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "signer:ProfileVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/signer/latest/developerguide/authen-apipermissions.html",
+        "DocPage": "${ConceptsDocRoot}authen-apipermissions.html",
+        "Description": "Filters access by version of the Signing Profile"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "signer",
+    "service": "AWS Signer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signing-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signing-profile",
+        "ARN": "arn:aws:signer:${Region}:${Account}:/signing-profiles/${ProfileName}",
+        "RegEx": "^arn:aws:signer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by allowed set of values for each of the tags"
+      }
+    ]
+  }
+]

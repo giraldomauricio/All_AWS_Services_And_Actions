@@ -1,0 +1,4486 @@
+[
+  {
+    "name": "AccountConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelIngestion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ingestion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ingestion",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateAccountCustomization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAccountSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAdmin",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateCustomPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEmailCustomizationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "emailCustomizationTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "emailCustomizationTemplate",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateFolderMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateGroupMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "quicksight:UserName"
+        ],
+        "ContextKeyStrings": [
+          "quicksight:username"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateIAMPolicyAssignment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateIngestion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ingestion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ingestion",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:namespace/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateReader",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateTemplateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateTheme",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateThemeAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVPCConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccountCustomization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customization"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEmailCustomizationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "emailCustomizationTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "emailCustomizationTemplate",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFolderMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGroupMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "quicksight:UserName"
+        ],
+        "ContextKeyStrings": [
+          "quicksight:username"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIAMPolicyAssignment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:namespace/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTemplateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTheme",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteThemeAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUserByPrincipalId",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVPCConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountCustomization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customization"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "account"
+    ],
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:account/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAnalysisPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDashboardPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSetPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSourcePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEmailCustomizationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "emailCustomizationTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "emailCustomizationTemplate",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFolderPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFolderResolvedPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGroupMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "quicksight:UserName"
+        ],
+        "ContextKeyStrings": [
+          "quicksight:username"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeIAMPolicyAssignment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeIngestion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ingestion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ingestion",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "DescribeIpRestriction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:namespace/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTemplateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTemplatePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTheme",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeThemeAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeThemePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GenerateEmbedUrlForAnonymousUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard",
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:namespace/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "GenerateEmbedUrlForRegisteredUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAnonymousUserEmbedUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAuthCode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDashboardEmbedUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGroupMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSessionEmbedUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAnalyses",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCustomPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDashboardVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDashboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDataSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFolderMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFolders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGroupMemberships",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIAMPolicyAssignments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIAMPolicyAssignmentsForUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIngestions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "noResourceARN": "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListNamespaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTemplateAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTemplateVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListThemeAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListThemeVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListThemes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUserGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PassDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "PassDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "RegisterUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "quicksight:IamArn",
+          "quicksight:SessionName"
+        ],
+        "ContextKeyStrings": [
+          "quicksight:sessionname",
+          "quicksight:iamarn"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ScopeDownPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchAnalyses",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchDashboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchDirectoryGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchFolders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetGroupMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "Subscribe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ingestion",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "Unsubscribe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ingestion",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountCustomization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "customization"
+    ],
+    "supportedResources": [
+      {
+        "Name": "customization",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:customization/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAnalysisPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "analysis"
+    ],
+    "supportedResources": [
+      {
+        "Name": "analysis",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:analysis/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDashboardPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDashboardPublishedVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dashboard/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataSetPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:dataset/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataSourcePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:datasource/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEmailCustomizationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "emailCustomizationTemplate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "emailCustomizationTemplate",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFolderPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "folder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "folder",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:folder/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:group/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIAMPolicyAssignment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assignment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assignment",
+        "ARN": "arn:aws:quicksight::${Account}:assignment/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIpRestriction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdatePublicSharingSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTemplateAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTemplatePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "template",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:template/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTheme",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateThemeAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateThemePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "theme"
+    ],
+    "supportedResources": [
+      {
+        "Name": "theme",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:theme/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "quicksight",
+    "service": "Amazon QuickSight",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:quicksight:${Region}:${Account}:user/${ResourceId}",
+        "RegEx": "^arn:aws:quicksight:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

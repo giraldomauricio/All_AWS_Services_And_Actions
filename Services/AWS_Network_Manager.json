@@ -1,0 +1,3323 @@
+[
+  {
+    "name": "AcceptAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateCustomerGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:cgwArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which customer gateways can be associated or disassociated"
+      }
+    ]
+  },
+  {
+    "name": "AssociateLink",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "link",
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateTransitGatewayConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:tgwConnectPeerArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which transit gateway connect peers can be associated or disassociated"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment",
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCoreNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateGlobalNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLink",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSiteToSiteVpnAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "networkmanager:vpnConnectionArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which Site-to-Site VPN can be used to a create/update attachment"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateTransitGatewayPeering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "networkmanager:tgwArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which transit gateways can be registered, deregistered, or peered"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateTransitGatewayRouteTableAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "peering"
+    ],
+    "supportedResources": [
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "networkmanager:tgwRtbArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which Transit Gateway Route Table can be used to create an attachment"
+      }
+    ]
+  },
+  {
+    "name": "CreateVpcAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:subnetArns",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which VPC subnets can be added or removed from a VPC attachment"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "networkmanager:vpcArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which VPC can be used to a create/update attachment"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connect-peer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCoreNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCoreNetworkPolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGlobalNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLink",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "link",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePeering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "peering"
+    ],
+    "supportedResources": [
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "site",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterTransitGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:tgwArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which transit gateways can be registered, deregistered, or peered"
+      }
+    ]
+  },
+  {
+    "name": "DescribeGlobalNetworks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateCustomerGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:cgwArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which customer gateways can be associated or disassociated"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateLink",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "link",
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateTransitGatewayConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:tgwConnectPeerArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which transit gateway connect peers can be associated or disassociated"
+      }
+    ]
+  },
+  {
+    "name": "ExecuteCoreNetworkChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnectAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnectPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connect-peer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnectPeerAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCoreNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCoreNetworkChangeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCoreNetworkChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCoreNetworkPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCustomerGatewayAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLinkAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLinks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetworkResourceCounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetworkResourceRelationships",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetworkResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetworkRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetworkTelemetry",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRouteAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSiteToSiteVpnAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSites",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTransitGatewayConnectPeerAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTransitGatewayPeering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "peering"
+    ],
+    "supportedResources": [
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTransitGatewayRegistrations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTransitGatewayRouteTableAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVpcAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAttachments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListConnectPeers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connect-peer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCoreNetworkPolicyVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCoreNetworks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOrganizationServiceAccessStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPeerings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutCoreNetworkPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterTransitGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:tgwArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which transit gateways can be registered, deregistered, or peered"
+      }
+    ]
+  },
+  {
+    "name": "RejectAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreCoreNetworkPolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartOrganizationServiceAccessUpdate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartRouteAnalysis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connect-peer",
+        "ARN": "arn:aws:networkmanager::${Account}:connect-peer/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "peering",
+        "ARN": "arn:aws:networkmanager::${Account}:peering/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:networkmanager::${Account}:connection/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCoreNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "core-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "core-network",
+        "ARN": "arn:aws:networkmanager::${Account}:core-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:networkmanager::${Account}:device/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGlobalNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLink",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "link",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "link",
+        "ARN": "arn:aws:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNetworkResourceMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "site",
+      "global-network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "site",
+        "ARN": "arn:aws:networkmanager::${Account}:site/${GlobalNetworkId}/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "global-network",
+        "ARN": "arn:aws:networkmanager::${Account}:global-network/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVpcAttachment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "networkmanager",
+    "service": "AWS Network Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "attachment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "attachment",
+        "ARN": "arn:aws:networkmanager::${Account}:attachment/${ResourceId}",
+        "RegEx": "^arn:aws:networkmanager:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "networkmanager:subnetArns",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html",
+        "DocPage": "${DocHomeURL}vpc/latest/tgw/nm-security-iam.html",
+        "Description": "Filters access by which VPC subnets can be added or removed from a VPC attachment"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  }
+]

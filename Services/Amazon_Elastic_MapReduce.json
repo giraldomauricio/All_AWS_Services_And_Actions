@@ -1,0 +1,2264 @@
+[
+  {
+    "name": "AddInstanceFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddInstanceGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddJobFlowSteps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticmapreduce:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag keys are provided with the action regardless of tag value"
+      }
+    ]
+  },
+  {
+    "name": "AttachEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelSteps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticmapreduce:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag keys are provided with the action regardless of tag value"
+      }
+    ]
+  },
+  {
+    "name": "CreatePersistentAppUI",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateStudioPresignedUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateStudioSessionMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStudioSessionMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWorkspaceAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJobFlows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeNotebookExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "notebook-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "notebook-execution",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:notebook-execution/${NotebookExecutionId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePersistentAppUI",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReleaseLabel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSecurityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStep",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAutoTerminationPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBlockPublicAccessConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetManagedScalingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOnClusterAppUIPresignedURL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPersistentAppUIPresignedURL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStudioSessionMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "LinkRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBootstrapActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEditors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInstanceFleets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInstanceGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListNotebookExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReleaseLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRepositories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSecurityConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSteps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStudioSessionMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListStudios",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWorkspaceAccessIdentities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyInstanceFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyInstanceGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "OpenEditorInConsole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster",
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutAutoScalingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutAutoTerminationPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutBlockPublicAccessConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutManagedScalingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutWorkspaceAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveAutoScalingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveAutoTerminationPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveManagedScalingPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag keys are provided with the action regardless of tag value"
+      }
+    ]
+  },
+  {
+    "name": "RunJobFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetTerminationProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster",
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartNotebookExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster",
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticmapreduce:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag and value pair is provided with the action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access",
+        "Description": "Filters access by whether the tag keys are provided with the action regardless of tag value"
+      }
+    ]
+  },
+  {
+    "name": "StopEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopNotebookExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "notebook-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "notebook-execution",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:notebook-execution/${NotebookExecutionId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TerminateJobFlows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UnlinkRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateEditor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "editor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "editor",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:editor/${EditorId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateStudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStudioSessionMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "studio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "studio",
+        "ARN": "arn:aws:elasticmapreduce:${Region}:${Account}:studio/${StudioId}",
+        "RegEx": "^arn:aws:elasticmapreduce:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "elasticmapreduce:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticmapreduce:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ViewEventsFromAllClustersInConsole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticmapreduce",
+    "service": "Amazon Elastic MapReduce",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

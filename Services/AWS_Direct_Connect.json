@@ -1,0 +1,2110 @@
+[
+  {
+    "name": "AcceptDirectConnectGatewayAssociationProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AllocateConnectionOnInterconnect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AllocateHostedConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "AllocatePrivateVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "AllocatePublicVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "AllocateTransitVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "AssociateConnectionWithLag",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxlag",
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateHostedConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateMacSecKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ConfirmConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ConfirmCustomerAgreement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ConfirmPrivateVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ConfirmPublicVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ConfirmTransitVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBGPPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDirectConnectGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDirectConnectGatewayAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDirectConnectGatewayAssociationProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateInterconnect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateLag",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePrivateVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePublicVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateTransitVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteBGPPeer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDirectConnectGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDirectConnectGatewayAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDirectConnectGatewayAssociationProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteInterconnect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLag",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxlag"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualInterface",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectionLoa",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectionsOnInterconnect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomerMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDirectConnectGatewayAssociationProposals",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDirectConnectGatewayAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDirectConnectGatewayAttachments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDirectConnectGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeHostedConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInterconnectLoa",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInterconnects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLoa",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLocations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRouterConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeVirtualInterfaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateConnectionFromLag",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxlag",
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateMacSecKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualInterfaceTestHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBgpFailoverTest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopBgpFailoverTest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxcon"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxcon",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxcon/${ConnectionId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDirectConnectGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dx-gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dx-gateway",
+        "ARN": "arn:aws:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDirectConnectGatewayAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateLag",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxlag"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxlag",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxlag/${LagId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualInterfaceAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "directconnect",
+    "service": "AWS Direct Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dxvif"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dxvif",
+        "ARN": "arn:aws:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}",
+        "RegEx": "^arn:aws:directconnect:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

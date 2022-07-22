@@ -1,0 +1,2302 @@
+[
+  {
+    "name": "AssociateEntitiesToExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociatePersonasToEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchGetDocumentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchPutDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ClearQuerySuggestions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFaq",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateQuerySuggestionsBlockList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateThesaurus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFaq",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "faq",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "faq",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/faq/${FaqId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeletePrincipalMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteQuerySuggestionsBlockList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query-suggestions-block-list",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteThesaurus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thesaurus",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFaq",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "faq",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "faq",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/faq/${FaqId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribePrincipalMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeQuerySuggestionsBlockList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query-suggestions-block-list",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeQuerySuggestionsConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeThesaurus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thesaurus",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateEntitiesFromExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociatePersonasFromEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetQuerySuggestions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSourceSyncJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListDataSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListEntityPersonas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExperienceEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "experience",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "experience",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/experience/${ExperienceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExperiences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFaqs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListGroupsOlderThanOrderingId",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIndices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListQuerySuggestionsBlockLists",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "faq",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/faq/${FaqId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListThesauri",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutPrincipalMapping",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Query",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartDataSourceSyncJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopDataSourceSyncJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "SubmitFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "faq",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/faq/${FaqId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "faq",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/faq/${FaqId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-source",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-source",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/data-source/${DataSourceId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateExperience",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateQuerySuggestionsBlockList",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query-suggestions-block-list",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query-suggestions-block-list",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/query-suggestions-block-list/${QuerySuggestionsBlockListId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateQuerySuggestionsConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateThesaurus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "kendra",
+    "service": "Amazon Kendra",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thesaurus",
+      "index"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thesaurus",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}/thesaurus/${ThesaurusId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:kendra:${Region}:${Account}:index/${IndexId}",
+        "RegEx": "^arn:aws:kendra:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  }
+]

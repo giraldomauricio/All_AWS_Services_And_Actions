@@ -1,0 +1,2354 @@
+[
+  {
+    "name": "BuildBotLocale",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot",
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the set of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateBotAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the set of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateBotChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBotLocale",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBotVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCustomVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateIntent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSlot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSlotType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateUploadUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot",
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBotAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBotChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBotLocale",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBotVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteImport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIntent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSlot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSlotType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUtterances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBotAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBotChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBotLocale",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBotRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBotVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomVocabularyMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeImport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeIntent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSlot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSlotType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAggregatedUtterances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBotAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBotChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBotLocales",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBotRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBotVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBuiltInIntents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBuiltInSlotTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListImports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListIntents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRecommendedIntents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSlotTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSlots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RecognizeText",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RecognizeUtterance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchAssociatedTranscripts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBotRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartConversation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartImport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the set of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the set of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the set of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateBot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBotAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot alias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBotLocale",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBotRecommendation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIntent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "bot alias",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot-alias/${BotId}/${BotAliasId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSlot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSlotType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lex",
+    "service": "Amazon Lex V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bot",
+        "ARN": "arn:aws:lex:${Region}:${Account}:bot/${BotId}",
+        "RegEx": "^arn:aws:lex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

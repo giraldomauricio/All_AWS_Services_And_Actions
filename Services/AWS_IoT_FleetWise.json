@@ -1,0 +1,1024 @@
+[
+  {
+    "name": "AssociateVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle",
+      "fleet",
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDecoderManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateModelManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSignalCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest",
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:campaign/${CampaignName}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:campaign/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDecoderManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModelManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSignalCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:campaign/${CampaignName}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:campaign/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDecoderManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetModelManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRegisterAccountStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSignalCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVehicleStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportDecoderManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ImportSignalCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCampaigns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:campaign/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDecoderManifestNetworkInterfaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDecoderManifestSignals",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDecoderManifests",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:decoder-manifest/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFleets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:fleet/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFleetsForVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListModelManifestNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListModelManifests",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:model-manifest/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSignalCatalogNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSignalCatalogs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:signal-catalog/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListVehicles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "noResourceARN": "arn:${Partition}:iotfleetwise:${Region}:${Account}:vehicle/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListVehiclesInFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:campaign/${CampaignName}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:campaign/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDecoderManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "decodermanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:fleet/${FleetId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:fleet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateModelManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "modelmanifest"
+    ],
+    "supportedResources": [
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSignalCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "signalcatalog"
+    ],
+    "supportedResources": [
+      {
+        "Name": "signalcatalog",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:signal-catalog/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVehicle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleetwise",
+    "service": "AWS IoT FleetWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vehicle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vehicle",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:vehicle/${VehicleId}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:vehicle/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "modelmanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:model-manifest/[^/]+$",
+        "isRequired": false
+      },
+      {
+        "Name": "decodermanifest",
+        "ARN": "arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/${Name}",
+        "RegEx": "^arn:aws:iotfleetwise:${Region}:${Account}:decoder-manifest/[^/]+$",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotfleetwise:UpdateToModelManifestArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html",
+        "Description": "Filters access by a list of IoT FleetWise Model Manifest ARNs"
+      },
+      {
+        "Name": "iotfleetwise:UpdateToDecoderManifestArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html",
+        "Description": "Filters access by a list of IoT FleetWise Decoder Manifest ARNs"
+      }
+    ]
+  }
+]

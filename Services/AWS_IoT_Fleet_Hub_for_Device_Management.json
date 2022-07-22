@@ -1,0 +1,232 @@
+[
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotfleethub",
+    "service": "AWS IoT Fleet Hub for Device Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:iotfleethub:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:iotfleethub:.+-\\d+:\\d{12}:application/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

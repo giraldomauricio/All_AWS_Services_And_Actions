@@ -1,0 +1,718 @@
+[
+  {
+    "name": "AddTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBatchPrediction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batchprediction",
+      "mlmodel",
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDataSourceFromRDS",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDataSourceFromRedshift",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDataSourceFromS3",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "evaluation",
+      "mlmodel",
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateMLModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel",
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRealtimeEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBatchPrediction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batchprediction"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "evaluation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMLModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRealtimeEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBatchPredictions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvaluations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMLModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBatchPrediction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batchprediction"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMLModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Predict",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBatchPrediction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batchprediction"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batchprediction",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:batchprediction/${BatchPredictionId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datasource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datasource",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:datasource/${DatasourceId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEvaluation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "evaluation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "evaluation",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:evaluation/${EvaluationId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMLModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "machinelearning",
+    "service": "Amazon Machine Learning",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mlmodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mlmodel",
+        "ARN": "arn:aws:machinelearning:${Region}:${Account}:mlmodel/${MlModelId}",
+        "RegEx": "^arn:aws:machinelearning:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

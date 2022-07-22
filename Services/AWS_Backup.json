@@ -1,0 +1,2007 @@
+[
+  {
+    "name": "CopyFromBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CopyIntoBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateBackupPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateBackupSelection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateFramework",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "framework"
+    ],
+    "supportedResources": [
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateReportPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reportPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "backup:FrameworkArns",
+        "Type": "ArrayOfARN",
+        "DocPageRel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys",
+        "Description": "Filters access by the Framework ARNs"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "DeleteBackupPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackupSelection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackupVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackupVaultLockConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackupVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFramework",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "framework"
+    ],
+    "supportedResources": [
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRecoveryPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReportPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reportPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBackupJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCopyJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeFramework",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "framework"
+    ],
+    "supportedResources": [
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGlobalSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeProtectedResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRecoveryPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRegionSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReportPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reportPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRestoreJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateRecoveryPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExportBackupPlanTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBackupPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBackupPlanFromJSON",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBackupPlanFromTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetBackupSelection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBackupVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBackupVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecoveryPointRestoreMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSupportedResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBackupJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBackupPlanTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBackupPlanVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBackupPlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBackupSelections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBackupVaults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCopyJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFrameworks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProtectedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecoveryPointsByBackupVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRecoveryPointsByResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReportPlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRestoreJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutBackupVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutBackupVaultLockConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutBackupVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBackupJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupVault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "StartCopyJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartReportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reportPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartRestoreJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopBackupJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backupVault",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-vault:${BackupVaultName}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateBackupPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backupPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backupPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:backup-plan:${BackupPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFramework",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "framework"
+    ],
+    "supportedResources": [
+      {
+        "Name": "framework",
+        "ARN": "arn:aws:backup:${Region}:${Account}:framework:${FrameworkName}-${FrameworkId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGlobalSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateRecoveryPointLifecycle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:${Vendor}:${Region}:*:${ResourceType}:${RecoveryPointId}",
+        "RegEx": "^arn:aws:${Vendor}:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRegionSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateReportPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup",
+    "service": "AWS Backup",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reportPlan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reportPlan",
+        "ARN": "arn:aws:backup:${Region}:${Account}:report-plan:${ReportPlanName}-${ReportPlanId}",
+        "RegEx": "^arn:aws:backup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "backup:FrameworkArns",
+        "Type": "ArrayOfARN",
+        "DocPageRel": "https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys",
+        "Description": "Filters access by the Framework ARNs"
+      }
+    ]
+  }
+]

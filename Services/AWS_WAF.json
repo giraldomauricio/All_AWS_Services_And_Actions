@@ -1,0 +1,2126 @@
+[
+  {
+    "name": "CreateByteMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bytematchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bytematchset",
+        "ARN": "arn:aws:waf::${Account}:bytematchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateGeoMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "geomatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "geomatchset",
+        "ARN": "arn:aws:waf::${Account}:geomatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:waf::${Account}:ipset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRateBasedRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ratebasedrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRegexMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexmatchset",
+        "ARN": "arn:aws:waf::${Account}:regexmatch/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:waf::${Account}:regexpatternset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSizeConstraintSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sizeconstraintset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sizeconstraintset",
+        "ARN": "arn:aws:waf::${Account}:sizeconstraintset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSqlInjectionMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sqlinjectionmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sqlinjectionmatchset",
+        "ARN": "arn:aws:waf::${Account}:sqlinjectionset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWebACLMigrationStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateXssMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "xssmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "xssmatchset",
+        "ARN": "arn:aws:waf::${Account}:xssmatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteByteMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bytematchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bytematchset",
+        "ARN": "arn:aws:waf::${Account}:bytematchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGeoMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "geomatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "geomatchset",
+        "ARN": "arn:aws:waf::${Account}:geomatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:waf::${Account}:ipset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRateBasedRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ratebasedrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRegexMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexmatchset",
+        "ARN": "arn:aws:waf::${Account}:regexmatch/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:waf::${Account}:regexpatternset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSizeConstraintSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sizeconstraintset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sizeconstraintset",
+        "ARN": "arn:aws:waf::${Account}:sizeconstraintset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSqlInjectionMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sqlinjectionmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sqlinjectionmatchset",
+        "ARN": "arn:aws:waf::${Account}:sqlinjectionset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteXssMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "xssmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "xssmatchset",
+        "ARN": "arn:aws:waf::${Account}:xssmatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetByteMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bytematchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bytematchset",
+        "ARN": "arn:aws:waf::${Account}:bytematchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetChangeToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetChangeTokenStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetGeoMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "geomatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "geomatchset",
+        "ARN": "arn:aws:waf::${Account}:geomatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:waf::${Account}:ipset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRateBasedRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ratebasedrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRateBasedRuleManagedKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ratebasedrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRegexMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexmatchset",
+        "ARN": "arn:aws:waf::${Account}:regexmatch/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:waf::${Account}:regexpatternset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSampledRequests",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSizeConstraintSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sizeconstraintset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sizeconstraintset",
+        "ARN": "arn:aws:waf::${Account}:sizeconstraintset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSqlInjectionMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sqlinjectionmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sqlinjectionmatchset",
+        "ARN": "arn:aws:waf::${Account}:sqlinjectionset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetXssMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "xssmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "xssmatchset",
+        "ARN": "arn:aws:waf::${Account}:xssmatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListActivatedRulesInRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListByteMatchSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGeoMatchSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListIPSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLoggingConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRateBasedRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRegexMatchSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRegexPatternSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSizeConstraintSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSqlInjectionMatchSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSubscribedRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListWebACLs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListXssMatchSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutPermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateByteMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bytematchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bytematchset",
+        "ARN": "arn:aws:waf::${Account}:bytematchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGeoMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "geomatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "geomatchset",
+        "ARN": "arn:aws:waf::${Account}:geomatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:waf::${Account}:ipset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRateBasedRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ratebasedrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ratebasedrule",
+        "ARN": "arn:aws:waf::${Account}:ratebasedrule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRegexMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexmatchset",
+        "ARN": "arn:aws:waf::${Account}:regexmatch/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:waf::${Account}:regexpatternset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:waf::${Account}:rule/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:waf::${Account}:rulegroup/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSizeConstraintSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sizeconstraintset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sizeconstraintset",
+        "ARN": "arn:aws:waf::${Account}:sizeconstraintset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSqlInjectionMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sqlinjectionmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sqlinjectionmatchset",
+        "ARN": "arn:aws:waf::${Account}:sqlinjectionset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:waf::${Account}:webacl/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateXssMatchSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "waf",
+    "service": "AWS WAF",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "xssmatchset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "xssmatchset",
+        "ARN": "arn:aws:waf::${Account}:xssmatchset/${Id}",
+        "RegEx": "^arn:aws:waf:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

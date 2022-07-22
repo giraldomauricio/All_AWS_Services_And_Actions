@@ -1,0 +1,884 @@
+[
+  {
+    "name": "CreateGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGatewayRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMeshes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualRouters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StreamAggregatedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh-preview",
+    "service": "AWS App Mesh Preview",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh-preview:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

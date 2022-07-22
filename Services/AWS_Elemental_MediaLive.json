@@ -1,0 +1,1818 @@
+[
+  {
+    "name": "AcceptInputDeviceTransfer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDelete",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchStart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchStop",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchUpdateSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelInputDeviceTransfer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ClaimDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input",
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateInput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input",
+      "input-security-group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateInputSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-security-group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMultiplexProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreatePartnerInput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInputSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-security-group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMultiplexProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReservation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reservation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DescribeChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInputDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInputDeviceThumbnail",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInputSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-security-group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMultiplexProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOffering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "offering"
+    ],
+    "supportedResources": [
+      {
+        "Name": "offering",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:offering:${OfferingId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:offering:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReservation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reservation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInputDeviceTransfers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInputDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInputSecurityGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMultiplexPrograms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMultiplexes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReservations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PurchaseOffering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reservation",
+      "offering"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "offering",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:offering:${OfferingId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:offering:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "RebootInputDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectInputDeviceTransfer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartInputDeviceMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TransferInputDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateChannelClass",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:channel:${ChannelId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:channel:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:input:${InputId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:input:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInputDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-device",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputDevice:${DeviceId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputDevice:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInputSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "input-security-group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "input-security-group",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:inputSecurityGroup:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/medialive/latest/ugtagging.html",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateMultiplex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMultiplexProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "multiplex"
+    ],
+    "supportedResources": [
+      {
+        "Name": "multiplex",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:multiplex:${MultiplexId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:multiplex:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateReservation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "medialive",
+    "service": "AWS Elemental MediaLive",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reservation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reservation",
+        "ARN": "arn:aws:medialive:${Region}:${Account}:reservation:${ReservationId}",
+        "RegEx": "^arn:aws:medialive:${Region}:${Account}:reservation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

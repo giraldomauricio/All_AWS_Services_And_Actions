@@ -1,0 +1,3190 @@
+[
+  {
+    "name": "BatchDetectDominantLanguage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDetectEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDetectKeyPhrases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDetectSentiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDetectSyntax",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ClassifyDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier-endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ContainsPiiEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDocumentClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:ModelKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the model KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier-endpoint",
+      "entity-recognizer",
+      "entity-recognizer-endpoint",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEntityRecognizer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:ModelKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the model KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDocumentClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier-endpoint",
+      "entity-recognizer-endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEntityRecognizer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDocumentClassificationJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classification-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classification-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classification-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDocumentClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDominantLanguageDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dominant-language-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier-endpoint",
+      "entity-recognizer-endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEntityRecognizer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventsDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "events-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeKeyPhrasesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "key-phrases-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribePiiEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pii-entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeTargetedSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "targeted-sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "targeted-sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:targeted-sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeTopicsDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "topics-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "topics-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:topics-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DetectDominantLanguage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetectKeyPhrases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectPiiEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectSentiment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectSyntax",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ImportModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:ModelKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the model KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListDocumentClassificationJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDocumentClassifierSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDocumentClassifiers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDominantLanguageDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEntitiesDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEntityRecognizerSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEntityRecognizers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEventsDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListKeyPhrasesDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPiiEntitiesDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSentimentDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classification-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classification-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "targeted-sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:targeted-sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "topics-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:topics-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTargetedSentimentDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTopicsDetectionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartDocumentClassificationJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classification-job",
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classification-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classification-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartDominantLanguageDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dominant-language-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartEventsDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "events-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartKeyPhrasesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "key-phrases-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartPiiEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pii-entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartTargetedSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "targeted-sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "targeted-sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:targeted-sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartTopicsDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "topics-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "topics-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:topics-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "comprehend:OutputKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the output KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "comprehend:VpcSubnets",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC subnets associated with the resource in the request"
+      },
+      {
+        "Name": "comprehend:VolumeKmsKey",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the volume KMS key associated with the resource in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "comprehend:VpcSecurityGroupIds",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazoncomprehend.html#amazoncomprehend-policy-keys",
+        "Description": "Filters access by the list of all VPC security group ids associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopDominantLanguageDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dominant-language-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopEventsDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "events-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopKeyPhrasesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "key-phrases-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopPiiEntitiesDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "pii-entities-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopTargetedSentimentDetectionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "targeted-sentiment-detection-job"
+    ],
+    "supportedResources": [
+      {
+        "Name": "targeted-sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:targeted-sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopTrainingDocumentClassifier",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopTrainingEntityRecognizer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-recognizer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classification-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classification-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "topics-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:topics-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag values present in a resource creation request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "pii-entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:pii-entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classification-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classification-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "events-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:events-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer/${EntityRecognizerName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier/${DocumentClassifierName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sentiment-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:sentiment-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "topics-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:topics-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dominant-language-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:dominant-language-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entities-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entities-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "key-phrases-detection-job",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:key-phrases-detection-job/${JobId}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "comprehend",
+    "service": "Amazon Comprehend",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document-classifier-endpoint",
+      "entity-recognizer-endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document-classifier-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:document-classifier-endpoint/${DocumentClassifierEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "entity-recognizer-endpoint",
+        "ARN": "arn:aws:comprehend:${Region}:${Account}:entity-recognizer-endpoint/${EntityRecognizerEndpointName}",
+        "RegEx": "^arn:aws:comprehend:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  }
+]

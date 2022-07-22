@@ -1,0 +1,1012 @@
+[
+  {
+    "name": "ActivateAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BackTestAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAlert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alert",
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMetricSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector",
+      "MetricSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeactivateAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAlert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alert"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAlert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alert"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAnomalyDetectionExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMetricSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MetricSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetectMetricSetConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAnomalyGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataQualityMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSampleData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAlerts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAnomalyDetectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAnomalyGroupRelatedMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAnomalyGroupSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAnomalyGroupTimeSeries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMetricSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAlert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Alert"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Alert",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:Alert:${AlertName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:Alert:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAnomalyDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AnomalyDetector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AnomalyDetector",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:${AnomalyDetectorName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:AnomalyDetector:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMetricSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "lookoutmetrics",
+    "service": "Amazon Lookout for Metrics",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MetricSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MetricSet",
+        "ARN": "arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}",
+        "RegEx": "^arn:aws:lookoutmetrics:${Region}:${Account}:MetricSet/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

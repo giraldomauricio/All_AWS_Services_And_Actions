@@ -1,0 +1,2878 @@
+[
+  {
+    "name": "AcceptPortfolioShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application",
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateBudgetWithResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AssociatePrincipalWithPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateProductWithPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AssociateResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateServiceActionWithProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateTagOptionWithResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchAssociateServiceActionWithProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDisassociateServiceActionFromProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CopyProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConstraint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreatePortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePortfolioShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateProvisionedProductPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateTagOption",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConstraint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeletePortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePortfolioShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProvisionedProductPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteTagOption",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeConstraint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCopyProductStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePortfolioShareStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePortfolioShares",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProductAsAdmin",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProductView",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeProvisionedProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeProvisionedProductPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProvisioningParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRecord",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeServiceActionExecutionParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTagOption",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisableAWSOrganizationsAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application",
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateBudgetFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociatePrincipalFromPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateProductFromPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateServiceActionFromProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateTagOptionFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableAWSOrganizationsAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExecuteProvisionedProductPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExecuteProvisionedProductServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAWSOrganizationsAccessStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAssociatedResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProvisionedProductOutputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ImportAsProvisionedProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAcceptedPortfolioShares",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAssociatedAttributeGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssociatedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAttributeGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAttributeGroupsForApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBudgetsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConstraintsForPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLaunchPaths",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListOrganizationPortfolioAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPortfolioAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPortfolios",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPortfoliosForProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPrincipalsForPortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProvisionedProductPlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProvisioningArtifacts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProvisioningArtifactsForServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecordHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourcesForTagOption",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServiceActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServiceActionsForProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "servicecatalog:roleLevel",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/servicecatalog/latest/adminguide/permissions-examples.html",
+        "Description": "Filters access by user to see and perform actions on resources created either by them or by anyone federating into the same role as them"
+      },
+      {
+        "Name": "servicecatalog:userLevel",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/servicecatalog/latest/adminguide/permissions-examples.html",
+        "Description": "Filters access by user to see and perform actions on only resources that they created"
+      },
+      {
+        "Name": "servicecatalog:accountLevel",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/servicecatalog/latest/adminguide/permissions-examples.html",
+        "Description": "Filters access by user to see and perform actions on resources created by anyone in the account"
+      }
+    ]
+  },
+  {
+    "name": "ListStackInstancesForProvisionedProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ProvisionProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectPortfolioShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ScanProvisionedProducts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchProducts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchProductsAsAdmin",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchProvisionedProducts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SyncResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "TerminateProvisionedProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/applications/${ApplicationId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAttributeGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "AttributeGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "AttributeGroup",
+        "ARN": "arn:aws:servicecatalog:${Region}:${Account}:/attribute-groups/${AttributeGroupId}",
+        "RegEx": "^arn:aws:servicecatalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConstraint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdatePortfolio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdatePortfolioShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Portfolio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Portfolio",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:portfolio/${PortfolioId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateProvisionedProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateProvisionedProductProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateProvisioningArtifact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Product",
+        "ARN": "arn:aws:catalog:${Region}:${Account}:product/${ProductId}",
+        "RegEx": "^arn:aws:catalog:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServiceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateTagOption",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "servicecatalog",
+    "service": "AWS Service Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

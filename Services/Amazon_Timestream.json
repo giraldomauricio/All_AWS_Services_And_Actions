@@ -1,0 +1,830 @@
+[
+  {
+    "name": "CancelQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateScheduledQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteScheduledQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeScheduledQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExecuteScheduledQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "noResourceARN": "arn:${Partition}:timestream:${Region}:${Account}:database/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMeasures",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListScheduledQueries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "table",
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PrepareQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Select",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SelectValues",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "table",
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database",
+      "table",
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/timestream/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDatabase",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "database"
+    ],
+    "supportedResources": [
+      {
+        "Name": "database",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateScheduledQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "scheduled-query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "scheduled-query",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "WriteRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "timestream",
+    "service": "Amazon Timestream",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+        "RegEx": "^arn:aws:timestream:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

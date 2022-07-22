@@ -1,0 +1,197 @@
+[
+  {
+    "name": "DeleteAlternateContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:account::${Account}:account",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "accountInOrganization",
+        "ARN": "arn:aws:account::${ManagementAccountId}:account/o-${OrganizationId}/${MemberAccountId}",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "account:AlternateContactTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by alternate contact types"
+      },
+      {
+        "Name": "account:AccountResourceOrgPaths",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the resource path for an account in an organization"
+      },
+      {
+        "Name": "account:AccountResourceOrgTags/${TagKey}",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by resource tags for an account in an organization"
+      }
+    ]
+  },
+  {
+    "name": "DisableRegion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableRegion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAlternateContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:account::${Account}:account",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "accountInOrganization",
+        "ARN": "arn:aws:account::${ManagementAccountId}:account/o-${OrganizationId}/${MemberAccountId}",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "account:AlternateContactTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by alternate contact types"
+      },
+      {
+        "Name": "account:AccountResourceOrgPaths",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the resource path for an account in an organization"
+      },
+      {
+        "Name": "account:AccountResourceOrgTags/${TagKey}",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by resource tags for an account in an organization"
+      }
+    ]
+  },
+  {
+    "name": "ListRegions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAlternateContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "account",
+    "service": "AWS Account Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "account",
+        "ARN": "arn:aws:account::${Account}:account",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "accountInOrganization",
+        "ARN": "arn:aws:account::${ManagementAccountId}:account/o-${OrganizationId}/${MemberAccountId}",
+        "RegEx": "^arn:aws:account:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "account:AlternateContactTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by alternate contact types"
+      },
+      {
+        "Name": "account:AccountResourceOrgPaths",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the resource path for an account in an organization"
+      },
+      {
+        "Name": "account:AccountResourceOrgTags/${TagKey}",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/accounts/latest/reference/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by resource tags for an account in an organization"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1452 @@
+[
+  {
+    "name": "AcceptInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ArchiveFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "filter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePublishingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSampleFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateThreatIntelSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeclineInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "filter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeletePublishingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "publishingDestination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "publishingDestination",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteThreatIntelSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "threatintelset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePublishingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "publishingDestination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "publishingDestination",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateFromMasterAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "filter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFindingsStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInvitationsCount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMasterAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMemberDetectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetThreatIntelSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "threatintelset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUsageStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "InviteMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDetectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFilters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListIPSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOrganizationAdminAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPublishingDestinations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListThreatIntelSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartMonitoringMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopMonitoringMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UnarchiveFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "filter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "filter",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/filter/${FilterName}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFindingsFeedback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/ipset/${IPSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMemberDetectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdatePublishingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "publishingDestination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "publishingDestination",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/publishingDestination/${PublishingDestinationId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateThreatIntelSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "guardduty",
+    "service": "Amazon GuardDuty",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "threatintelset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "threatintelset",
+        "ARN": "arn:aws:guardduty:${Region}:${Account}:detector/${DetectorId}/threatintelset/${ThreatIntelSetId}",
+        "RegEx": "^arn:aws:guardduty:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

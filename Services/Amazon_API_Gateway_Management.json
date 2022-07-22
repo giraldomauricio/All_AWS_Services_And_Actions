@@ -1,0 +1,1798 @@
+[
+  {
+    "name": "AddCertificateToDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "DomainName",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/MtlsTrustStoreUri",
+          "apigateway:Resource/MtlsTrustStoreVersion",
+          "apigateway:Resource/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:resource/mtlstruststoreuri",
+          "apigateway:request/securitypolicy",
+          "apigateway:resource/mtlstruststoreversion",
+          "apigateway:resource/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DomainNames",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:request/securitypolicy"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DELETE",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RequestValidator",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/requestvalidators/${RequestValidatorId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/requestvalidators/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlanKey",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}/keys/${Id}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?/keys/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Integration",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlan",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Model",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/models/${ModelName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/models/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Deployment",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/deployments/${DeploymentId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/deployments/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "VpcLink",
+        "ARN": "arn:aws:apigateway:${Region}::/vpclinks/${VpcLinkId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/vpclinks/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DomainName",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/MtlsTrustStoreUri",
+          "apigateway:Resource/MtlsTrustStoreVersion",
+          "apigateway:Resource/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:resource/mtlstruststoreuri",
+          "apigateway:request/securitypolicy",
+          "apigateway:resource/mtlstruststoreversion",
+          "apigateway:resource/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RestApi",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/ApiName",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Resource/AuthorizerUri",
+          "apigateway:Resource/DisableExecuteApiEndpoint",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:resource/authorizertype",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/apiname",
+          "apigateway:request/disableexecuteapiendpoint",
+          "apigateway:resource/apiname",
+          "apigateway:resource/disableexecuteapiendpoint",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Authorizer",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/authorizers/${AuthorizerId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/authorizers/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Resource/AuthorizerUri",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:resource/authorizertype",
+          "apigateway:request/authorizeruri"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "BasePathMapping",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}/basepathmappings/${BasePath}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?/basepathmappings/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "IntegrationResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Resource",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stage",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "apigateway:Resource/AccessLoggingDestination",
+          "apigateway:Resource/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:resource/accessloggingdestination",
+          "apigateway:resource/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MethodResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses/${ResponseType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ApiKey",
+        "ARN": "arn:aws:apigateway:${Region}::/apikeys/${ApiKeyId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/apikeys/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ClientCertificate",
+        "ARN": "arn:aws:apigateway:${Region}::/clientcertificates/${ClientCertificateId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/clientcertificates/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationVersion",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/versions/${DocumentationVersionId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/versions/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Template",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/models/${ModelName}/template",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/models/[^/]+?/template$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationPart",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts/${DocumentationPartId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Method",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "GET",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RequestValidator",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/requestvalidators/${RequestValidatorId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/requestvalidators/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Sdk",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages/${StageName}/sdks/${SdkType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages/[^/]+?/sdks/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "VpcLinks",
+        "ARN": "arn:aws:apigateway:${Region}::/vpclinks",
+        "RegEx": "^arn:aws:apigateway:${Region}::/vpclinks$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Deployment",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/deployments/${DeploymentId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/deployments/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "VpcLink",
+        "ARN": "arn:aws:apigateway:${Region}::/vpclinks/${VpcLinkId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/vpclinks/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Authorizer",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/authorizers/${AuthorizerId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/authorizers/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Resource/AuthorizerUri",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:resource/authorizertype",
+          "apigateway:request/authorizeruri"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Resource",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RestApis",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:request/disableexecuteapiendpoint",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:request/endpointtype",
+          "apigateway:request/routeauthorizationtype",
+          "apigateway:request/apiname"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MethodResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "ApiKey",
+        "ARN": "arn:aws:apigateway:${Region}::/apikeys/${ApiKeyId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/apikeys/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ClientCertificate",
+        "ARN": "arn:aws:apigateway:${Region}::/clientcertificates/${ClientCertificateId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/clientcertificates/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationVersion",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/versions/${DocumentationVersionId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/versions/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationPart",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts/${DocumentationPartId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Deployments",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/deployments",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/deployments$",
+        "ContextKeys": [
+          "apigateway:Request/StageName"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/stagename"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stages",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlanKey",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}/keys/${Id}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?/keys/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Integration",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Authorizers",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/authorizers",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/authorizers$",
+        "ContextKeys": [
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/authorizeruri"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RequestValidators",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/requestvalidators",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/requestvalidators$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationVersions",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/versions",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/versions$",
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlan",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Resources",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlanKeys",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}/keys",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?/keys$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationParts",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Model",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/models/${ModelName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/models/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ApiKeys",
+        "ARN": "arn:aws:apigateway:${Region}::/apikeys",
+        "RegEx": "^arn:aws:apigateway:${Region}::/apikeys$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlans",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Account",
+        "ARN": "arn:aws:apigateway:${Region}::/account",
+        "RegEx": "^arn:aws:apigateway:${Region}::/account$",
+        "isRequired": false
+      },
+      {
+        "Name": "DomainName",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/MtlsTrustStoreUri",
+          "apigateway:Resource/MtlsTrustStoreVersion",
+          "apigateway:Resource/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:resource/mtlstruststoreuri",
+          "apigateway:request/securitypolicy",
+          "apigateway:resource/mtlstruststoreversion",
+          "apigateway:resource/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RestApi",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/ApiName",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Resource/AuthorizerUri",
+          "apigateway:Resource/DisableExecuteApiEndpoint",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:resource/authorizertype",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/apiname",
+          "apigateway:request/disableexecuteapiendpoint",
+          "apigateway:resource/apiname",
+          "apigateway:resource/disableexecuteapiendpoint",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "BasePathMapping",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}/basepathmappings/${BasePath}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?/basepathmappings/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "IntegrationResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Stage",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "apigateway:Resource/AccessLoggingDestination",
+          "apigateway:Resource/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:resource/accessloggingdestination",
+          "apigateway:resource/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponses",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses/${ResponseType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ClientCertificates",
+        "ARN": "arn:aws:apigateway:${Region}::/clientcertificates",
+        "RegEx": "^arn:aws:apigateway:${Region}::/clientcertificates$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DomainNames",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:request/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Method",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Models",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/models",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/models$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "BasePathMappings",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}/basepathmappings",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?/basepathmappings$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PATCH",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RequestValidator",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/requestvalidators/${RequestValidatorId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/requestvalidators/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlanKey",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}/keys/${Id}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?/keys/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Integration",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlan",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Model",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/models/${ModelName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/models/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Deployment",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/deployments/${DeploymentId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/deployments/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "VpcLink",
+        "ARN": "arn:aws:apigateway:${Region}::/vpclinks/${VpcLinkId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/vpclinks/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Account",
+        "ARN": "arn:aws:apigateway:${Region}::/account",
+        "RegEx": "^arn:aws:apigateway:${Region}::/account$",
+        "isRequired": false
+      },
+      {
+        "Name": "DomainName",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/MtlsTrustStoreUri",
+          "apigateway:Resource/MtlsTrustStoreVersion",
+          "apigateway:Resource/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:resource/mtlstruststoreuri",
+          "apigateway:request/securitypolicy",
+          "apigateway:resource/mtlstruststoreversion",
+          "apigateway:resource/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RestApi",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/ApiName",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Resource/AuthorizerUri",
+          "apigateway:Resource/DisableExecuteApiEndpoint",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:resource/authorizertype",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/apiname",
+          "apigateway:request/disableexecuteapiendpoint",
+          "apigateway:resource/apiname",
+          "apigateway:resource/disableexecuteapiendpoint",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Authorizer",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/authorizers/${AuthorizerId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/authorizers/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Resource/AuthorizerUri",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:resource/authorizertype",
+          "apigateway:request/authorizeruri"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "BasePathMapping",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}/basepathmappings/${BasePath}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?/basepathmappings/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "IntegrationResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Resource",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stage",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "apigateway:Resource/AccessLoggingDestination",
+          "apigateway:Resource/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:resource/accessloggingdestination",
+          "apigateway:resource/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MethodResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses/${ResponseType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ApiKey",
+        "ARN": "arn:aws:apigateway:${Region}::/apikeys/${ApiKeyId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/apikeys/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ClientCertificate",
+        "ARN": "arn:aws:apigateway:${Region}::/clientcertificates/${ClientCertificateId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/clientcertificates/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationVersion",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/versions/${DocumentationVersionId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/versions/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "Template",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/models/${ModelName}/template",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/models/[^/]+?/template$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationPart",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts/${DocumentationPartId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Method",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "POST",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Deployments",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/deployments",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/deployments$",
+        "ContextKeys": [
+          "apigateway:Request/StageName"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/stagename"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stages",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Authorizers",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/authorizers",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/authorizers$",
+        "ContextKeys": [
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/authorizeruri"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RequestValidators",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/requestvalidators",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/requestvalidators$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationVersions",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/versions",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/versions$",
+        "isRequired": false
+      },
+      {
+        "Name": "Resources",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlanKeys",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans/${UsagePlanId}/keys",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans/[^/]+?/keys$",
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationParts",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "VpcLinks",
+        "ARN": "arn:aws:apigateway:${Region}::/vpclinks",
+        "RegEx": "^arn:aws:apigateway:${Region}::/vpclinks$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ApiKeys",
+        "ARN": "arn:aws:apigateway:${Region}::/apikeys",
+        "RegEx": "^arn:aws:apigateway:${Region}::/apikeys$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "UsagePlans",
+        "ARN": "arn:aws:apigateway:${Region}::/usageplans",
+        "RegEx": "^arn:aws:apigateway:${Region}::/usageplans$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "IntegrationResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "RestApis",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:request/disableexecuteapiendpoint",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:request/endpointtype",
+          "apigateway:request/routeauthorizationtype",
+          "apigateway:request/apiname"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MethodResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponses",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ClientCertificates",
+        "ARN": "arn:aws:apigateway:${Region}::/clientcertificates",
+        "RegEx": "^arn:aws:apigateway:${Region}::/clientcertificates$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DomainNames",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:request/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Models",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/models",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/models$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "BasePathMappings",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}/basepathmappings",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?/basepathmappings$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "PUT",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RestApi",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/ApiName",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Resource/AuthorizerUri",
+          "apigateway:Resource/DisableExecuteApiEndpoint",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:resource/authorizertype",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/apiname",
+          "apigateway:request/disableexecuteapiendpoint",
+          "apigateway:resource/apiname",
+          "apigateway:resource/disableexecuteapiendpoint",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "IntegrationResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/integration/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/integration/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "MethodResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/resources/${ResourceId}/methods/${HttpMethodType}/responses/${StatusCode}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/resources/[^/]+?/methods/[^/]+?/responses/[^/]+?$",
+        "isRequired": false
+      },
+      {
+        "Name": "GatewayResponse",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/gatewayresponses/${ResponseType}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/gatewayresponses/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DocumentationPart",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/documentation/parts/${DocumentationPartId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/documentation/parts/[^/]+?$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-tagging.html",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "RemoveCertificateFromDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "DomainName",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames/${DomainName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/MtlsTrustStoreUri",
+          "apigateway:Resource/MtlsTrustStoreVersion",
+          "apigateway:Resource/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:resource/mtlstruststoreuri",
+          "apigateway:request/securitypolicy",
+          "apigateway:resource/mtlstruststoreversion",
+          "apigateway:resource/securitypolicy"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DomainNames",
+        "ARN": "arn:aws:apigateway:${Region}::/domainnames",
+        "RegEx": "^arn:aws:apigateway:${Region}::/domainnames$",
+        "ContextKeys": [
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/MtlsTrustStoreUri",
+          "apigateway:Request/MtlsTrustStoreVersion",
+          "apigateway:Request/SecurityPolicy",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/mtlstruststoreversion",
+          "apigateway:request/endpointtype",
+          "apigateway:request/mtlstruststoreuri",
+          "apigateway:request/securitypolicy"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Stages",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stage",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?/stages/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/AccessLoggingDestination",
+          "apigateway:Request/AccessLoggingFormat",
+          "apigateway:Resource/AccessLoggingDestination",
+          "apigateway:Resource/AccessLoggingFormat",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/accessloggingformat",
+          "apigateway:resource/accessloggingdestination",
+          "apigateway:resource/accessloggingformat",
+          "apigateway:request/accessloggingdestination"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRestApiPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "apigateway",
+    "service": "Amazon API Gateway Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "RestApi",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${RestApiId}",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis/[^/]+?$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "apigateway:Resource/ApiKeyRequired",
+          "apigateway:Resource/ApiName",
+          "apigateway:Resource/AuthorizerType",
+          "apigateway:Resource/AuthorizerUri",
+          "apigateway:Resource/DisableExecuteApiEndpoint",
+          "apigateway:Resource/EndpointType",
+          "apigateway:Resource/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:resource/authorizeruri",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:resource/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:resource/authorizertype",
+          "apigateway:resource/endpointtype",
+          "apigateway:request/endpointtype",
+          "apigateway:request/apiname",
+          "apigateway:request/disableexecuteapiendpoint",
+          "apigateway:resource/apiname",
+          "apigateway:resource/disableexecuteapiendpoint",
+          "apigateway:resource/routeauthorizationtype",
+          "apigateway:request/routeauthorizationtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "RestApis",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis",
+        "RegEx": "^arn:aws:apigateway:${Region}::/restapis$",
+        "ContextKeys": [
+          "apigateway:Request/ApiKeyRequired",
+          "apigateway:Request/ApiName",
+          "apigateway:Request/AuthorizerType",
+          "apigateway:Request/AuthorizerUri",
+          "apigateway:Request/DisableExecuteApiEndpoint",
+          "apigateway:Request/EndpointType",
+          "apigateway:Request/RouteAuthorizationType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "apigateway:request/authorizertype",
+          "apigateway:request/disableexecuteapiendpoint",
+          "aws:resourcetag/${tagkey}",
+          "apigateway:request/apikeyrequired",
+          "apigateway:request/authorizeruri",
+          "apigateway:request/endpointtype",
+          "apigateway:request/routeauthorizationtype",
+          "apigateway:request/apiname"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

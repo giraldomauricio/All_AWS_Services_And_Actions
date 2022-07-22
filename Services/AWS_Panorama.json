@@ -1,0 +1,1674 @@
+[
+  {
+    "name": "CreateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAppDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAppVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "appVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "appVersion",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}:${AppVersion}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDeploymentConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateInputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateJobForDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateNodeFromTemplateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePackage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePackageImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateStreams",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAppVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePackage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:package/${PackageId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterPackageVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAppDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAppVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applicationInstance",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:applicationInstance/${ApplicationInstanceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplicationInstanceDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applicationInstance",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:applicationInstance/${ApplicationInstanceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDeviceJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeNodeFromTemplateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePackage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:package/${PackageId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePackageImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePackageVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSoftware",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDeploymentConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStreams",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWebSocketURL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAppDeploymentOperations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAppVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplicationInstanceDependencies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListApplicationInstanceNodeInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListApplicationInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListApps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDataSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDeploymentConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDevicesJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListNodeFromTemplateJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPackageImportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPackages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ProvisionDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RegisterPackageVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveApplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applicationInstance",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:applicationInstance/${ApplicationInstanceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:device/${DeviceId}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAppConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:app/${AppName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDataSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataSource",
+        "ARN": "arn:aws:panorama:${Region}:${Account}:dataSource/${DeviceId}/${DataSourceName}",
+        "RegEx": "^arn:aws:panorama:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDeviceMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "panorama",
+    "service": "AWS Panorama",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

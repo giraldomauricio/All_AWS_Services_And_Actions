@@ -1,0 +1,866 @@
+[
+  {
+    "name": "CreateMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "member"
+    ],
+    "supportedResources": [
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "node"
+    ],
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "member"
+    ],
+    "supportedResources": [
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNetwork",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "node"
+    ],
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "proposal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListNetworks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProposalVotes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "proposal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProposals",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "network"
+    ],
+    "supportedResources": [
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "invitation",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:invitations/${InvitationId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "invitation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "invitation",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:invitations/${InvitationId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "invitation",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:invitations/${InvitationId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "invitation",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:invitations/${InvitationId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "network",
+        "ARN": "arn:aws:managedblockchain:${Region}::networks/${NetworkId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "member"
+    ],
+    "supportedResources": [
+      {
+        "Name": "member",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:members/${MemberId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "node"
+    ],
+    "supportedResources": [
+      {
+        "Name": "node",
+        "ARN": "arn:aws:managedblockchain:${Region}:${Account}:nodes/${NodeId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "VoteOnProposal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "managedblockchain",
+    "service": "Amazon Managed Blockchain",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "proposal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "proposal",
+        "ARN": "arn:aws:managedblockchain:${Region}::proposals/${ProposalId}",
+        "RegEx": "^arn:aws:managedblockchain:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

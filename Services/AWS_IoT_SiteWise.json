@@ -1,0 +1,2681 @@
+[
+  {
+    "name": "AssociateAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:childAssetId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a child asset being associated whith a parent asset"
+      }
+    ]
+  },
+  {
+    "name": "AssociateTimeSeriesToAssetProperty",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "time-series",
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      },
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "BatchAssociateProjectAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDisassociateProjectAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetAssetPropertyAggregates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "BatchGetAssetPropertyValue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "BatchGetAssetPropertyValueHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "BatchPutAssetPropertyValue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "CreateAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      },
+      {
+        "Name": "iotsitewise:portal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a portal"
+      }
+    ]
+  },
+  {
+    "name": "CreateAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateAssetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePortal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "portal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "access-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      },
+      {
+        "Name": "iotsitewise:portal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a portal"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAssetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      }
+    ]
+  },
+  {
+    "name": "DeleteGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePortal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "portal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTimeSeries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "access-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      },
+      {
+        "Name": "iotsitewise:portal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a portal"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAssetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAssetProperty",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      }
+    ]
+  },
+  {
+    "name": "DescribeDefaultEncryptionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGatewayCapabilityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLoggingOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePortal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "portal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStorageConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTimeSeries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateTimeSeriesFromAssetProperty",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "time-series",
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      },
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "GetAssetPropertyAggregates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "GetAssetPropertyValue",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "GetAssetPropertyValueHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "GetInterpolatedAssetPropertyValues",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "time-series",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:time-series/${TimeSeriesId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:propertyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an asset property"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      },
+      {
+        "Name": "iotsitewise:isAssociatedWithAssetProperty",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by data streams associated with or not associated with asset properties"
+      }
+    ]
+  },
+  {
+    "name": "ListAccessPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      },
+      {
+        "Name": "iotsitewise:group",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an AWS Single Sign-On group"
+      },
+      {
+        "Name": "iotsitewise:user",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an AWS Single Sign-On user"
+      },
+      {
+        "Name": "iotsitewise:portal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a portal"
+      },
+      {
+        "Name": "iotsitewise:iam",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of an AWS IAM identity"
+      }
+    ]
+  },
+  {
+    "name": "ListAssetModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAssetRelationships",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssociatedAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "ListDashboards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPortals",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProjectAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "portal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTimeSeries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDefaultEncryptionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutLoggingOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutStorageConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "access-policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "access-policy",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:access-policy/${AccessPolicyId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      },
+      {
+        "Name": "iotsitewise:portal",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a portal"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAssetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAssetModelPropertyRouting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset-model",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset-model/${AssetModelId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAssetProperty",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "asset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "asset",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:asset/${AssetId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:propertyAlias",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the property alias"
+      },
+      {
+        "Name": "iotsitewise:assetHierarchyPath",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by an asset hierarchy path, which is the string of asset IDs in the asset\u0027s hierarchy, each separated by a forward slash"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDashboard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dashboard"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dashboard",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:dashboard/${DashboardId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iotsitewise:project",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ID of a project"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGatewayCapabilityConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePortal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "portal"
+    ],
+    "supportedResources": [
+      {
+        "Name": "portal",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:portal/${PortalId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotsitewise",
+    "service": "AWS IoT SiteWise",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:iotsitewise:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:iotsitewise:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

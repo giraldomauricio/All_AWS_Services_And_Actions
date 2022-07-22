@@ -1,0 +1,866 @@
+[
+  {
+    "name": "ActivateEC2Remote",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEnvironmentEC2",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloud9:UserArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_UserArn",
+        "Description": "Filters access by the user ARN specified"
+      },
+      {
+        "Name": "cloud9:EnvironmentId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_EnvironmentId",
+        "Description": "Filters access by the AWS Cloud9 environment ID"
+      },
+      {
+        "Name": "cloud9:Permissions",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_Permissions",
+        "Description": "Filters access by the type of AWS Cloud9 permissions"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentSSH",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEC2Remote",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironmentMemberships",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloud9:UserArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_UserArn",
+        "Description": "Filters access by the user ARN specified"
+      },
+      {
+        "Name": "cloud9:EnvironmentId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_EnvironmentId",
+        "Description": "Filters access by the AWS Cloud9 environment ID"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEnvironmentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSSHRemote",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMembershipSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUserPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetUserSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyTemporaryCredentialsOnEnvironmentEC2",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironmentMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloud9:UserArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_UserArn",
+        "Description": "Filters access by the user ARN specified"
+      },
+      {
+        "Name": "cloud9:EnvironmentId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_EnvironmentId",
+        "Description": "Filters access by the AWS Cloud9 environment ID"
+      },
+      {
+        "Name": "cloud9:Permissions",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloud9.html##awscloud9-cloud9_Permissions",
+        "Description": "Filters access by the type of AWS Cloud9 permissions"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEnvironmentSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMembershipSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSSHRemote",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:cloud9:${Region}:${Account}:environment:${ResourceId}",
+        "RegEx": "^arn:aws:cloud9:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUserSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ValidateEnvironmentName",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloud9",
+    "service": "AWS Cloud9",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

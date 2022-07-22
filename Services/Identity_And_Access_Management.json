@@ -1,0 +1,5035 @@
+[
+  {
+    "name": "AddClientIDToOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddRoleToInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddUserToGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachGroupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "AttachRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "AttachUserPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "ChangePassword",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAccessKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAccountAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateLoginProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceLinkedRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:AWSServiceName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_AWSServiceName",
+        "Description": "Filters access by the AWS service to which this role is attached"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceSpecificCredential",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVirtualMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mfa"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mfa",
+        "ARN": "arn:aws:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeactivateMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAccessKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAccountAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccountPasswordPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGroupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoginProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRolePermissionsBoundary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "DeleteRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "DeleteSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceLinkedRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceSpecificCredential",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSigningCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUserPermissionsBoundary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUserPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "DeleteVirtualMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "mfa",
+        "ARN": "arn:aws:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sms-mfa",
+        "ARN": "arn:aws:iam::${Account}:sms-mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachGroupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "DetachRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "DetachUserPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      },
+      {
+        "Name": "iam:PolicyARN",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN",
+        "Description": "Filters access by the ARN of an IAM policy"
+      }
+    ]
+  },
+  {
+    "name": "EnableMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GenerateCredentialReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GenerateOrganizationsAccessReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "access-report"
+    ],
+    "supportedResources": [
+      {
+        "Name": "access-report",
+        "ARN": "arn:aws:iam::${Account}:access-report/${EntityPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:OrganizationsPolicyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_OrganizationsPolicyId",
+        "Description": "Filters access by the ID of an AWS Organizations policy"
+      }
+    ]
+  },
+  {
+    "name": "GenerateServiceLastAccessedDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role",
+      "group",
+      "policy",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccessKeyLastUsed",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccountAuthorizationDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccountPasswordPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccountSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContextKeysForCustomPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContextKeysForPrincipalPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCredentialReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGroupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLoginProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOrganizationsAccessReport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceLastAccessedDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetServiceLastAccessedDetailsWithEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetServiceLinkedRoleDeletionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUserPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccessKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccountAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAttachedGroupPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAttachedRolePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAttachedUserPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEntitiesForPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGroupPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:group/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGroupsForUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInstanceProfileTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInstanceProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInstanceProfilesForRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMFADeviceTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mfa"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mfa",
+        "ARN": "arn:aws:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMFADevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListOpenIDConnectProviderTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListOpenIDConnectProviders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:policy/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPoliciesGrantingServiceAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role",
+      "group",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPolicyTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPolicyVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRolePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRoleTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRoles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:role/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSAMLProviderTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSAMLProviders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSSHPublicKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServerCertificateTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServerCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:server-certificate/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServiceSpecificCredentials",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSigningCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUserPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUserTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:user/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListVirtualMFADevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "arn:aws:iam::$account:mfa/",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PassRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PassedToService",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PassedToService",
+        "Description": "Filters access by the AWS service to which this role is passed"
+      },
+      {
+        "Name": "iam:AssociatedResourceArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_AssociatedResourceArn",
+        "Description": "Filters by the resource that the role will be used on behalf of"
+      }
+    ]
+  },
+  {
+    "name": "PutGroupPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutRolePermissionsBoundary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "PutRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "PutUserPermissionsBoundary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "PutUserPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "iam:PermissionsBoundary",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary",
+        "Description": "Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role)"
+      }
+    ]
+  },
+  {
+    "name": "RemoveClientIDFromOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveRoleFromInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveUserFromGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetServiceSpecificCredential",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResyncMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetDefaultPolicyVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetSecurityTokenServicePreferences",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SimulateCustomPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SimulatePrincipalPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mfa"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mfa",
+        "ARN": "arn:aws:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagInstanceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance-profile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance-profile",
+        "ARN": "arn:aws:iam::${Account}:instance-profile/${InstanceProfileNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagMFADevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mfa"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mfa",
+        "ARN": "arn:aws:iam::${Account}:mfa/${MfaTokenIdWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagOpenIDConnectProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:iam::${Account}:policy/${PolicyNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccessKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAccountPasswordPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateAssumeRolePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:iam::${Account}:group/${GroupNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLoginProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateOpenIDConnectProviderThumbprint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "oidc-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "oidc-provider",
+        "ARN": "arn:aws:iam::${Account}:oidc-provider/${OidcProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRoleDescription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSAMLProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "saml-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "saml-provider",
+        "ARN": "arn:aws:iam::${Account}:saml-provider/${SamlProviderName}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServiceSpecificCredential",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSigningCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UploadSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UploadServerCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server-certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server-certificate",
+        "ARN": "arn:aws:iam::${Account}:server-certificate/${CertificateNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ConceptsDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UploadSigningCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iam",
+    "service": "Identity And Access Management",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

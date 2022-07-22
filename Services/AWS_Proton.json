@@ -1,0 +1,3447 @@
+[
+  {
+    "name": "AcceptEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelComponentDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelEnvironmentDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:EnvironmentTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified environment template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "CancelServiceInstanceDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "CancelServicePipelineDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      },
+      {
+        "Name": "proton:EnvironmentTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified environment template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironmentTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateTemplateSyncConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAccountRoles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:EnvironmentTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified environment template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironmentTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteServiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServiceTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTemplateSyncConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAccountRoles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironmentTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRepositorySyncStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTemplateSyncConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTemplateSyncStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListComponentOutputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListComponentProvisionedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListComponents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentAccountConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentOutputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentProvisionedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentTemplateMajorVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentTemplateMinorVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentTemplateVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironmentTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRepositories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRepositorySyncDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServiceInstanceOutputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service",
+      "service-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceInstanceProvisionedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service",
+      "service-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServicePipelineOutputs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServicePipelineProvisionedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceTemplateMajorVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceTemplateMinorVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceTemplateVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServiceTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "NotifyResourceDeploymentStatusChange",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "environment-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:proton:${Region}:${Account}:repository/${Provider}:${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-minor-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}.${MinorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-template-major-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${TemplateName}:${MajorVersionId}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment-template-version",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersion}.${MinorVersion}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountRoles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:proton:${Region}:${Account}:component/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:EnvironmentTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified environment template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEnvironmentAccountConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-account-connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-account-connection",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-account-connection/${Id}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironmentTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironmentTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironmentTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironmentTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:environment-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateServiceInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-instance",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${ServiceName}/service-instance/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateServicePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "proton:ServiceTemplate",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html",
+        "Description": "Filters access by specified service template related to resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateServiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServiceTemplateMajorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServiceTemplateMinorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateServiceTemplateVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service-template"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service-template",
+        "ARN": "arn:aws:proton:${Region}:${Account}:service-template/${Name}",
+        "RegEx": "^arn:aws:proton:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTemplateSyncConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "proton",
+    "service": "AWS Proton",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

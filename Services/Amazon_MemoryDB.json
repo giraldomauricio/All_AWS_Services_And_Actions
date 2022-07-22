@@ -1,0 +1,1533 @@
+[
+  {
+    "name": "BatchUpdateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CopySnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateAcl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup",
+      "acl",
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAcl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "acl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAcls",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "acl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEngineVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeParameterGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeServiceUpdates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSubnetGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "FailoverShard",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAllowedNodeTypeUpdates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ResetParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:snapshot/${SnapshotName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAcl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "acl",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "acl",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:acl/${AclName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:parametergroup/${ParameterGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:subnetgroup/${SubnetGroupName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "memorydb",
+    "service": "Amazon MemoryDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:memorydb:${Region}:${Account}:user/${UserName}",
+        "RegEx": "^arn:aws:memorydb:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1576 @@
+[
+  {
+    "name": "CreateGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGatewayRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMeshes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRoutes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualRouters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVirtualServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StreamAggregatedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions by the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGatewayRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gatewayRoute"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gatewayRoute",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}/gatewayRoute/${GatewayRouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMesh",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "mesh"
+    ],
+    "supportedResources": [
+      {
+        "Name": "mesh",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRoute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "route"
+    ],
+    "supportedResources": [
+      {
+        "Name": "route",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}/route/${RouteName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualGateway",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualGateway/${VirtualGatewayName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualNode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualNode"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualRouter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualRouter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVirtualService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appmesh",
+    "service": "AWS App Mesh",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualService"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualService",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "virtualNode",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualNode/${VirtualNodeName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "virtualRouter",
+        "ARN": "arn:aws:appmesh:${Region}:${Account}:mesh/${MeshName}/virtualRouter/${VirtualRouterName}",
+        "RegEx": "^arn:aws:appmesh:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "name": "AssociateServiceRoleToAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchGetDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:device/${DeviceName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:project/${ProjectName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDeviceCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:project/${ProjectName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeployProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project",
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:project/${ProjectName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "device",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:device/${DeviceName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:device/${DeviceName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAssociatedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDeploymentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:device/${DeviceName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:model/${ModelName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:project/${ProjectName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportProjectFromTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RegisterDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "device"
+    ],
+    "supportedResources": [
+      {
+        "Name": "device",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:device/${DeviceName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deeplens",
+    "service": "AWS DeepLens",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:deeplens:${Region}:${Account}:project/${ProjectName}",
+        "RegEx": "^arn:aws:deeplens:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,762 @@
+[
+  {
+    "name": "CreateConnectorProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteConnectorProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "DescribeConnector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connector",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connector/${ConnectorLabel}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectorEntity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectorFields",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectorProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeConnectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeFlowExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFlowExecutionRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFlows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConnectorEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListConnectorFields",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListConnectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connector",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connector/${ConnectorLabel}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFlows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterConnector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RunFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UnRegisterConnector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connector",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connector/${ConnectorLabel}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnectorProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFlow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "flow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "flow",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:flow/${FlowName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UseConnectorProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appflow",
+    "service": "Amazon AppFlow",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorprofile",
+        "ARN": "arn:aws:appflow:${Region}:${Account}:connectorprofile/${ProfileName}",
+        "RegEx": "^arn:aws:appflow:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

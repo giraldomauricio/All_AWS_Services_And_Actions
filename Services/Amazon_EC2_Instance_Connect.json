@@ -1,0 +1,71 @@
+[
+  {
+    "name": "SendSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ec2-instance-connect",
+    "service": "Amazon EC2 Instance Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ec2:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ec2:osuser",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/ec2-instance-connect/latest/APIReference/API_SendSSHPublicKey.html",
+        "Description": "Filters access by specifying the default user name for the AMI that you used to launch your instance"
+      }
+    ]
+  },
+  {
+    "name": "SendSerialConsoleSSHPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ec2-instance-connect",
+    "service": "Amazon EC2 Instance Connect",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ec2:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ec2:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

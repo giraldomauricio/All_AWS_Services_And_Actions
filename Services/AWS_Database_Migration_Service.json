@@ -1,0 +1,1823 @@
+[
+  {
+    "name": "AddTagsToResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:dms:${Region}:${Account}:cert:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:cert-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:cert-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "EventSubscription",
+        "ARN": "arn:aws:dms:${Region}:${Account}:es:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:es-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:es-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationSubnetGroup",
+        "ARN": "arn:aws:dms:${Region}:${Account}:subgrp:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:subgrp-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:subgrp-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dms:req-tag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html#awsdatabasemigrationservice-dms_req-tag___TagKey_",
+        "Description": "Filters access based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "ApplyPendingMaintenanceAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelReplicationTaskAssessmentRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTaskAssessmentRun"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTaskAssessmentRun",
+        "ARN": "arn:aws:dms:${Region}:${Account}:assessment-run:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateReplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateReplicationSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint",
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dms:req-tag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html#awsdatabasemigrationservice-dms_req-tag___TagKey_",
+        "Description": "Filters access based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Certificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:dms:${Region}:${Account}:cert:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:cert-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:cert-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint",
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "EventSubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "EventSubscription",
+        "ARN": "arn:aws:dms:${Region}:${Account}:es:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:es-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:es-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationSubnetGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationSubnetGroup",
+        "ARN": "arn:aws:dms:${Region}:${Account}:subgrp:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:subgrp-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:subgrp-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationTaskAssessmentRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTaskAssessmentRun"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTaskAssessmentRun",
+        "ARN": "arn:aws:dms:${Region}:${Account}:assessment-run:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccountAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeApplicableIndividualAssessments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpointSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpointTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventCategories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventSubscriptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeOrderableReplicationInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeRefreshSchemasStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationInstanceTaskLogs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeReplicationInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReplicationSubnetGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReplicationTaskAssessmentResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationTaskAssessmentRuns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTaskAssessmentRun",
+        "ARN": "arn:aws:dms:${Region}:${Account}:assessment-run:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationTaskIndividualAssessments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationTaskAssessmentRun",
+        "ARN": "arn:aws:dms:${Region}:${Account}:assessment-run:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSchemas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTableStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:dms:${Region}:${Account}:cert:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:cert-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:cert-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "EventSubscription",
+        "ARN": "arn:aws:dms:${Region}:${Account}:es:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:es-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:es-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationSubnetGroup",
+        "ARN": "arn:aws:dms:${Region}:${Account}:subgrp:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:subgrp-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:subgrp-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:dms:${Region}:${Account}:cert:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:cert-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:cert-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyReplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyReplicationSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "MoveReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask",
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebootReplicationInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RefreshSchemas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint",
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReloadTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTagsFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Certificate",
+        "ARN": "arn:aws:dms:${Region}:${Account}:cert:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:cert-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:cert-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "EventSubscription",
+        "ARN": "arn:aws:dms:${Region}:${Account}:es:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:es-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:es-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationSubnetGroup",
+        "ARN": "arn:aws:dms:${Region}:${Account}:subgrp:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:subgrp-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:subgrp-tag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartReplicationTaskAssessment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartReplicationTaskAssessmentRun",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopReplicationTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ReplicationTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ReplicationTask",
+        "ARN": "arn:aws:dms:${Region}:${Account}:task:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:task-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:task-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TestConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dms",
+    "service": "AWS Database Migration Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Endpoint",
+      "ReplicationInstance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Endpoint",
+        "ARN": "arn:aws:dms:${Region}:${Account}:endpoint:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:endpoint-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:endpoint-tag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ReplicationInstance",
+        "ARN": "arn:aws:dms:${Region}:${Account}:rep:*",
+        "RegEx": "^arn:aws:dms:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "dms:rep-tag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "dms:rep-tag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

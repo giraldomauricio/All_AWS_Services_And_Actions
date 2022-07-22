@@ -1,0 +1,591 @@
+[
+  {
+    "name": "ConfigureLogs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateHarvestJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateOriginEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOriginEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "origin_endpoints"
+    ],
+    "supportedResources": [
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeHarvestJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "harvest_jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "harvest_jobs",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:harvest_jobs/${HarvestJobIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOriginEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "origin_endpoints"
+    ],
+    "supportedResources": [
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHarvestJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOriginEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "harvest_jobs",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:harvest_jobs/${HarvestJobIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RotateChannelCredentials",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RotateIngestEndpointCredentials",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "harvest_jobs",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:harvest_jobs/${HarvestJobIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tag for a MediaPackage request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys for a MediaPackage resource or request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "harvest_jobs",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:harvest_jobs/${HarvestJobIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys for a MediaPackage resource or request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channels"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channels",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:channels/${ChannelIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateOriginEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediapackage",
+    "service": "AWS Elemental MediaPackage",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "origin_endpoints"
+    ],
+    "supportedResources": [
+      {
+        "Name": "origin_endpoints",
+        "ARN": "arn:aws:mediapackage:${Region}:${Account}:origin_endpoints/${OriginEndpointIdentifier}",
+        "RegEx": "^arn:aws:mediapackage:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,1293 @@
+[
+  {
+    "name": "AddCustomRoutingEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AdvertiseByoipCidr",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AllowCustomRoutingTraffic",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCustomRoutingAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCustomRoutingEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCustomRoutingListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomRoutingAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomRoutingEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCustomRoutingListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DenyCustomRoutingTraffic",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeprovisionByoipCidr",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAcceleratorAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomRoutingAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomRoutingAcceleratorAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomRoutingEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCustomRoutingListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccelerators",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListByoipCidrs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCustomRoutingAccelerators",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCustomRoutingEndpointGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCustomRoutingListeners",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCustomRoutingPortMappings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCustomRoutingPortMappingsByDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEndpointGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListListeners",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ProvisionByoipCidr",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveCustomRoutingEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAcceleratorAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomRoutingAccelerator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomRoutingAcceleratorAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accelerator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accelerator",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCustomRoutingListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointgroup",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}/endpoint-group/${EndpointGroupId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}/endpoint-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "listener"
+    ],
+    "supportedResources": [
+      {
+        "Name": "listener",
+        "ARN": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}/listener/${ListenerId}",
+        "RegEx": "^arn:aws:globalaccelerator::[0-9]+:accelerator/[0-9a-f-]+/listener/[0-9a-fA-F]{8}$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "WithdrawByoipCidr",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "globalaccelerator",
+    "service": "AWS Global Accelerator",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

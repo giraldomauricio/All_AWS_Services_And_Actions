@@ -1,0 +1,1764 @@
+[
+  {
+    "name": "AssociateFileGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateFileSystemAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelDataRepositoryTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CopyBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "fsx:IsBackupCopyDestination",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CopyBackup.html",
+        "Description": "Filters access by whether the backup is a destination backup for a CopyBackup operation"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "fsx:IsBackupCopySource",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CopyBackup.html",
+        "Description": "Filters access by whether the backup is a source backup for a CopyBackup operation"
+      }
+    ]
+  },
+  {
+    "name": "CreateBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDataRepositoryAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system",
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDataRepositoryTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system",
+      "task"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateFileSystemFromBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system",
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume",
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStorageVirtualMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system",
+      "storage-virtual-machine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVolume",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "fsx:StorageVirtualMachineId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing storage virtual machine for a volume for mutating volume operations"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "fsx:ParentVolumeId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing parent volume for mutating volume operations"
+      }
+    ]
+  },
+  {
+    "name": "CreateVolumeFromBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume",
+      "storage-virtual-machine",
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "fsx:StorageVirtualMachineId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing storage virtual machine for a volume for mutating volume operations"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataRepositoryAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStorageVirtualMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "storage-virtual-machine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVolume",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "fsx:StorageVirtualMachineId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing storage virtual machine for a volume for mutating volume operations"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "fsx:ParentVolumeId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing parent volume for mutating volume operations"
+      }
+    ]
+  },
+  {
+    "name": "DescribeAssociatedFileGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBackups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:backup/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataRepositoryAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:association/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataRepositoryTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:task/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeFileSystemAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFileSystems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:file-system/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:snapshot/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStorageVirtualMachines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:storage-virtual-machine/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeVolumes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "noResourceARN": "arn:${Partition}:fsx:${Region}:${Account}:volume/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateFileGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateFileSystemAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ManageBackupPrincipalAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReleaseFileSystemNfsV3Locks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreVolumeFromSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume",
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:backup/${BackupId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDataRepositoryAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:association/${FileSystemId}/${DataRepositoryAssociationId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFileSystem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "file-system"
+    ],
+    "supportedResources": [
+      {
+        "Name": "file-system",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:file-system/${FileSystemId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStorageVirtualMachine",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "storage-virtual-machine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "storage-virtual-machine",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVolume",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "fsx",
+    "service": "Amazon FSx",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "volume"
+    ],
+    "supportedResources": [
+      {
+        "Name": "volume",
+        "ARN": "arn:aws:fsx:${Region}:${Account}:volume/${FileSystemId}/${VolumeId}",
+        "RegEx": "^arn:aws:fsx:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "fsx:StorageVirtualMachineId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing storage virtual machine for a volume for mutating volume operations"
+      },
+      {
+        "Name": "fsx:ParentVolumeId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/fsx/latest/WindowsGuide/access-control-manage-access-intro.htmlAPI_CreateVolume.html",
+        "Description": "Filters access by the containing parent volume for mutating volume operations"
+      }
+    ]
+  }
+]

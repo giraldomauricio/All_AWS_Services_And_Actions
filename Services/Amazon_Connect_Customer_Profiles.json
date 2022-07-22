@@ -1,0 +1,1188 @@
+[
+  {
+    "name": "AddProfileKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateIntegrationWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the customer profile service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the customer profile service"
+      }
+    ]
+  },
+  {
+    "name": "CreateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIntegration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains",
+      "integrations"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "integrations",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/integrations/${Uri}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProfileKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProfileObject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProfileObjectType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAutoMergingPreview",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetIdentityResolutionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetIntegration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains",
+      "integrations"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "integrations",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/integrations/${Uri}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMatches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProfileObjectType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetProfileObjectTypeTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWorkflowSteps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccountIntegrations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDomains",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListIdentityResolutionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListIntegrations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProfileObjectTypeTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProfileObjectTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProfileObjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWorkflows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "MergeProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutIntegration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains",
+      "integrations"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "integrations",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/integrations/${Uri}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the customer profile service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the customer profile service"
+      }
+    ]
+  },
+  {
+    "name": "PutProfileObject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutProfileObjectType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object-types",
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object-types",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the customer profile service"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the customer profile service"
+      }
+    ]
+  },
+  {
+    "name": "SearchProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "profile",
+    "service": "Amazon Connect Customer Profiles",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:profile:${Region}:${Account}:domains/${DomainName}",
+        "RegEx": "^arn:aws:profile:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

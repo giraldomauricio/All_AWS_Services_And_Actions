@@ -1,0 +1,1980 @@
+[
+  {
+    "name": "AbortMultipartUpload",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "CreateAccessPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "CreateBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "CreateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/endpoint/${EndpointId}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/endpoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteAccessPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccessPointPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "DeleteBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "DeleteBucketPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/endpoint/${EndpointId}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/endpoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteObject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "DeleteObjectTagging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:ExistingObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by requiring that an existing object tag has a specific tag key and value"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetAccessPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccessPointPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetBucketPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetBucketTagging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetLifecycleConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetObject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:ExistingObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by requiring that an existing object tag has a specific tag key and value"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "GetObjectTagging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:ExistingObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by requiring that an existing object tag has a specific tag key and value"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "ListAccessPoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket",
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:delimiter",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html",
+        "DocPage": "${ConceptsDocRoot}walkthrough1.html",
+        "Description": "Filters access by requiring the delimiter parameter"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:max-keys",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html#example-numeric-condition-operators",
+        "Description": "Filters access by limiting the maximum number of keys returned in a ListBucket request"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:prefix",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html#condition-key-bucket-ops-2",
+        "Description": "Filters access by key name prefix"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "ListBucketMultipartUploads",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket",
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      },
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "ListEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMultipartUploadParts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "ListRegionalBuckets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSharedEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAccessPointPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "accesspoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "accesspoint",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/accesspoint/${AccessPointName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/accesspoint/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutBucketPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutBucketTagging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutLifecycleConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bucket"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/bucket/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutObject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:x-amz-server-side-encryption",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingServerSideEncryption.html",
+        "DocPage": "${ConceptsDocRoot}UsingServerSideEncryption.html",
+        "Description": "Filters access by requiring server-side encryption"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:x-amz-acl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#permissions",
+        "DocPage": "${ConceptsDocRoot}acl-overview.html#permissions",
+        "Description": "Filters access by requiring the x-amz-acl header with a specific canned ACL in a request"
+      },
+      {
+        "Name": "s3-outposts:x-amz-storage-class",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-howtoset",
+        "DocPage": "${ConceptsDocRoot}storage-class-intro.html#sc-howtoset",
+        "Description": "Filters access by storage class"
+      },
+      {
+        "Name": "s3-outposts:RequestObjectTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by restricting the tag keys allowed on objects"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:RequestObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by restricting the tag keys and values allowed on objects"
+      },
+      {
+        "Name": "s3-outposts:x-amz-copy-source",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html#putobject-limit-copy-source-3",
+        "Description": "Filters access by restricting the copy source to a specific bucket, prefix, or object"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-metadata-directive",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html",
+        "DocPage": "${ActionsDocRoot}API_CopyObject.html",
+        "Description": "Filters access by enabling enforcement of object metadata behavior (COPY or REPLACE) when objects are copied"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutObjectAcl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:ExistingObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by requiring that an existing object tag has a specific tag key and value"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:x-amz-acl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#permissions",
+        "DocPage": "${ConceptsDocRoot}acl-overview.html#permissions",
+        "Description": "Filters access by requiring the x-amz-acl header with a specific canned ACL in a request"
+      },
+      {
+        "Name": "s3-outposts:x-amz-storage-class",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-howtoset",
+        "DocPage": "${ConceptsDocRoot}storage-class-intro.html#sc-howtoset",
+        "Description": "Filters access by storage class"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  },
+  {
+    "name": "PutObjectTagging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "s3-outposts",
+    "service": "Amazon S3 on Outposts",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "object"
+    ],
+    "supportedResources": [
+      {
+        "Name": "object",
+        "ARN": "arn:aws:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}",
+        "RegEx": "^arn:aws:s3-outposts:${Region}:${Account}:outpost/[^/]+/((bucket/[^/]+)|(accesspoint/[^/]+))/object/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "s3-outposts:DataAccessPointAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the AWS Account ID that owns the access point"
+      },
+      {
+        "Name": "s3-outposts:signatureAge",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the length of time, in milliseconds, that a signature is valid in an authenticated request"
+      },
+      {
+        "Name": "s3-outposts:ExistingObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by requiring that an existing object tag has a specific tag key and value"
+      },
+      {
+        "Name": "s3-outposts:authType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by restricting incoming requests to a specific authentication method"
+      },
+      {
+        "Name": "s3-outposts:RequestObjectTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by restricting the tag keys allowed on objects"
+      },
+      {
+        "Name": "s3-outposts:signatureversion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by identifying the version of AWS Signature that is supported for authenticated requests"
+      },
+      {
+        "Name": "s3-outposts:RequestObjectTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html#tagging-and-policies",
+        "DocPage": "${ConceptsDocRoot}object-tagging.html#tagging-and-policies",
+        "Description": "Filters access by restricting the tag keys and values allowed on objects"
+      },
+      {
+        "Name": "s3-outposts:AccessPointNetworkOrigin",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by the network origin (Internet or VPC)"
+      },
+      {
+        "Name": "s3-outposts:DataAccessPointArn",
+        "Type": "String",
+        "DocPageRel": "#https://docs.aws.amazon.com/AmazonS3/latest/dev/creating-access-points.html#access-points-policies",
+        "DocPage": "#${ConceptsDocRoot}creating-access-points.html#access-points-policies",
+        "Description": "Filters access by an access point Amazon Resource Name (ARN)"
+      },
+      {
+        "Name": "s3-outposts:x-amz-content-sha256",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
+        "DocPage": "${ActionsDocRoot}bucket-policy-s3-sigv4-conditions.html",
+        "Description": "Filters access by disallowing unsigned content in your bucket"
+      }
+    ]
+  }
+]

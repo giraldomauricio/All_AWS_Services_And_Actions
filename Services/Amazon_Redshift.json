@@ -1,0 +1,4189 @@
+[
+  {
+    "name": "AcceptReservedNodeExchange",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AddPartner",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AssociateDataShareConsumer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datashare"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datashare",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AuthorizeClusterSecurityGroupIngress",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup",
+      "securitygroupingress-ec2securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "securitygroupingress-ec2securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AuthorizeDataShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datashare"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datashare",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "redshift:ConsumerIdentifier",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the datashare consumer"
+      }
+    ]
+  },
+  {
+    "name": "AuthorizeEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AuthorizeSnapshotAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteClusterSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchModifyClusterSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelQuerySession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelResize",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CopyClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateAuthenticationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateClusterParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateClusterSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateClusterSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateClusterUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dbuser"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dbuser",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "redshift:DbUser",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the database user name"
+      }
+    ]
+  },
+  {
+    "name": "CreateEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventsubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateHsmClientCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hsmclientcertificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hsmclientcertificate",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateHsmConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hsmconfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hsmconfiguration",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateSavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateScheduledAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshotCopyGrant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotcopygrant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotcopygrant",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshotSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotschedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmconfiguration",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbname",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbname:${ClusterName}/${DbName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmclientcertificate",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbuser",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-cidr",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/cidrip/${IpRange}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-ec2securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotcopygrant",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usagelimit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "DeauthorizeDataShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datashare"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datashare",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "redshift:ConsumerIdentifier",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the datashare consumer"
+      }
+    ]
+  },
+  {
+    "name": "DeleteAuthenticationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteClusterParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteClusterSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteClusterSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventsubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteHsmClientCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hsmclientcertificate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hsmclientcertificate",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteHsmConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hsmconfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hsmconfiguration",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePartner",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSavedQueries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteScheduledAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSnapshotCopyGrant",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotcopygrant"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotcopygrant",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSnapshotSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotschedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmconfiguration",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbname",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbname:${ClusterName}/${DbName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmclientcertificate",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbuser",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-cidr",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/cidrip/${IpRange}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-ec2securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotcopygrant",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usagelimit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccountAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAuthenticationProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterDbRevisions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterParameterGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeClusterSecurityGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterSubnetGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterTracks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusterVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataShares",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSharesForConsumer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDataSharesForProducer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDefaultClusterParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEndpointAuthorization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventCategories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEventSubscriptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeHsmClientCertificates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeHsmConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoggingStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeNodeConfigurationOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeOrderableClusterOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePartners",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedNodeExchangeStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedNodeOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeResize",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSavedQueries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeScheduledActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshotCopyGrants",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshotSchedules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotschedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStorage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTableRestoreStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmconfiguration",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmconfiguration:${HSMConfigurationId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbname",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbname:${ClusterName}/${DbName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hsmclientcertificate",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:hsmclientcertificate:${HSMClientCertificateId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbuser",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-cidr",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/cidrip/${IpRange}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroupingress-ec2securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshotcopygrant",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotcopygrant:${SnapshotCopyGrantName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUsageLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usagelimit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableLogging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableSnapshotCopy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateDataShareConsumer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datashare"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datashare",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableLogging",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableSnapshotCopy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExecuteQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "FetchResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetClusterCredentials",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dbuser"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dbuser",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbuser:${ClusterName}/${DbUser}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "dbgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "dbname",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbname:${ClusterName}/${DbName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "redshift:DbUser",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the database user name"
+      },
+      {
+        "Name": "redshift:DurationSeconds",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the number of seconds until a temporary credential set expires"
+      },
+      {
+        "Name": "redshift:DbName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by the database name"
+      }
+    ]
+  },
+  {
+    "name": "GetReservedNodeExchangeConfigurationOptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetReservedNodeExchangeOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "JoinGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dbgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dbgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:dbgroup:${ClusterName}/${DbGroup}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSavedQueries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSchemas",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyAquaConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyAuthenticationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterDbRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterIamRoles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterMaintenance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyClusterParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterSnapshotSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyClusterSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:subnetgroup:${SubnetGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyEventSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "eventsubscription"
+    ],
+    "supportedResources": [
+      {
+        "Name": "eventsubscription",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:eventsubscription:${EventSubscriptionName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifySavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyScheduledAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifySnapshotCopyRetentionPeriod",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifySnapshotSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshotschedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshotschedule",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshotschedule:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usagelimit"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usagelimit",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:usagelimit:${UsageLimitId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PauseCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PurchaseReservedNodeOffering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RebootCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RejectDataShare",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "datashare"
+    ],
+    "supportedResources": [
+      {
+        "Name": "datashare",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:datashare:${ProducerClusterNamespace}/${DataShareName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetClusterParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:parametergroup:${ParameterGroupName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResizeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreFromClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster",
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/redshift/latest/mgmt/redshift-iam-access-control-overview.html#redshift-policy-resources.conditions",
+        "Description": "Filters access by actions based on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "RestoreTableFromClusterSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster",
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResumeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RevokeClusterSecurityGroupIngress",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup",
+      "securitygroupingress-ec2securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroup:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ec2SecurityGroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "securitygroupingress-ec2securitygroup",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:securitygroupingress:${SecurityGroupName}/ec2securitygroup/${Owner}/${Ece2SecuritygroupId}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RevokeEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RevokeSnapshotAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:snapshot:${ClusterName}/${SnapshotName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RotateEncryptionKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:redshift:${Region}:${Account}:cluster:${ClusterName}",
+        "RegEx": "^arn:aws:redshift:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePartnerStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ViewQueriesFromConsole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ViewQueriesInConsole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift",
+    "service": "Amazon Redshift",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

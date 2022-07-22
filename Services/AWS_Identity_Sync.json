@@ -1,0 +1,296 @@
+[
+  {
+    "name": "CreateSyncFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSyncProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSyncTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSyncFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSyncProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSyncTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncTargetResource",
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncTargetResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:target/.+?/.+?",
+        "isRequired": true
+      },
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSyncProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSyncTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncTargetResource",
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncTargetResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:target/.+?/.+?",
+        "isRequired": true
+      },
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSyncFilters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSyncTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "identity-sync",
+    "service": "AWS Identity Sync",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SyncTargetResource",
+      "SyncProfileResource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SyncTargetResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:target/.+?/.+?",
+        "isRequired": true
+      },
+      {
+        "Name": "SyncProfileResource",
+        "ARN": "arn:aws:identity-sync:${Region}:${Account}:profile/${SyncProfileName}",
+        "RegEx": "^arn:aws:identity-sync:${Region}:${Account}:profile/.+?",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

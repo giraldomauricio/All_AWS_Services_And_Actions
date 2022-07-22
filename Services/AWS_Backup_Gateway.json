@@ -1,0 +1,688 @@
+[
+  {
+    "name": "AssociateGatewayToServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway",
+      "hypervisor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Backup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "virtualmachine"
+    ],
+    "supportedResources": [
+      {
+        "Name": "virtualmachine",
+        "ARN": "arn:aws:backup-gateway::${Account}:vm/${VirtualmachineId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteHypervisor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hypervisor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateGatewayFromServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportHypervisorConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHypervisors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "virtualmachine",
+        "ARN": "arn:aws:backup-gateway::${Account}:vm/${VirtualmachineId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "ListVirtualMachines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutMaintenanceStartTime",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Restore",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hypervisor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "virtualmachine",
+        "ARN": "arn:aws:backup-gateway::${Account}:vm/${VirtualmachineId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "TestHypervisorConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "virtualmachine",
+        "ARN": "arn:aws:backup-gateway::${Account}:vm/${VirtualmachineId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "hypervisor",
+        "ARN": "arn:aws:backup-gateway::${Account}:hypervisor/${HypervisorId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGatewayInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGatewaySoftwareNow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateHypervisor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "backup-gateway",
+    "service": "AWS Backup Gateway",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "gateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "gateway",
+        "ARN": "arn:aws:backup-gateway::${Account}:gateway/${GatewayId}",
+        "RegEx": "^arn:aws:backup-gateway:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

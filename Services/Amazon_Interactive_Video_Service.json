@@ -1,0 +1,1050 @@
+[
+  {
+    "name": "BatchGetChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetStreamKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel",
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRecordingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Recording-Configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel",
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePlaybackKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Playback-Key-Pair"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRecordingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Recording-Configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteStreamKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPlaybackKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Playback-Key-Pair"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecordingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Recording-Configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStreamKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetStreamSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportPlaybackKeyPair",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Playback-Key-Pair"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "ListChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPlaybackKeyPairs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Playback-Key-Pair"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRecordingConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Recording-Configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStreamKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel",
+      "Stream-Key"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStreamSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStreams",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "PutMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags associated with the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Stream-Key",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:stream-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:stream-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Recording-Configuration",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Playback-Key-Pair",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:playback-key/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:playback-key/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ivs",
+    "service": "Amazon Interactive Video Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Channel",
+        "ARN": "arn:aws:ivs:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:ivs:[a-z0-9-]+:[0-9]+:channel/[a-zA-Z0-9-]+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

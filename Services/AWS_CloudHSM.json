@@ -1,0 +1,847 @@
+[
+  {
+    "name": "AddTagsToResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CopyBackupToRegion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateHapg",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateHsm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLunaClient",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteHapg",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteHsm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteLunaClient",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeBackups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeHapg",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeHsm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLunaClient",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "InitializeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAvailableZones",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHapgs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHsms",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLunaClients",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyBackupAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyHapg",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyHsm",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyLunaClient",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveTagsFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RestoreBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudhsm",
+    "service": "AWS CloudHSM",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:cluster/${CloudHsmClusterInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:cloudhsm:${Region}:${Account}:backup/${CloudHsmBackupInstanceName}",
+        "RegEx": "^arn:aws:cloudhsm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  }
+]

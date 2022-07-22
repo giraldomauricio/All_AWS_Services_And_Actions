@@ -1,0 +1,1678 @@
+[
+  {
+    "name": "ConfigureLogsForPlaybackConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLiveSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreatePrefetchSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSourceLocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateVodSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChannelPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLiveSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "liveSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeletePlaybackConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeletePrefetchSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration",
+      "prefetchSchedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "prefetchSchedule",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:prefetchSchedule/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel",
+      "program"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "program",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:program/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSourceLocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteVodSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "vodSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeLiveSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "liveSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeProgram",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel",
+      "program"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "program",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:program/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSourceLocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeVodSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "vodSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetChannelPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetChannelSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetPlaybackConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetPrefetchSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration",
+      "prefetchSchedule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "prefetchSchedule",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:prefetchSchedule/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAlerts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLiveSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListPlaybackConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPrefetchSchedules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "playbackConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSourceLocations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListVodSources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutChannelPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutPlaybackConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "playbackConfiguration",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:playbackConfiguration/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "channel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "channel",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:channel/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLiveSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "liveSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "liveSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:liveSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateSourceLocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateVodSource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mediatailor",
+    "service": "AWS Elemental MediaTailor",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "sourceLocation",
+      "vodSource"
+    ],
+    "supportedResources": [
+      {
+        "Name": "sourceLocation",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:sourceLocation/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "vodSource",
+        "ARN": "arn:aws:mediatailor:${Region}:${Account}:vodSource/${ResourceId}",
+        "RegEx": "^arn:aws:mediatailor:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  }
+]

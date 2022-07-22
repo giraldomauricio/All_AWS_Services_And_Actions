@@ -1,0 +1,1273 @@
+[
+  {
+    "name": "AssociateFirewallPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall",
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateSubnets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFirewall",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall",
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateFirewallPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "DeleteFirewall",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFirewallPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "StatelessRuleGroup",
+      "StatefulRuleGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFirewall",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFirewallPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRuleGroupMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateSubnets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFirewallPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFirewalls",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall",
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by on the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFirewallDeleteProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFirewallDescription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFirewallEncryptionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFirewallPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FirewallPolicy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FirewallPolicy",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFirewallPolicyChangeProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "StatefulRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateful-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "StatelessRuleGroup",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:stateless-rulegroup/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSubnetChangeProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "network-firewall",
+    "service": "AWS Network Firewall",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Firewall"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Firewall",
+        "ARN": "arn:aws:network-firewall:${Region}:${Account}:firewall/${Name}",
+        "RegEx": "^arn:aws:network-firewall:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,3926 @@
+[
+  {
+    "name": "CreateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [],
+    "supportedResources": [],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "CreateCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "CreateEmailTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateInAppTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateJourney",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "CreatePushTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRecommenderConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSegment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a tag key and value pair"
+      }
+    ]
+  },
+  {
+    "name": "CreateSmsTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateVoiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAdmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApnsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApnsSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApnsVoipChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApnsVoipSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBaiduChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEmailChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEmailTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGcmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInAppTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteJourney",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePushTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRecommenderConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recommenders"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recommenders",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:recommenders/${RecommenderId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSegment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSmsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSmsTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUserEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVoiceChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVoiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAdmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApnsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApnsSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApnsVoipChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApnsVoipSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplicationDateRangeKpi",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplicationSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBaiduChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaignActivities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaignDateRangeKpi",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaignVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaignVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCampaigns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetChannels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEmailChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEmailTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGcmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInAppMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInAppTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJourney",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJourneyDateRangeKpi",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJourneyExecutionActivityMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJourneyExecutionMetrics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPushTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecommenderConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recommenders"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recommenders",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:recommenders/${RecommenderId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecommenderConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetReports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSegment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSegmentExportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSegmentImportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSegmentVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSegmentVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSegments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSmsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSmsTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUserEndpoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVoiceChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVoiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJourneys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTemplateVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTemplates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PhoneNumberValidate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "phone-number-validate"
+    ],
+    "supportedResources": [
+      {
+        "Name": "phone-number-validate",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:phone/number/validate",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutEventStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendOTPMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendUsersMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAdmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApnsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApnsSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApnsVoipChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApnsVoipSandboxChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApplicationSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBaiduChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaigns",
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaigns",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/campaigns/${CampaignId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEmailChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEmailTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEndpointsBatch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGcmChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInAppTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateJourney",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateJourneyState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "journeys"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "journeys",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/journeys/${JourneyId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdatePushTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRecommenderConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recommenders"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recommenders",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:recommenders/${RecommenderId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSegment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps",
+      "segments"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "segments",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}/segments/${SegmentId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateSmsChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSmsTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTemplateActiveVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVoiceChannel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateVoiceTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "templates"
+    ],
+    "supportedResources": [
+      {
+        "Name": "templates",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:templates/${TemplateName}/${ChannelType}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by a key that is present in the request the user makes to the pinpoint service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-permissions.html#iam-contextkeys",
+        "Description": "Filters access by the list of all the tag key names present in the request the user makes to the pinpoint service"
+      }
+    ]
+  },
+  {
+    "name": "VerifyOTPMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "mobiletargeting",
+    "service": "Amazon Pinpoint",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:mobiletargeting:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:mobiletargeting:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

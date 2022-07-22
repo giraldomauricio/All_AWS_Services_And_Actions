@@ -1,0 +1,4432 @@
+[
+  {
+    "name": "AddTagsToResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reserved-instance",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:reserved-instance:${ReservedCacheNodeId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "AuthorizeCacheSecurityGroupIngress",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchApplyUpdateAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchStopUpdateAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CompleteMigration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CopySnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "elasticache:KmsKeyId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the KmsKeyId parameter in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCacheCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateCacheParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "elasticache:CacheParameterGroupName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the the CacheParameterGroupName parameter in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCacheSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCacheSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup",
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateUserGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user",
+      "usergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DecreaseNodeGroupsInGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticache:NumNodeGroups",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the NumNodeGroups or NodeGroupCount parameter specified in the request. This key can be used to restrict the number of node groups (shards) clusters can have after creation or scaling operations"
+      }
+    ]
+  },
+  {
+    "name": "DecreaseReplicaCount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticache:ReplicasPerNodeGroup",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the number of replicas per node group (shards) specified in creations or scaling requests"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCacheCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCacheParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "elasticache:CacheParameterGroupName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the the CacheParameterGroupName parameter in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCacheSecurityGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCacheSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUserGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheEngineVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheParameterGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheSecurityGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCacheSubnetGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeEngineDefaultParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeGlobalReplicationGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeReplicationGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedCacheNodes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reserved-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reserved-instance",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:reserved-instance:${ReservedCacheNodeId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedCacheNodesOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeServiceUpdates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeUpdateActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeUserGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "usergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "FailoverGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "IncreaseNodeGroupsInGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticache:NumNodeGroups",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the NumNodeGroups or NodeGroupCount parameter specified in the request. This key can be used to restrict the number of node groups (shards) clusters can have after creation or scaling operations"
+      }
+    ]
+  },
+  {
+    "name": "IncreaseReplicaCount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticache:ReplicasPerNodeGroup",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the number of replicas per node group (shards) specified in creations or scaling requests"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAllowedNodeTypeModifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reserved-instance",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:reserved-instance:${ReservedCacheNodeId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ModifyCacheCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ModifyCacheParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "elasticache:CacheParameterGroupName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the the CacheParameterGroupName parameter in the request"
+      }
+    ]
+  },
+  {
+    "name": "ModifyCacheSubnetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subnetgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ModifyGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "elasticache:AutomaticFailoverEnabled",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the AutomaticFailoverEnabled parameter in the request"
+      },
+      {
+        "Name": "elasticache:CacheNodeType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the cacheNodeType parameter present in the request. This key can be used to restrict which cache node types can be used on cluster creation or scaling operations"
+      },
+      {
+        "Name": "elasticache:EngineVersion",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the engineVersion parameter present in creation or cluster modification requests"
+      }
+    ]
+  },
+  {
+    "name": "ModifyReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ModifyReplicationGroupShardConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "elasticache:NumNodeGroups",
+        "Type": "Numeric",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the NumNodeGroups or NodeGroupCount parameter specified in the request. This key can be used to restrict the number of node groups (shards) clusters can have after creation or scaling operations"
+      }
+    ]
+  },
+  {
+    "name": "ModifyUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ModifyUserGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user",
+      "usergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "PurchaseReservedCacheNodesOffering",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "reserved-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "reserved-instance",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:reserved-instance:${ReservedCacheNodeId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "RebalanceSlotsInGlobalReplicationGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "globalreplicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "globalreplicationgroup",
+        "ARN": "arn:aws:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "elasticache:NumNodeGroups",
+          "elasticache:CacheNodeType",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:KmsKeyId",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:transitencryptionenabled",
+          "elasticache:authtokenenabled",
+          "elasticache:clustermodeenabled",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebootCacheCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "RemoveTagsFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:user:${UserId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "reserved-instance",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:reserved-instance:${ReservedCacheNodeId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:cluster:${CacheClusterId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:multiazenabled",
+          "elasticache:snapshotretentionlimit",
+          "aws:requesttag/${tagkey}",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "usergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:usergroup:${UserGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subnetgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:subnetgroup:${CacheSubnetGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:snapshot:${SnapshotName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ResetCacheParameterGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parametergroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parametergroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheParameterGroupName"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "elasticache:CacheParameterGroupName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/IAM.ConditionKeys.html#IAM.SpecifyingConditions",
+        "Description": "Filters access by the the CacheParameterGroupName parameter in the request"
+      }
+    ]
+  },
+  {
+    "name": "RevokeCacheSecurityGroupIngress",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "securitygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "securitygroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:securitygroup:${CacheSecurityGroupName}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "aws:tagkeys",
+          "aws:requesttag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartMigration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TestFailover",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticache",
+    "service": "Amazon ElastiCache",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "replicationgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "replicationgroup",
+        "ARN": "arn:aws:elasticache:${Region}:${Account}:replicationgroup:${ReplicationGroupId}",
+        "RegEx": "^arn:aws:elasticache:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:RequestTag/${TagKey}",
+          "aws:TagKeys",
+          "elasticache:CacheNodeType",
+          "elasticache:EngineVersion",
+          "elasticache:EngineType",
+          "elasticache:AutomaticFailoverEnabled",
+          "elasticache:MultiAZEnabled",
+          "elasticache:AuthTokenEnabled",
+          "elasticache:SnapshotRetentionLimit",
+          "elasticache:CacheParameterGroupName",
+          "elasticache:NumNodeGroups",
+          "elasticache:ReplicasPerNodeGroup",
+          "elasticache:AtRestEncryptionEnabled",
+          "elasticache:TransitEncryptionEnabled",
+          "elasticache:ClusterModeEnabled",
+          "elasticache:KmsKeyId"
+        ],
+        "ContextKeyStrings": [
+          "elasticache:engineversion",
+          "elasticache:enginetype",
+          "elasticache:cacheparametergroupname",
+          "aws:resourcetag/${tagkey}",
+          "elasticache:multiazenabled",
+          "elasticache:numnodegroups",
+          "elasticache:snapshotretentionlimit",
+          "elasticache:atrestencryptionenabled",
+          "elasticache:cachenodetype",
+          "elasticache:authtokenenabled",
+          "elasticache:transitencryptionenabled",
+          "elasticache:clustermodeenabled",
+          "aws:tagkeys",
+          "elasticache:kmskeyid",
+          "elasticache:automaticfailoverenabled",
+          "aws:requesttag/${tagkey}",
+          "elasticache:replicaspernodegroup"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  }
+]

@@ -1,0 +1,935 @@
+[
+  {
+    "name": "CancelBatchJobExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataSetImportTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApplicationFromEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplicationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBatchJobExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataSetDetails",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataSetImportTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplicationVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBatchJobDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBatchJobExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSetImportHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEngineVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBatchJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag key and value pair that is allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Application",
+        "ARN": "arn:aws:m2:${Region}:${Account}:app/${ApplicationId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:app/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "m2",
+    "service": "AWS Mainframe Modernization Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Environment",
+        "ARN": "arn:aws:m2:${Region}:${Account}:env/${EnvironmentId}",
+        "RegEx": "^arn:aws:m2:${Region}:${Account}:env/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

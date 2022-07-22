@@ -1,0 +1,728 @@
+[
+  {
+    "name": "AssumeRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceidentity",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceidentity",
+        "Description": "Filters access by the source identity that is set on the caller"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "sts:RoleSessionName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname",
+        "Description": "Filters access by the role session name required when you assume a role"
+      },
+      {
+        "Name": "sts:TransitiveTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys",
+        "Description": "Filters access by the transitive tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "iam:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_ResourceTag",
+        "Description": "Filters access by the tags that are attached to the role that is being assumed"
+      },
+      {
+        "Name": "sts:ExternalId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_externalid",
+        "Description": "Filters access by the unique identifier required when you assume a role in another account"
+      },
+      {
+        "Name": "sts:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity",
+        "Description": "Filters access by the source identity that is passed in the request"
+      },
+      {
+        "Name": "aws:PrincipalTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "Description": "Filters access by the tag associated with the principal that is making the request"
+      }
+    ]
+  },
+  {
+    "name": "AssumeRoleWithSAML",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "saml:eduorglegalname",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_eduorglegalname",
+        "Description": "Filters access by the eduOrg attribute"
+      },
+      {
+        "Name": "saml:iss",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_iss",
+        "Description": "Filters access by on the issuer, which is represented by a URN"
+      },
+      {
+        "Name": "saml:eduorgsuperioruri",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_eduorgsuperioruri",
+        "Description": "Filters access by the eduOrg attribute"
+      },
+      {
+        "Name": "saml:sub",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sub",
+        "Description": "Filters access by the subject of the claim (the SAML user ID)"
+      },
+      {
+        "Name": "saml:givenName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_givenname",
+        "Description": "Filters access by the givenName attribute"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "saml:edupersonprimaryorgunitdn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonprimaryorgunitdn",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:surname",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_surname",
+        "Description": "Filters access by the surname attribute"
+      },
+      {
+        "Name": "sts:TransitiveTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys",
+        "Description": "Filters access by the transitive tag keys that are passed in the request"
+      },
+      {
+        "Name": "saml:edupersonassurance",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonassurance",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:cn",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_cn",
+        "Description": "Filters access by the eduOrg attribute"
+      },
+      {
+        "Name": "saml:edupersonentitlement",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonentitlement",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "sts:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity",
+        "Description": "Filters access by the source identity that is passed in the request"
+      },
+      {
+        "Name": "saml:organizationStatus",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_organizationstatus",
+        "Description": "Filters access by the organizationStatus attribute"
+      },
+      {
+        "Name": "saml:name",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_name",
+        "Description": "Filters access by the name attribute"
+      },
+      {
+        "Name": "saml:sub_type",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_subtype",
+        "Description": "Filters access by the value persistent, transient, or the full Format URI"
+      },
+      {
+        "Name": "saml:commonName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_commonname",
+        "Description": "Filters access by the commonName attribute"
+      },
+      {
+        "Name": "aws:PrincipalTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "Description": "Filters access by the tag associated with the principal that is making the request"
+      },
+      {
+        "Name": "saml:namequalifier",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_namequalifier",
+        "Description": "Filters access by the hash value of the issuer, account ID, and friendly name"
+      },
+      {
+        "Name": "sts:RoleSessionName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname",
+        "Description": "Filters access by the role session name required when you assume a role"
+      },
+      {
+        "Name": "saml:edupersonscopedaffiliation",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonscopedaffiliation",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:doc",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_doc",
+        "Description": "Filters access by on the principal that was used to assume the role"
+      },
+      {
+        "Name": "saml:edupersonnickname",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonnickname",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:edupersonprimaryaffiliation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonprimaryaffiliation",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "saml:aud",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_aud",
+        "Description": "Filters access by the endpoint URL to which SAML assertions are presented"
+      },
+      {
+        "Name": "saml:edupersonaffiliation",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonaffiliation",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:uid",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_uid",
+        "Description": "Filters access by the uid attribute"
+      },
+      {
+        "Name": "saml:x500UniqueIdentifier",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_x500uniqueidentifier",
+        "Description": "Filters access by the uid attribute"
+      },
+      {
+        "Name": "saml:edupersonorgunitdn",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonorgunitdn",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:edupersonprincipalname",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonprincipalname",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:primaryGroupSID",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_primarygroupsid",
+        "Description": "Filters access by the primaryGroupSID attribute"
+      },
+      {
+        "Name": "saml:edupersontargetedid",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersontargetedid",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:eduorghomepageuri",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_eduorghomepageuri",
+        "Description": "Filters access by the eduOrg attribute"
+      },
+      {
+        "Name": "saml:eduorgwhitepagesuri",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_eduorgwhitepagesuri",
+        "Description": "Filters access by the eduOrg attribute"
+      },
+      {
+        "Name": "saml:edupersonorgdn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_edupersonorgdn",
+        "Description": "Filters access by the eduPerson attribute"
+      },
+      {
+        "Name": "saml:mail",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_mail",
+        "Description": "Filters access by the mail attribute"
+      },
+      {
+        "Name": "saml:eduorgidentityauthnpolicyuri",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_aud",
+        "Description": "Filters access by the eduOrg attribute"
+      }
+    ]
+  },
+  {
+    "name": "AssumeRoleWithWebIdentity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "role"
+    ],
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cognito-identity.amazonaws.com:amr",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_amr",
+        "Description": "Filters access by the login information for Amazon Cognito"
+      },
+      {
+        "Name": "graph.facebook.com:id",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id",
+        "Description": "Filters access by the Facebook user ID"
+      },
+      {
+        "Name": "accounts.google.com:aud",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_aud",
+        "Description": "Filters access by the Google application ID"
+      },
+      {
+        "Name": "cognito-identity.amazonaws.com:aud",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_aud",
+        "Description": "Filters access by the Amazon Cognito identity pool ID"
+      },
+      {
+        "Name": "sts:RoleSessionName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname",
+        "Description": "Filters access by the role session name required when you assume a role"
+      },
+      {
+        "Name": "graph.facebook.com:app_id",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id",
+        "Description": "Filters access by the Facebook application ID"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "www.amazon.com:user_id",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id",
+        "Description": "Filters access by the Login with Amazon user ID"
+      },
+      {
+        "Name": "www.amazon.com:app_id",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id",
+        "Description": "Filters access by the Login with Amazon application ID"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "accounts.google.com:sub",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sub",
+        "Description": "Filters access by the subject of the claim (the Google user ID)"
+      },
+      {
+        "Name": "sts:TransitiveTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys",
+        "Description": "Filters access by the transitive tag keys that are passed in the request"
+      },
+      {
+        "Name": "cognito-identity.amazonaws.com:sub",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sub",
+        "Description": "Filters access by the subject of the claim (the Amazon Cognito user ID)"
+      },
+      {
+        "Name": "sts:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity",
+        "Description": "Filters access by the source identity that is passed in the request"
+      },
+      {
+        "Name": "accounts.google.com:oaud",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_oaud",
+        "Description": "Filters access by the Google audience"
+      },
+      {
+        "Name": "aws:PrincipalTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "Description": "Filters access by the tag associated with the principal that is making the request"
+      }
+    ]
+  },
+  {
+    "name": "DecodeAuthorizationMessage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccessKeyInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCallerIdentity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFederationToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:PrincipalTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "Description": "Filters access by the tag associated with the principal that is making the request"
+      }
+    ]
+  },
+  {
+    "name": "GetServiceBearerToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSessionToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetSourceIdentity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceidentity",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceidentity",
+        "Description": "Filters access by the source identity that is set on the caller"
+      },
+      {
+        "Name": "sts:SourceIdentity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity",
+        "Description": "Filters access by the source identity that is passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sts",
+    "service": "AWS Security Token Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "role",
+        "ARN": "arn:aws:iam::${Account}:role/${RoleNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${UserNameWithPath}",
+        "RegEx": "^arn:aws:iam:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "sts:TransitiveTagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys",
+        "Description": "Filters access by the transitive tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:PrincipalTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-principaltag",
+        "Description": "Filters access by the tag associated with the principal that is making the request"
+      }
+    ]
+  }
+]

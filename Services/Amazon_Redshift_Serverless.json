@@ -1,0 +1,1030 @@
+[
+  {
+    "name": "ConvertRecoveryPointToSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot",
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      },
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/${RecoveryPointId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointAccess"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointAccess",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateWorkgroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointAccess"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointAccess",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteWorkgroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCredentials",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointAccess"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointAccess",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRecoveryPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/${RecoveryPointId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetWorkgroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointAccess"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointAccess",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListNamespaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecoveryPoints",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListUsageLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWorkgroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutResourcePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RestoreFromRecoveryPoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoveryPoint"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoveryPoint",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/${RecoveryPointId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:recovery-point/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreFromSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEndpointAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "endpointAccess"
+    ],
+    "supportedResources": [
+      {
+        "Name": "endpointAccess",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/${EndpointAccessId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:managedvpcendpoint/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateNamespace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "namespace"
+    ],
+    "supportedResources": [
+      {
+        "Name": "namespace",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:namespace/${NamespaceId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:namespace/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "snapshot"
+    ],
+    "supportedResources": [
+      {
+        "Name": "snapshot",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:snapshot/${SnapshotId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:snapshot/.+?",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUsageLimit",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateWorkgroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "redshift-serverless",
+    "service": "Amazon Redshift Serverless",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workgroup",
+        "ARN": "arn:aws:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}",
+        "RegEx": "^arn:aws:redshift-serverless:${Region}:${Account}:workgroup/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

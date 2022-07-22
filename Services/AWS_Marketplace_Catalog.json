@@ -1,0 +1,222 @@
+[
+  {
+    "name": "CancelChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ChangeSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ChangeSet",
+        "ARN": "arn:aws:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}",
+        "RegEx": "^arn:aws:aws-marketplace:${Region}:${Account}:[^/]+/ChangeSet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CompleteTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ChangeSet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ChangeSet",
+        "ARN": "arn:aws:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}",
+        "RegEx": "^arn:aws:aws-marketplace:${Region}:${Account}:[^/]+/ChangeSet/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEntity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Entity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Entity",
+        "ARN": "arn:aws:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}",
+        "RegEx": "^arn:aws:aws-marketplace:${Region}:${Account}:[^/]+/[^/]+/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListChangeSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEntities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Entity"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Entity",
+        "ARN": "arn:aws:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}",
+        "RegEx": "^arn:aws:aws-marketplace:${Region}:${Account}:[^/]+/[^/]+/[^/]+$",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "catalog:ChangeType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/api-access-control.html",
+        "DocPage": "${ConceptsDocRoot}api-access-control.html",
+        "Description": "Filters access by the change type in the StartChangeSet request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "aws-marketplace",
+    "service": "AWS Marketplace Catalog",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

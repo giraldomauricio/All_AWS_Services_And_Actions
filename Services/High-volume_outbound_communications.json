@@ -1,0 +1,654 @@
+[
+  {
+    "name": "CreateCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnectInstanceConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteInstanceOnboardingJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetCampaignState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetCampaignStateBatch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetConnectInstanceConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstanceOnboardingJobStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCampaigns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "PauseCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDialRequestBatch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResumeCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartInstanceOnboardingJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopCampaign",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCampaignDialerConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCampaignName",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCampaignOutboundCallConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "connect-campaigns",
+    "service": "High-volume outbound communications",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "campaign"
+    ],
+    "supportedResources": [
+      {
+        "Name": "campaign",
+        "ARN": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+        "RegEx": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

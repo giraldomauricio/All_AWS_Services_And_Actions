@@ -1,0 +1,2328 @@
+[
+  {
+    "name": "AssociateApplicationFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "AssociateApplicationToEntitlement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchAssociateUserStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "BatchDisassociateUserStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CopyImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateAppBlock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app-block"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDirectoryConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEntitlement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateImageBuilder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image",
+      "image-builder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateImageBuilderStreamingURL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image-builder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamingURL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateUpdatedImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateUsageReportSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAppBlock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "app-block"
+    ],
+    "supportedResources": [
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDirectoryConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteEntitlement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteImageBuilder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image-builder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteImagePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteUsageReportSubscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAppBlocks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplicationFleetAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDirectoryConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeEntitlements",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeFleets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeImageBuilders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeImagePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStacks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUsageReportSubscriptions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeUserStackAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisableUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateApplicationFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateApplicationFromEntitlement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack",
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "EnableUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExpireSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAssociatedFleets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssociatedStacks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEntitledApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartImageBuilder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image-builder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopImageBuilder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image-builder"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "Stream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "appstream:userId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/appstream2/latest/developerguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role",
+        "Description": "Filters access by the ID of the AppStream 2.0 user"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "image-builder",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image-builder/${ImageBuilderName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:application/${ApplicationName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "app-block",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:app-block/${AppBlockName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDirectoryConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateEntitlement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFleet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "fleet"
+    ],
+    "supportedResources": [
+      {
+        "Name": "fleet",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:fleet/${FleetName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateImagePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:image/${ImageName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appstream",
+    "service": "Amazon AppStream 2.0",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:appstream:${Region}:${Account}:stack/${StackName}",
+        "RegEx": "^arn:aws:appstream:.+:[0-9]+:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource"
+      }
+    ]
+  }
+]

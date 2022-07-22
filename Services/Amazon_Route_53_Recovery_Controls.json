@@ -1,0 +1,818 @@
+[
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:cluster/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:cluster/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "CreateControlPanel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "controlpanel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRoutingControl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateSafetyRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "safetyrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:cluster/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:cluster/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteControlPanel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "controlpanel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteRoutingControl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSafetyRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "safetyrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:cluster/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:cluster/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeControlPanel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "controlpanel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeRoutingControl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRoutingControlByName",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSafetyRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "safetyrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListAssociatedRoute53HealthChecks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListControlPanels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRoutingControls",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSafetyRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "controlpanel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:cluster/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:cluster/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:cluster/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:cluster/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateControlPanel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "controlpanel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "controlpanel",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRoutingControl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSafetyRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-control-config",
+    "service": "Amazon Route 53 Recovery Controls",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "safetyrule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "safetyrule",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/safetyrule/${SafetyRuleId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/safetyrule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on tag key-value pairs attached to the resource"
+      }
+    ]
+  }
+]

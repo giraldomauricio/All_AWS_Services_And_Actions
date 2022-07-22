@@ -1,0 +1,3311 @@
+[
+  {
+    "name": "AssociateRoleToGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "AssociateServiceRoleToAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectorDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectorDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateCoreDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCoreDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateDeviceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDeviceDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateFunctionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFunctionDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateGroupCertificateAuthority",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateGroupVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateLoggerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLoggerDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateResourceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateResourceDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateSoftwareUpdateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSubscriptionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSubscriptionDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteConnectorDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCoreDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteDeviceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteFunctionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLoggerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteResourceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteSubscriptionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateRoleFromGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateServiceRoleFromAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "Discover",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thing"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thing",
+        "ARN": "arn:aws:iot:${Region}:${Account}:thing/${ThingName}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAssociatedRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetBulkDeploymentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bulkDeployment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetConnectivityInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectivityInfo"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectivityInfo",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/connectivityInfo",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnectorDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetConnectorDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition",
+      "connectorDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "connectorDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCoreDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetCoreDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition",
+      "coreDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "coreDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDeploymentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deployment",
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/deployments/${DeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDeviceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDeviceDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinitionVersion",
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFunctionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetFunctionDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition",
+      "functionDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "functionDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetGroupCertificateAuthority",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group",
+      "certificateAuthority"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "certificateAuthority",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/certificateauthorities/${CertificateAuthorityId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGroupCertificateConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetGroupVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group",
+      "groupVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "groupVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLoggerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetLoggerDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition",
+      "loggerDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "loggerDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetResourceDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition",
+      "resourceDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "resourceDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceRoleForAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSubscriptionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetSubscriptionDefinitionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition",
+      "subscriptionDefinitionVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "subscriptionDefinitionVersion",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}/versions/${VersionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetThingRuntimeConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thingRuntimeConfig"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thingRuntimeConfig",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/runtimeconfig",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBulkDeploymentDetailedReports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bulkDeployment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListBulkDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConnectorDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListConnectorDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCoreDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListCoreDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListDeviceDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListDeviceDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFunctionDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListFunctionDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGroupCertificateAuthorities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListGroupVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLoggerDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListLoggerDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourceDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListResourceDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSubscriptionDefinitionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListSubscriptionDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the mandatory tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "ResetDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartBulkDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopBulkDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "bulkDeployment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the mandatory tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "bulkDeployment",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/bulk/deployments/${BulkDeploymentId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnectivityInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectivityInfo"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectivityInfo",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/connectivityInfo",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConnectorDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectorDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectorDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/connectors/${ConnectorDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCoreDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "coreDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "coreDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/cores/${CoreDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDeviceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deviceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deviceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/devices/${DeviceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFunctionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "functionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "functionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/functions/${FunctionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGroupCertificateConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "group"
+    ],
+    "supportedResources": [
+      {
+        "Name": "group",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/groups/${GroupId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLoggerDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loggerDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loggerDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/loggers/${LoggerDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateResourceDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/resources/${ResourceDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateSubscriptionDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "subscriptionDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "subscriptionDefinition",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/definition/subscriptions/${SubscriptionDefinitionId}",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateThingRuntimeConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "greengrass",
+    "service": "AWS IoT Greengrass",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "thingRuntimeConfig"
+    ],
+    "supportedResources": [
+      {
+        "Name": "thingRuntimeConfig",
+        "ARN": "arn:aws:greengrass:${Region}:${Account}:/greengrass/things/${ThingName}/runtimeconfig",
+        "RegEx": "^arn:aws:greengrass:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,617 @@
+[
+  {
+    "name": "AssociateTeamMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUserProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${aws:username}",
+        "RegEx": "^arn:aws:iam:.+$",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteExtendedAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUserProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${aws:username}",
+        "RegEx": "^arn:aws:iam:.+$",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUserProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateTeamMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExtendedAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTeamMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUserProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutExtendedAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "Description": "Filters create requests based on the allowed set of values for each of the tags."
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "Description": "Filters create requests based on the presence of mandatory tags in the request."
+      }
+    ]
+  },
+  {
+    "name": "UntagProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "Description": "Filters create requests based on the presence of mandatory tags in the request."
+      }
+    ]
+  },
+  {
+    "name": "UpdateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTeamMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:codestar:${Region}:${Account}:project/${ProjectId}",
+        "RegEx": "^arn:aws:codestar:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUserProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:iam::${Account}:user/${aws:username}",
+        "RegEx": "^arn:aws:iam:.+$",
+        "ContextKeys": [
+          "iam:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "iam:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "VerifyServiceRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar",
+    "service": "AWS CodeStar",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

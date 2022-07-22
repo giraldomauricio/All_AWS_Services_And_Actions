@@ -1,0 +1,634 @@
+[
+  {
+    "name": "AssociateCoupon",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAudio",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "audio"
+    ],
+    "supportedResources": [
+      {
+        "Name": "audio",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:audio/${AudioId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateComposition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "composition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteComposition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "composition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetComposition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "composition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetSampleModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCompositions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "composition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSampleModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by actions based on tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTrainingTopics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by actions based on tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by actions based on tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateComposition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "composition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "composition",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:composition/${CompositionId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "deepcomposer",
+    "service": "AWS DeepComposer",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:deepcomposer:${Region}:${Account}:model/${ModelId}",
+        "RegEx": "^arn:aws:deepcomposer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

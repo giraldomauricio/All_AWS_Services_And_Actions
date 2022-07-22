@@ -1,0 +1,371 @@
+[
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateApplicationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateCloudFormationChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "serverlessrepo:applicationType",
+        "Type": "String",
+        "Description": "Application type"
+      }
+    ]
+  },
+  {
+    "name": "CreateCloudFormationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "serverlessrepo:applicationType",
+        "Type": "String",
+        "Description": "Application type"
+      }
+    ]
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "serverlessrepo:applicationType",
+        "Type": "String",
+        "Description": "Application type"
+      }
+    ]
+  },
+  {
+    "name": "GetApplicationPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCloudFormationTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApplicationDependencies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "serverlessrepo:applicationType",
+        "Type": "String",
+        "Description": "Application type"
+      }
+    ]
+  },
+  {
+    "name": "ListApplicationVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "serverlessrepo:applicationType",
+        "Type": "String",
+        "Description": "Application type"
+      }
+    ]
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutApplicationPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UnshareApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "serverlessrepo",
+    "service": "AWS Serverless Application Repository",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "applications"
+    ],
+    "supportedResources": [
+      {
+        "Name": "applications",
+        "ARN": "arn:aws:serverlessrepo:${Region}:${Account}:applications/${ResourceId}",
+        "RegEx": "^arn:aws:serverlessrepo:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,1256 @@
+[
+  {
+    "name": "AssociateConnectionWithChart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection",
+      "chart"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateConnectionWithTab",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateQueryWithTab",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDeleteFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateChart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "chart"
+    ],
+    "supportedResources": [
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteChart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "chart"
+    ],
+    "supportedResources": [
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTab",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DriverExecute",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GenerateSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccountInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetChart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "chart"
+    ],
+    "supportedResources": [
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUserInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetUserWorkspaceSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRedshiftClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSampleDatabases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSavedQueryVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTabs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTaggedResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutTab",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutUserWorkspaceSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountConnectionSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountExportSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccountGeneralSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateChart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "chart"
+    ],
+    "supportedResources": [
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connection",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:connection/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:connection/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateFileFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "chart",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:chart/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:chart/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFolder",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateSavedQuery",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "sqlworkbench",
+    "service": "AWS SQL Workbench",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "query"
+    ],
+    "supportedResources": [
+      {
+        "Name": "query",
+        "ARN": "arn:aws:sqlworkbench:${Region}:${Account}:query/${ResourceId}",
+        "RegEx": "^arn:aws:sqlworkbench:${Region}:${Account}:query/.+$",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  }
+]

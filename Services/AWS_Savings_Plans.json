@@ -1,0 +1,285 @@
+[
+  {
+    "name": "CreateSavingsPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteQueuedSavingsPlan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value assoicated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSavingsPlanRates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value assoicated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSavingsPlans",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on tag-value assoicated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeSavingsPlansOfferingRates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSavingsPlansOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "savingsplans",
+    "service": "AWS Savings Plans",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "savingsplan"
+    ],
+    "supportedResources": [
+      {
+        "Name": "savingsplan",
+        "ARN": "arn:aws:savingsplans::${Account}:savingsplan/${ResourceId}",
+        "RegEx": "^arn:aws:savingsplans:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of mandatory tags in the request"
+      }
+    ]
+  }
+]

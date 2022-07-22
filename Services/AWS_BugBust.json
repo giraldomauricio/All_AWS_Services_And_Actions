@@ -1,0 +1,611 @@
+[
+  {
+    "name": "CreateEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EvaluateProfilingGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetJoinEventStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "JoinEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListBugs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListEventParticipants",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListEventScores",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListProfilingGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListPullRequests",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateWorkItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateWorkItemAdmin",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "bugbust",
+    "service": "AWS BugBust",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Event"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Event",
+        "ARN": "arn:aws:bugbust:${Region}:${Account}:events/${EventId}",
+        "RegEx": "^arn:aws:bugbust:${Region}:${Account}:events/.+?",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  }
+]

@@ -1,0 +1,806 @@
+[
+  {
+    "name": "CancelContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Contact"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Contact",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:contact/${ContactId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:contact/.+?",
+        "ContextKeys": [
+          "groundstation:ContactId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:contactid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataflowEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMissionProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataflowEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DataflowEndpointGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DataflowEndpointGroup",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/.+?",
+        "ContextKeys": [
+          "groundstation:DataflowEndpointGroupId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:dataflowendpointgroupid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMissionProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MissionProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Contact"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Contact",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:contact/${ContactId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:contact/.+?",
+        "ContextKeys": [
+          "groundstation:ContactId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:contactid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataflowEndpointGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DataflowEndpointGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DataflowEndpointGroup",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/.+?",
+        "ContextKeys": [
+          "groundstation:DataflowEndpointGroupId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:dataflowendpointgroupid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMinuteUsage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMissionProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MissionProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetSatellite",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Satellite"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Satellite",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:satellite/${SatelliteId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:satellite/.+?",
+        "ContextKeys": [
+          "groundstation:SatelliteId"
+        ],
+        "ContextKeyStrings": [
+          "groundstation:satelliteid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListConfigs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListContacts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDataflowEndpointGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGroundStations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMissionProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListSatellites",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "DataflowEndpointGroup",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/.+?",
+        "ContextKeys": [
+          "groundstation:DataflowEndpointGroupId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:dataflowendpointgroupid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Contact",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:contact/${ContactId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:contact/.+?",
+        "ContextKeys": [
+          "groundstation:ContactId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:contactid"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReserveContact",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "DataflowEndpointGroup",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/.+?",
+        "ContextKeys": [
+          "groundstation:DataflowEndpointGroupId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:dataflowendpointgroupid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Contact",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:contact/${ContactId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:contact/.+?",
+        "ContextKeys": [
+          "groundstation:ContactId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:contactid"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "DataflowEndpointGroup",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/${DataflowEndpointGroupId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:dataflow-endpoint-group/.+?",
+        "ContextKeys": [
+          "groundstation:DataflowEndpointGroupId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:dataflowendpointgroupid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Contact",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:contact/${ContactId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:contact/.+?",
+        "ContextKeys": [
+          "groundstation:ContactId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:contactid"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConfig",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Config"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Config",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:config/${ConfigType}/${ConfigId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:config/.+?/.+?",
+        "ContextKeys": [
+          "groundstation:ConfigId",
+          "groundstation:ConfigType",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:configid",
+          "groundstation:configtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMissionProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "groundstation",
+    "service": "AWS Ground Station",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MissionProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MissionProfile",
+        "ARN": "arn:aws:groundstation:${Region}:${Account}:mission-profile/${MissionProfileId}",
+        "RegEx": "^arn:aws:groundstation:${Region}:${Account}:mission-profile/.+?",
+        "ContextKeys": [
+          "groundstation:MissionProfileId",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "groundstation:missionprofileid"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

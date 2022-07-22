@@ -1,0 +1,701 @@
+[
+  {
+    "name": "AcceptInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateGraph",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteGraph",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateMembership",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "EnableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFreeTrialEligibility",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetGraphIngestState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPricingInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetUsageInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListGraphs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListOrganizationAdminAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by specifying the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "RejectInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchGraph",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartMonitoringMember",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by specifying the tags associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by specifying the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by specifying the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by specifying the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "detective",
+    "service": "Amazon Detective",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Graph"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Graph",
+        "ARN": "arn:aws:detective:${Region}:${Account}:graph:${ResourceId}",
+        "RegEx": "^arn:aws:detective:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

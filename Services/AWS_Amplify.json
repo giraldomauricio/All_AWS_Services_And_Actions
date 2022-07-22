@@ -1,0 +1,1155 @@
+[
+  {
+    "name": "CreateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in a request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "CreateBackendEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBranch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in a request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDomainAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in a request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWebHook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackendEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBranch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDomainAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/domains/${DomainName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWebHook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GenerateAccessLogs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetArtifactUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBackendEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBranch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDomainAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/domains/${DomainName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWebHook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListApps",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListArtifacts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBackendEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBranches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDomainAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListWebHooks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in a request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by a tag\u0027s key and value in a request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}/jobs/${JobId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys in a request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApp",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateBranch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "branches"
+    ],
+    "supportedResources": [
+      {
+        "Name": "branches",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/branches/${BranchName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDomainAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domains"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domains",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}/domains/${DomainName}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWebHook",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "amplify",
+    "service": "AWS Amplify",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "apps"
+    ],
+    "supportedResources": [
+      {
+        "Name": "apps",
+        "ARN": "arn:aws:amplify:${Region}:${Account}:apps/${AppId}",
+        "RegEx": "^arn:aws:amplify:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

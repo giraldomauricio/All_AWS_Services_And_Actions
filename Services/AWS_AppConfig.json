@@ -1,0 +1,1606 @@
+[
+  {
+    "name": "CreateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateConfigurationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the allowed set of values for a specified tag"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDeploymentStrategy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the allowed set of values for a specified tag"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateHostedConfigurationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConfigurationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDeploymentStrategy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deploymentstrategy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteHostedConfigurationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "hostedconfigurationversion",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "hostedconfigurationversion",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}/hostedconfigurationversion/${VersionNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetConfigurationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deployment",
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDeploymentStrategy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deploymentstrategy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetHostedConfigurationVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "hostedconfigurationversion",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "hostedconfigurationversion",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}/hostedconfigurationversion/${VersionNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLatestConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "configuration",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/configuration/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "ListApplications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConfigurationProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDeploymentStrategies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListHostedConfigurationVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "StartConfigurationSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "configuration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "configuration",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/configuration/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "StartDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment",
+      "configurationprofile",
+      "deploymentstrategy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the allowed set of values for a specified tag"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "StopDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deployment",
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configuration",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/configuration/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by the allowed set of values for a specified tag"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "deployment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/deployment/${DeploymentNumber}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "configuration",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}/configuration/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a list of tag keys that are allowed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateApplication",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConfigurationProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDeploymentStrategy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "deploymentstrategy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "deploymentstrategy",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:deploymentstrategy/${DeploymentStrategyId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "DocPage": "${DocHomeURL}systems-manager/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "Description": "Filters access by a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "ValidateConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "appconfig",
+    "service": "AWS AppConfig",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "application",
+      "configurationprofile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "application",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "configurationprofile",
+        "ARN": "arn:aws:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}",
+        "RegEx": "^arn:aws:appconfig:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

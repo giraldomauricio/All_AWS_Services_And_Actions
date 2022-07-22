@@ -1,0 +1,2010 @@
+[
+  {
+    "name": "CreateCapacityProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:enable-execute-command",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the execute-command capability of your Amazon ECS task or Amazon ECS service"
+      },
+      {
+        "Name": "ecs:capacity-provider",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS capacity provider"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "ecs:task-definition",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS task definition"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "CreateTaskSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccountSetting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCapacityProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "capacity-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "capacity-provider",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DeleteTaskSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task-set",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:service",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS service"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DeregisterContainerInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeCapacityProviders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "capacity-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "capacity-provider",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeContainerInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DescribeServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DescribeTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTaskSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task-set",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:service",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS service"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DescribeTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "DiscoverPollEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExecuteCommand",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:task",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS task"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      },
+      {
+        "Name": "ecs:container-name",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the name of an Amazon ECS container which is defined in the ECS task definition"
+      }
+    ]
+  },
+  {
+    "name": "ListAccountSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListClusters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListContainerInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListServices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task-definition",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTaskDefinitionFamilies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTaskDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "Poll",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "PutAccountSetting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAccountSettingDefault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "PutClusterCapacityProviders",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "capacity-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "capacity-provider",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:capacity-provider",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS capacity provider"
+      }
+    ]
+  },
+  {
+    "name": "RegisterContainerInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "RegisterTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RunTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task-definition",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:enable-execute-command",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the execute-command capability of your Amazon ECS task or Amazon ECS service"
+      },
+      {
+        "Name": "ecs:capacity-provider",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS capacity provider"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "StartTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task-definition",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:enable-execute-command",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the execute-command capability of your Amazon ECS task or Amazon ECS service"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      },
+      {
+        "Name": "ecs:container-instances",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS container instance"
+      }
+    ]
+  },
+  {
+    "name": "StartTelemetrySession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "StopTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "SubmitAttachmentStateChanges",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SubmitContainerStateChange",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SubmitTaskStateChange",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task-definition",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task-definition",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCapacityProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "capacity-provider"
+    ],
+    "supportedResources": [
+      {
+        "Name": "capacity-provider",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateCluster",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateClusterSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cluster"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cluster",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:cluster/${ClusterName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateContainerAgent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "UpdateContainerInstancesState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "container-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "container-instance",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "UpdateService",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:enable-execute-command",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the execute-command capability of your Amazon ECS task or Amazon ECS service"
+      },
+      {
+        "Name": "ecs:capacity-provider",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS capacity provider"
+      },
+      {
+        "Name": "ecs:task-definition",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS task definition"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "UpdateServicePrimaryTaskSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "service"
+    ],
+    "supportedResources": [
+      {
+        "Name": "service",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTaskSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ecs",
+    "service": "Amazon Elastic Container Service",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "task-set"
+    ],
+    "supportedResources": [
+      {
+        "Name": "task-set",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "ecs:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ecs:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ecs:service",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS service"
+      },
+      {
+        "Name": "ecs:cluster",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "Description": "Filters access by the ARN of an Amazon ECS cluster"
+      }
+    ]
+  }
+]

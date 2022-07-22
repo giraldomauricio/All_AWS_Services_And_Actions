@@ -1,0 +1,2807 @@
+[
+  {
+    "name": "BatchCreateVariable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchGetVariable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "variable"
+    ],
+    "supportedResources": [
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelBatchImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batch-import"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelBatchPredictionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batch-prediction"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateBatchImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "batch-import"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateBatchPredictionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "detector",
+      "batch-prediction",
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDetectorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateModelVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateVariable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteBatchImportJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batch-import"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBatchPredictionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "batch-prediction"
+    ],
+    "supportedResources": [
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDetectorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEntityType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventsByEventType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteExternalModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "external-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLabel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "label"
+    ],
+    "supportedResources": [
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteModelVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOutcome",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "outcome"
+    ],
+    "supportedResources": [
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVariable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "variable"
+    ],
+    "supportedResources": [
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeModelVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBatchImportJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBatchPredictionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDeleteEventsByEventTypeStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDetectorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDetectors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEntityTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventPrediction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "detector",
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventPredictionMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "detector",
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetExternalModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetKMSEncryptionKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetModelVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOutcomes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVariables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEventPredictions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDetector",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "PutEntityType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "entity-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "PutEventType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "PutExternalModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type",
+      "external-model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "PutKMSEncryptionKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutLabel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "label"
+    ],
+    "supportedResources": [
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "PutOutcome",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "outcome"
+    ],
+    "supportedResources": [
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "SendEvent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-prediction",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-prediction/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-prediction/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "outcome",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:outcome/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:outcome/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "batch-import",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:batch-import/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:batch-import/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "label",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:label/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:label/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "entity-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:entity-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:entity-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDetectorVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "external-model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:external-model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:external-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDetectorVersionMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDetectorVersionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "detector-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "detector-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:detector-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:detector-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEventLabel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-type"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-type",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:event-type/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:event-type/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateModelVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateModelVersionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "model-version"
+    ],
+    "supportedResources": [
+      {
+        "Name": "model-version",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:model-version/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:model-version/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRuleMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRuleVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rule"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rule",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:rule/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:rule/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateVariable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "frauddetector",
+    "service": "Amazon Fraud Detector",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "variable"
+    ],
+    "supportedResources": [
+      {
+        "Name": "variable",
+        "ARN": "arn:aws:frauddetector:${Region}:${Account}:variable/${ResourcePath}",
+        "RegEx": "^arn:aws:frauddetector:${Region}:${Account}:variable/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

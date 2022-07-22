@@ -1,0 +1,1304 @@
+[
+  {
+    "name": "CreateGame",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteGame",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DisconnectPlayer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ExportSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetExtension",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetExtensionVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetGame",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetGameConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetGeneratedCodeJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetPlayerConnectionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetStage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetStageDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ImportGameConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "InvokeBackend",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListExtensionVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExtensions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGames",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGeneratedCodeJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListStageDeployments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListStages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartGeneratedCodeJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "StartStageDeployment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGame",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateGameConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateSnapshot",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "gamesparks",
+    "service": "Amazon GameSparks",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stage",
+      "game"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stage",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}/stage/${StageName}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "game",
+        "ARN": "arn:aws:gamesparks:${Region}:${Account}:game/${GameId}",
+        "RegEx": "^arn:aws:gamesparks:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/gamesparks/latest/dg/security-iam-service.html#policy-condition-keys",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4685 @@
+[
+  {
+    "name": "AddTagsToResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on the allowed set of values for a specified tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on whether mandatory tags are included in the request"
+      }
+    ]
+  },
+  {
+    "name": "AssociateOpsItemRelatedItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelCommand",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelMaintenanceWindowExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateActivation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAssociationBatch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on the allowed set of values for a specified tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on whether mandatory tags are included in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateOpsItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateOpsMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreatePatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateResourceDataSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourcedatasync"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourcedatasync",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:resource-data-sync/${SyncName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SyncType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteActivation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInventory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteOpsMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsmetadata"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteResourceDataSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourcedatasync"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourcedatasync",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:resource-data-sync/${SyncName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SyncType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeregisterManagedInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "managed-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:resourceTag/tag-key",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by allowing access based on a tag key-value pair assigned to the Systems Manager resource"
+      }
+    ]
+  },
+  {
+    "name": "DeregisterPatchBaselineForPatchGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterTargetFromMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterTaskFromMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeActivations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAssociationExecutionTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAssociationExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAutomationExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAutomationStepExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAvailablePatches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDocumentParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDocumentPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEffectiveInstanceAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance",
+      "managed-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeEffectivePatchesForPatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInstanceAssociationsStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance",
+      "managed-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInstanceInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeInstancePatchStates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeInstancePatchStatesForPatchGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeInstancePatches",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeInstanceProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeInventoryDeletions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMaintenanceWindowExecutionTaskInvocations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMaintenanceWindowExecutionTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMaintenanceWindowExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMaintenanceWindowSchedule",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMaintenanceWindowTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMaintenanceWindowTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeMaintenanceWindows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeMaintenanceWindowsForTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeOpsItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePatchBaselines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePatchGroupState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePatchGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePatchProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeSessions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateOpsItemRelatedItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAutomationExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCalendar",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCalendarState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCommandInvocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetConnectionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:resourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}security_iam_service-with-iam.html#policy-conditions",
+        "Description": "Filters access by allowing access based on a tag key-value pair assigned to the Systems Manager resource"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by based on a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "GetDefaultPatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDeployablePatchSnapshotForInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:DocumentCategories",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by verifying that a user has permission to access a document belonging to a specific category enum"
+      }
+    ]
+  },
+  {
+    "name": "GetInventory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInventorySchema",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMaintenanceWindowExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMaintenanceWindowExecutionTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMaintenanceWindowExecutionTaskInvocation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMaintenanceWindowTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetManifest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetOpsItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOpsMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsmetadata"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetOpsSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourcedatasync"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourcedatasync",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:resource-data-sync/${SyncName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetParameterHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetParameters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetParametersByPath",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:Recursive",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by allowing traversing hierarchical structure of the Systems Manager parameters"
+      }
+    ]
+  },
+  {
+    "name": "GetPatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPatchBaselineForPatchGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceSetting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "servicesetting"
+    ],
+    "supportedResources": [
+      {
+        "Name": "servicesetting",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:servicesetting/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "LabelParameterVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssociationVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCommandInvocations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCommands",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListComplianceItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListComplianceSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDocumentMetadataHistory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDocumentVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDocuments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInstanceAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListInventoryEntries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOpsItemEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOpsItemRelatedItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListOpsMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourceComplianceSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourceDataSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyDocumentPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutCalendar",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutComplianceItems",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutConfigurePackageResult",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutInventory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutParameter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on the allowed set of values for a specified tags"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on whether mandatory tags are included in the request"
+      },
+      {
+        "Name": "ssm:Overwrite",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by allowing Systems Manager parameters to be overwritten"
+      }
+    ]
+  },
+  {
+    "name": "RegisterDefaultPatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterManagedInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RegisterPatchBaselineForPatchGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterTargetWithMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterTaskWithMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTagsFromResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by \u0027Create\u0027 requests based on whether mandatory tags are included in the request"
+      }
+    ]
+  },
+  {
+    "name": "ResetServiceSetting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "servicesetting"
+    ],
+    "supportedResources": [
+      {
+        "Name": "servicesetting",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:servicesetting/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResumeSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendAutomationSignal",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendCommand",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "bucket",
+        "ARN": "arn:aws:s3:::${BucketName}",
+        "RegEx": "^arn:aws:s3:((::[^/]+)|((${Region}:${Account}:accesspoint/[^/]+))$",
+        "isRequired": false
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:resourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}security_iam_service-with-iam.html#policy-conditions",
+        "Description": "Filters access by allowing access based on a tag key-value pair assigned to the Systems Manager resource"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by based on a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "StartAssociationsOnce",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartAutomationExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-definition",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-definition/${AutomationDefinitionName}:${VersionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartChangeRequestExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-definition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-definition",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-definition/${AutomationDefinitionName}:${VersionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:AutoApprove",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/change-manager-auto-approval-access.html",
+        "DocPage": "${ConceptsDocRoot}change-manager-auto-approval-access.html",
+        "Description": "Filters access by verifying that a user has permission to start Change Manager workflows without a review step (with the exception of change freeze events)"
+      }
+    ]
+  },
+  {
+    "name": "StartSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "task",
+        "ARN": "arn:aws:ecs:${Region}:${Account}:task/${TaskId}",
+        "RegEx": "^arn:aws:ecs:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:resourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}security_iam_service-with-iam.html#policy-conditions",
+        "Description": "Filters access by allowing access based on a tag key-value pair assigned to the Systems Manager resource"
+      },
+      {
+        "Name": "ssm:SessionDocumentAccessCheck",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/getting-started-sessiondocumentaccesscheck.html",
+        "DocPage": "${ConceptsDocRoot}getting-started-sessiondocumentaccesscheck.html",
+        "Description": "Filters access by verifying that a user has permission to access either the default Session Manager configuration document or the custom configuration document specified in a request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by based on a tag key-value pair assigned to the AWS resource"
+      }
+    ]
+  },
+  {
+    "name": "StopAutomationExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "automation-execution"
+    ],
+    "supportedResources": [
+      {
+        "Name": "automation-execution",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:automation-execution/${AutomationExecutionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TerminateSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "session"
+    ],
+    "supportedResources": [
+      {
+        "Name": "session",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:session/${SessionId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UnlabelParameterVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "parameter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "parameter",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:parameter/${ParameterNameWithoutLeadingSlash}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAssociation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateAssociationStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SourceInstanceARN",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "DocPage": "${ConceptsDocRoot}service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "Description": "Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager\u0027s managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDocument",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDocumentDefaultVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDocumentMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "document"
+    ],
+    "supportedResources": [
+      {
+        "Name": "document",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:document/${DocumentName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:DocumentCategories",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:documentcategories"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInstanceAssociationStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "association"
+    ],
+    "supportedResources": [
+      {
+        "Name": "association",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:association/${AssociationId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SourceInstanceARN",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "DocPage": "${ConceptsDocRoot}service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "Description": "Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager\u0027s managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile"
+      }
+    ]
+  },
+  {
+    "name": "UpdateInstanceInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "instance",
+        "ARN": "arn:aws:ec2:${Region}:${Account}:instance/${InstanceId}",
+        "RegEx": "^arn:aws:ec2:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SourceInstanceARN",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "DocPage": "${ConceptsDocRoot}service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys",
+        "Description": "Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager\u0027s managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile"
+      }
+    ]
+  },
+  {
+    "name": "UpdateMaintenanceWindow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMaintenanceWindowTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateMaintenanceWindowTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "maintenancewindow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "maintenancewindow",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:maintenancewindow/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateManagedInstanceRole",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "managed-instance"
+    ],
+    "supportedResources": [
+      {
+        "Name": "managed-instance",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:managed-instance/${InstanceId}",
+        "RegEx": "^arn:aws:ssm:.+:",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:resourceTag/tag-key",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by allowing access based on a tag key-value pair assigned to the Systems Manager resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateOpsItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsitem"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsitem",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsitem/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateOpsMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "opsmetadata"
+    ],
+    "supportedResources": [
+      {
+        "Name": "opsmetadata",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:opsmetadata/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "ssm:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePatchBaseline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "patchbaseline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "patchbaseline",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:patchbaseline/${PatchBaselineIdResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "ContextKeys": [
+          "ssm:resourceTag/tag-key",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "ssm:resourcetag/tag-key",
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateResourceDataSync",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourcedatasync"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourcedatasync",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:resource-data-sync/${SyncName}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "ssm:SyncType",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "DocPage": "${ConceptsDocRoot}auth-and-access-control-iam-access-control-identity-based.html#policy-conditions",
+        "Description": "Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateServiceSetting",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "ssm",
+    "service": "AWS Systems Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "servicesetting"
+    ],
+    "supportedResources": [
+      {
+        "Name": "servicesetting",
+        "ARN": "arn:aws:ssm:${Region}:${Account}:servicesetting/${ResourceId}",
+        "RegEx": "^arn:aws:ssm:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,1099 @@
+[
+  {
+    "name": "AssociateExternalConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateWithDownstreamRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CopyPackageVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository",
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDomainPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePackageVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRepositoryPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribePackage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribePackageVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateExternalConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisposePackageVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAuthorizationToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDomainPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPackageVersionAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPackageVersionReadme",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRepositoryEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRepositoryPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDomains",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPackageVersionAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPackageVersionDependencies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPackageVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListPackages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRepositories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRepositoriesInDomain",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PublishPackageVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutDomainPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "domain"
+    ],
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutPackageMetadata",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutPackageOriginConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutRepositoryPermissionsPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ReadFromRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "domain",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:domain/${DomainName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdatePackageVersionsStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "package"
+    ],
+    "supportedResources": [
+      {
+        "Name": "package",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:package/${DomainName}/${RepositoryName}/${PackageFormat}/${PackageNamespace}/${PackageName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRepository",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codeartifact",
+    "service": "AWS CodeArtifact",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "repository"
+    ],
+    "supportedResources": [
+      {
+        "Name": "repository",
+        "ARN": "arn:aws:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}",
+        "RegEx": "^arn:aws:codeartifact:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

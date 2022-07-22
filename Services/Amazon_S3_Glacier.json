@@ -1,0 +1,775 @@
+[
+  {
+    "name": "AbortMultipartUpload",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AbortVaultLock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AddTagsToVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CompleteMultipartUpload",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CompleteVaultLock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "glacier:ArchiveAgeInDays",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazonglacier/latest/dev/access-control-overview.html#specifying-conditions",
+        "Description": "Filters access by how long an archive has been stored in the vault, in days"
+      }
+    ]
+  },
+  {
+    "name": "DeleteVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataRetrievalPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetJobOutput",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVaultLock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InitiateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "glacier:ArchiveAgeInDays",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazonglacier/latest/dev/access-control-overview.html#specifying-conditions",
+        "Description": "Filters access by how long an archive has been stored in the vault, in days"
+      }
+    ]
+  },
+  {
+    "name": "InitiateMultipartUpload",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InitiateVaultLock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMultipartUploads",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListParts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListProvisionedCapacity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListVaults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PurchaseProvisionedCapacity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RemoveTagsFromVault",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetDataRetrievalPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetVaultAccessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetVaultNotifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UploadArchive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UploadMultipartPart",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "glacier",
+    "service": "Amazon S3 Glacier",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vault"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vault",
+        "ARN": "arn:aws:glacier:${Region}:${Account}:vaults/${VaultName}",
+        "RegEx": "^arn:aws:glacier:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

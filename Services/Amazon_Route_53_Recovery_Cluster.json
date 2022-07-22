@@ -1,0 +1,107 @@
+[
+  {
+    "name": "GetRoutingControlState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-cluster",
+    "service": "Amazon Route 53 Recovery Cluster",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRoutingControls",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-cluster",
+    "service": "Amazon Route 53 Recovery Cluster",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateRoutingControlState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-cluster",
+    "service": "Amazon Route 53 Recovery Cluster",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "route53-recovery-cluster:AllowSafetyRulesOverrides",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/routing-control/latest/APIReference/API_UpdateRoutingControlState.html",
+        "DocPage": "${DocHomeURL}routing-control/latest/APIReference/API_UpdateRoutingControlState.html",
+        "Description": "Override safety rules to allow routing control state updates"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRoutingControlStates",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-cluster",
+    "service": "Amazon Route 53 Recovery Cluster",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "routingcontrol"
+    ],
+    "supportedResources": [
+      {
+        "Name": "routingcontrol",
+        "ARN": "arn:aws:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}",
+        "RegEx": "^arn:aws:route53-recovery-control::${Account}:controlpanel/.+/routingcontrol/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "route53-recovery-cluster:AllowSafetyRulesOverrides",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/routing-control/latest/APIReference/API_UpdateRoutingControlState.html",
+        "DocPage": "${DocHomeURL}routing-control/latest/APIReference/API_UpdateRoutingControlState.html",
+        "Description": "Override safety rules to allow routing control state updates"
+      }
+    ]
+  }
+]

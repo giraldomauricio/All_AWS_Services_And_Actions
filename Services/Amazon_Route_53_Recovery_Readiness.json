@@ -1,0 +1,1183 @@
+[
+  {
+    "name": "CreateCell",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cell"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateCrossAccountAuthorization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateReadinessCheck",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateRecoveryGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateResourceSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCell",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cell"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCrossAccountAuthorization",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteReadinessCheck",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteRecoveryGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteResourceSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetArchitectureRecommendations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetCell",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cell"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetCellReadinessSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cell"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetReadinessCheck",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetReadinessCheckResourceStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetReadinessCheckStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetRecoveryGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetRecoveryGroupReadinessSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetResourceSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListCells",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCrossAccountAuthorizations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListReadinessChecks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRecoveryGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourceSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateCell",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cell"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cell",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:cell/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::cell/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateReadinessCheck",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "readinesscheck"
+    ],
+    "supportedResources": [
+      {
+        "Name": "readinesscheck",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:readiness-check/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness:readiness-check/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRecoveryGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "recoverygroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "recoverygroup",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:recovery-group/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::recovery-group/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateResourceSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "route53-recovery-readiness",
+    "service": "Amazon Route 53 Recovery Readiness",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "resourceset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "resourceset",
+        "ARN": "arn:aws:route53-recovery-readiness::${Account}:resource-set/${ResourceId}",
+        "RegEx": "^arn:aws:route53-recovery-readiness::resource-set/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access based on the tags associated with the resource"
+      }
+    ]
+  }
+]

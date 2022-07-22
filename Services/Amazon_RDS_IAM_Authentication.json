@@ -1,0 +1,25 @@
+[
+  {
+    "name": "connect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rds-db",
+    "service": "Amazon RDS IAM Authentication",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "db-user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "db-user",
+        "ARN": "arn:aws:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}",
+        "RegEx": "^arn:aws:rds-db:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

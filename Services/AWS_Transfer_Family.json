@@ -1,0 +1,972 @@
+[
+  {
+    "name": "CreateAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "noResourceARN": "arn:${Partition}:transfer:${Region}:${Account}:server/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "noResourceARN": "arn:${Partition}:transfer:${Region}:${Account}:workflow/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteSshPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeSecurityPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeWorkflow",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportSshPublicKey",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAccesses",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExecutions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSecurityPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "noResourceARN": "arn:${Partition}:transfer:${Region}:${Account}:server/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListWorkflows",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "noResourceARN": "arn:${Partition}:transfer:${Region}:${Account}:workflow/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SendWorkflowStepState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workflow"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TestIdentityProvider",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "workflow",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:workflow/${WorkflowId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAccess",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "server"
+    ],
+    "supportedResources": [
+      {
+        "Name": "server",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:server/${ServerId}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transfer",
+    "service": "AWS Transfer Family",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "user",
+        "ARN": "arn:aws:transfer:${Region}:${Account}:user/${ServerId}/${UserName}",
+        "RegEx": "^arn:aws:transfer:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

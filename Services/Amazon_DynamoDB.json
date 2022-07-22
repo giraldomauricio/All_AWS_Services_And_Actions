@@ -1,0 +1,1762 @@
+[
+  {
+    "name": "BatchGetItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:Select",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the Select parameter of a Query or Scan request"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "BatchWriteItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "ConditionCheckItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "CreateBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateGlobalTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-table",
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-table",
+        "ARN": "arn:aws:dynamodb::${Account}:global-table/${GlobalTableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateTableReplica",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "DeleteTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTableReplica",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeContinuousBackups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeContributorInsights",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeExport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "export"
+    ],
+    "supportedResources": [
+      {
+        "Name": "export",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/export/${ExportName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGlobalTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-table",
+        "ARN": "arn:aws:dynamodb::${Account}:global-table/${GlobalTableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeGlobalTableSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-table",
+        "ARN": "arn:aws:dynamodb::${Account}:global-table/${GlobalTableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeKinesisStreamingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedCapacity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeReservedCapacityOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTableReplicaAutoScaling",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTimeToLive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableKinesisStreamingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableKinesisStreamingDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExportTableToPointInTime",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:Select",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the Select parameter of a Query or Scan request"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "GetRecords",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetShardIterator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListBackups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "noResourceARN": "arn:aws:dynamodb:${Region}:${Account}:table/*/backup/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListContributorInsights",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListExports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "noResourceARN": "arn:aws:dynamodb:${Region}:${Account}:table/*/export/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListGlobalTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListStreams",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTables",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "noResourceARN": "arn:aws:dynamodb:${Region}:${Account}:table/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsOfResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLDelete",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLInsert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLSelect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:FullTableScan",
+        "Type": "Bool",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ql-iam.html",
+        "Description": "Used to block full table scan"
+      },
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:Select",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the Select parameter of a Query or Scan request"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLUpdate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "PurchaseReservedCapacityOfferings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "Query",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:Select",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the Select parameter of a Query or Scan request"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "RestoreTableFromAwsBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreTableFromBackup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "backup",
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "backup",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RestoreTableToPointInTime",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "Scan",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:Select",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the Select parameter of a Query or Scan request"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "StartAwsBackupJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateContinuousBackups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateContributorInsights",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "index",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}/index/${IndexName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGlobalTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-table",
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-table",
+        "ARN": "arn:aws:dynamodb::${Account}:global-table/${GlobalTableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateGlobalTableSettings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "global-table",
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "global-table",
+        "ARN": "arn:aws:dynamodb::${Account}:global-table/${GlobalTableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateItem",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "dynamodb:EnclosingOperation",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Used to block Transactions APIs calls and allow the non-Transaction APIs calls and vice-versa"
+      },
+      {
+        "Name": "dynamodb:LeadingKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filters based on the partition key of the table"
+      },
+      {
+        "Name": "dynamodb:ReturnConsumedCapacity",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnConsumedCapacity parameter of a request. Contains either \"TOTAL\" or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:ReturnValues",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the ReturnValues parameter of request. Contains one of the following: \"ALL_OLD\", \"UPDATED_OLD\",\"ALL_NEW\",\"UPDATED_NEW\", or \"NONE\""
+      },
+      {
+        "Name": "dynamodb:Attributes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/specifying-conditions.html#FGAC_DDB.ConditionKeys",
+        "Description": "Filter based on the attribute (field or column) names of the table"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTableReplicaAutoScaling",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateTimeToLive",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dynamodb",
+    "service": "Amazon DynamoDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:dynamodb:${Region}:${Account}:table/${TableName}",
+        "RegEx": "^arn:aws:dynamodb:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

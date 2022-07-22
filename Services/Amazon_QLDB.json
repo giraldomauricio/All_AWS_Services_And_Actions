@@ -1,0 +1,1171 @@
+[
+  {
+    "name": "CancelJournalKinesisStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJournalKinesisStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeJournalS3Export",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExecuteStatement",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ExportJournalToS3",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetBlock",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDigest",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InsertSampleData",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJournalKinesisStreamsForLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJournalS3Exports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "noResourceARN": "arn:${Partition}:qldb:${Region}:${Account}:ledger/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListJournalS3ExportsForLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListLedgers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "noResourceARN": "arn:${Partition}:qldb:${Region}:${Account}:ledger/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/information_schema/user_tables",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/information_schema/user_tables",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLCreateIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLCreateTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLDelete",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLDropIndex",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "qldb:Purge",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-purge",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-purge",
+        "Description": "Filters access by the value of purge that is specified in a PartiQL DROP statement"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLDropTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "qldb:Purge",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-purge",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-purge",
+        "Description": "Filters access by the value of purge that is specified in a PartiQL DROP statement"
+      }
+    ]
+  },
+  {
+    "name": "PartiQLHistoryFunction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLInsert",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLSelect",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/information_schema/user_tables",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/information_schema/user_tables",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLUndropTable",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PartiQLUpdate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "table"
+    ],
+    "supportedResources": [
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendCommand",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ShowCatalog",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StreamJournalToKinesis",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stream"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/information_schema/user_tables",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/information_schema/user_tables",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stream",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:stream/${LedgerName}/${StreamId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:stream/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "catalog",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/information_schema/user_tables",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/information_schema/user_tables",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "table",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+/table/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${ContextKeysDocRoot}reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLedger",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateLedgerPermissionsMode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "qldb",
+    "service": "Amazon QLDB",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ledger"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ledger",
+        "ARN": "arn:aws:qldb:${Region}:${Account}:ledger/${LedgerName}",
+        "RegEx": "^arn:aws:qldb:${Region}:${Account}:ledger/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

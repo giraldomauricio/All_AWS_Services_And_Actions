@@ -1,0 +1,243 @@
+[
+  {
+    "name": "CreateLifecyclePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteLifecyclePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLifecyclePolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "noResourceARN": "arn:${Partition}:dlm:${Region}:${Account}:policy/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLifecyclePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLifecyclePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dlm",
+    "service": "Amazon Data Lifecycle Manager",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "policy"
+    ],
+    "supportedResources": [
+      {
+        "Name": "policy",
+        "ARN": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+        "RegEx": "^arn:aws:dlm:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

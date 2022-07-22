@@ -1,0 +1,1607 @@
+[
+  {
+    "name": "CompareFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateCollection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateProjectVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tags that are passed in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteCollection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteProject",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteProjectVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "projectversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeCollection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeDataset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProjectVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "project"
+    ],
+    "supportedResources": [
+      {
+        "Name": "project",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeProjects",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetectCustomLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "projectversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DetectFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectModerationLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectProtectiveEquipment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectText",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DistributeDatasetEntries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetCelebrityInfo",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCelebrityRecognition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetContentModeration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFaceDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFaceSearch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetLabelDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPersonTracking",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetSegmentDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetTextDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "IndexFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListCollections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatasetEntries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDatasetLabels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStreamProcessors",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "projectversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "RecognizeCelebrities",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SearchFaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SearchFacesByImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartCelebrityRecognition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartContentModeration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartFaceDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartFaceSearch",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "collection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartLabelDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartPersonTracking",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartProjectVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "projectversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StartSegmentDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartTextDetection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "noResourceARN": "",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StopProjectVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "projectversion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "StopStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by tags that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "projectversion",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/version/${VersionName}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "collection",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:collection/${CollectionId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tags associated with the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDatasetEntries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "dataset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "dataset",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:project/${ProjectName}/dataset/${DatasetType}/${CreationTimestamp}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStreamProcessor",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "rekognition",
+    "service": "Amazon Rekognition",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "streamprocessor"
+    ],
+    "supportedResources": [
+      {
+        "Name": "streamprocessor",
+        "ARN": "arn:aws:rekognition:${Region}:${Account}:streamprocessor/${StreamprocessorId}",
+        "RegEx": "^arn:aws:rekognition:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

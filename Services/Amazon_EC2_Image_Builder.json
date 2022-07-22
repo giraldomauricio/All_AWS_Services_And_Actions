@@ -1,0 +1,1856 @@
+[
+  {
+    "name": "CancelImageCreation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "kmsKey",
+        "ARN": "arn:aws:kms:${Region}:${Account}:key/${KeyId}",
+        "RegEx": "^arn:aws:kms:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateContainerRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "containerRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateDistributionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "distributionConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateImagePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateImageRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateInfrastructureConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "infrastructureConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "imagebuilder:Ec2MetadataHttpTokens",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-ec2metadatahttptokens",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-ec2metadatahttptokens",
+        "Description": "Filters access by the EC2 Instance Metadata HTTP Token Requirement specified in the request"
+      },
+      {
+        "Name": "imagebuilder:StatusTopicArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-statustopicarn",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-statustopicarn",
+        "Description": "Filters access by the SNS Topic Arn in the request to which terminal state notifications will be published"
+      },
+      {
+        "Name": "imagebuilder:CreatedResourceTagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetagkeys",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      },
+      {
+        "Name": "imagebuilder:CreatedResourceTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetag",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource created by Image Builder"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteContainerRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "containerRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDistributionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "distributionConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteImagePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteImageRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInfrastructureConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "infrastructureConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetComponentPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetContainerRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "containerRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetContainerRecipePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "containerRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDistributionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "distributionConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetImagePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImagePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImageRecipe",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetImageRecipePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInfrastructureConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "infrastructureConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportComponent",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "kmsKey",
+        "ARN": "arn:aws:kms:${Region}:${Account}:key/${KeyId}",
+        "RegEx": "^arn:aws:kms:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "ImportVmImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "ListComponentBuildVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "componentVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "componentVersion",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListComponents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListContainerRecipes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDistributionConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListImageBuildVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageVersion"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageVersion",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListImagePackages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListImagePipelineImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListImagePipelines",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListImageRecipes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInfrastructureConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      }
+    ]
+  },
+  {
+    "name": "PutComponentPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "component"
+    ],
+    "supportedResources": [
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutContainerRecipePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "containerRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutImagePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "image"
+    ],
+    "supportedResources": [
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutImageRecipePolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imageRecipe"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartImagePipelineExecution",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "imageRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-recipe/${ImageRecipeName}/${ImageRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "image",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image/${ImageName}/${ImageVersion}/${ImageBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "containerRecipe",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:container-recipe/${ContainerRecipeName}/${ContainerRecipeVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "component",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:component/${ComponentName}/${ComponentVersion}/${ComponentBuildVersion}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDistributionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "distributionConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "distributionConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:distribution-configuration/${DistributionConfigurationName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateImagePipeline",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "imagePipeline"
+    ],
+    "supportedResources": [
+      {
+        "Name": "imagePipeline",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:image-pipeline/${ImagePipelineName}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInfrastructureConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "imagebuilder",
+    "service": "Amazon EC2 Image Builder",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "infrastructureConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "infrastructureConfiguration",
+        "ARN": "arn:aws:imagebuilder:${Region}:${Account}:infrastructure-configuration/${ResourceId}",
+        "RegEx": "^arn:aws:imagebuilder:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "imagebuilder:Ec2MetadataHttpTokens",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-ec2metadatahttptokens",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-ec2metadatahttptokens",
+        "Description": "Filters access by the EC2 Instance Metadata HTTP Token Requirement specified in the request"
+      },
+      {
+        "Name": "imagebuilder:StatusTopicArn",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-statustopicarn",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-statustopicarn",
+        "Description": "Filters access by the SNS Topic Arn in the request to which terminal state notifications will be published"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag key-value pairs attached to the resource"
+      },
+      {
+        "Name": "imagebuilder:CreatedResourceTagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetagkeys",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetagkeys",
+        "Description": "Filters access by the presence of tag keys in the request"
+      },
+      {
+        "Name": "imagebuilder:CreatedResourceTag/\u003ckey\u003e",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetag",
+        "DocPage": "${DocHomeURL}imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetag",
+        "Description": "Filters access by the tag key-value pairs attached to the resource created by Image Builder"
+      }
+    ]
+  }
+]

@@ -1,0 +1,528 @@
+[
+  {
+    "name": "CreateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:user/${UserId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the presence of tag keys in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the presence of tag key-value pairs in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetLoadSampleDataSetGroupIntoEnvironmentStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:user/${UserId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnvironments",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListUsers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:user/${UserId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "LoadSampleDataSetGroupIntoEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetUserPassword",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:user/${UserId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEnvironment",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateUser",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "finspace",
+    "service": "Amazon FinSpace",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "environment",
+      "user"
+    ],
+    "supportedResources": [
+      {
+        "Name": "environment",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:environment/${EnvironmentId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "user",
+        "ARN": "arn:aws:finspace:${Region}:${Account}:user/${UserId}",
+        "RegEx": "^arn:aws:finspace:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

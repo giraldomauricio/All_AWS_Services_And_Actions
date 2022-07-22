@@ -1,0 +1,1816 @@
+[
+  {
+    "name": "AssociateConnectionAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid",
+      "connectionalias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "connectionalias",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateIpGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid",
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AuthorizeIpRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CopyWorkspaceImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateConnectClientAddIn",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateConnectionAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateIpGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUpdatedWorkspaceImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWorkspaceBundle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage",
+      "workspacebundle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspacebundle",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspacebundle/${BundleId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid",
+      "directoryid",
+      "workspacebundle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspacebundle",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspacebundle/${BundleId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "DeleteClientBranding",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnectClientAddIn",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteConnectionAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectionalias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectionalias",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIpGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteWorkspaceBundle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspacebundle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspacebundle",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspacebundle/${BundleId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWorkspaceImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterWorkspaceDirectory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountModifications",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeClientBranding",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeClientProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectClientAddIns",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectionAliasPermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectionalias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectionalias",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeConnectionAliases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeIpGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspaceBundles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "arn:${Partition}:workspaces:${Region}:${Account}:workspacebundle/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspaceDirectories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspaceImagePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeWorkspaceImages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspaceSnapshots",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeWorkspacesConnectionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateConnectionAlias",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectionalias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectionalias",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateIpGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid",
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportClientBranding",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportWorkspaceImage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAvailableManagementCidrRanges",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "MigrateWorkspace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid",
+      "workspacebundle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspacebundle",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspacebundle/${BundleId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ModifyClientProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifySelfservicePermissions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyWorkspaceAccessProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyWorkspaceCreationProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyWorkspaceProperties",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyWorkspaceState",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebootWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RebuildWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterWorkspaceDirectory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "RestoreWorkspace",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RevokeIpRules",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TerminateWorkspaces",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspace/${WorkspaceId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConnectClientAddIn",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "directoryid"
+    ],
+    "supportedResources": [
+      {
+        "Name": "directoryid",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:directory/${DirectoryId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateConnectionAliasPermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "connectionalias"
+    ],
+    "supportedResources": [
+      {
+        "Name": "connectionalias",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRulesOfIpGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceipgroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceipgroup",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWorkspaceBundle",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage",
+      "workspacebundle"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "workspacebundle",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspacebundle/${BundleId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWorkspaceImagePermission",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "workspaces",
+    "service": "Amazon WorkSpaces",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "workspaceimage"
+    ],
+    "supportedResources": [
+      {
+        "Name": "workspaceimage",
+        "ARN": "arn:aws:workspaces:${Region}:${Account}:workspaceimage/${ImageId}",
+        "RegEx": "^arn:aws:workspaces:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

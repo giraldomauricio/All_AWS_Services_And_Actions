@@ -1,0 +1,1767 @@
+[
+  {
+    "name": "AcceptAdministratorInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AcceptInvitation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchDisableStandards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchEnableStandards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "BatchGetStandardsControlAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchImportFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "product"
+    ],
+    "supportedResources": [
+      {
+        "Name": "product",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:product/${Company}/${ProductId}",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "securityhub:TargetAccount",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-access.html#conditions",
+        "Description": "Filters access by the AwsAccountId field that is specified in the request"
+      }
+    ]
+  },
+  {
+    "name": "BatchUpdateFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "securityhub:ASFFSyntaxPath/${ASFFSyntaxPath}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-asffsyntaxpath",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-asffsyntaxpath",
+        "Description": "Filters access by the specified fields and values in the request"
+      }
+    ]
+  },
+  {
+    "name": "BatchUpdateStandardsControlAssociations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateActionTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateFindingAggregator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateInsight",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeclineInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteActionTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFindingAggregator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "finding-aggregator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "finding-aggregator",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:finding-aggregator/${FindingAggregatorId}",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInsight",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeActionTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeHub",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeProducts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStandards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStandardsControls",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableImportFindingsForProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableSecurityHub",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateFromAdministratorAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateFromMasterAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableImportFindingsForProduct",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableOrganizationAdminAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableSecurityHub",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by actions based on the presence of tag key-value pairs in the request"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by actions based on the presence of tag keys in the request"
+      }
+    ]
+  },
+  {
+    "name": "GetAdhocInsightResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAdministratorAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetControlFindingSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEnabledStandards",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFindingAggregator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "finding-aggregator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "finding-aggregator",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:finding-aggregator/${FindingAggregatorId}",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFreeTrialEndDate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetFreeTrialUsage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInsightFindingTrend",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInsightResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInsights",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetInvitationsCount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMasterAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetUsage",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "InviteMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListControlEvaluationSummaries",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEnabledProductsForImport",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListFindingAggregators",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInvitations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListMembers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListOrganizationAdminAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListSecurityControlDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hub"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendFindingEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendInsightEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hub"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "hub"
+    ],
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateActionTarget",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFindingAggregator",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "finding-aggregator"
+    ],
+    "supportedResources": [
+      {
+        "Name": "finding-aggregator",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:finding-aggregator/${FindingAggregatorId}",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateFindings",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateInsight",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateOrganizationConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateSecurityHubConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateStandardsControl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "securityhub",
+    "service": "AWS Security Hub",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "hub",
+        "ARN": "arn:aws:securityhub:${Region}:${Account}:hub/default",
+        "RegEx": "^arn:aws:securityhub:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

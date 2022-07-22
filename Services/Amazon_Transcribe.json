@@ -1,0 +1,1117 @@
+[
+  {
+    "name": "CreateCallAnalyticsCategory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateLanguageModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMedicalVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateVocabularyFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteCallAnalyticsCategory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteCallAnalyticsJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteLanguageModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "languagemodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "languagemodel",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:language-model/${ModelName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:language-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteMedicalTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "medicaltranscriptionjob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "medicaltranscriptionjob",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:medical-transcription-job/${JobName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:medical-transcription-job/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteMedicalVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "medicalvocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "medicalvocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "transcriptionjob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "transcriptionjob",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:transcription-job/${JobName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:transcription-job/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteVocabularyFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabularyfilter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabularyfilter",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/${VocabularyFilterName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DescribeLanguageModel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "languagemodel"
+    ],
+    "supportedResources": [
+      {
+        "Name": "languagemodel",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:language-model/${ModelName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:language-model/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetCallAnalyticsCategory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetCallAnalyticsJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMedicalTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "medicaltranscriptionjob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "medicaltranscriptionjob",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:medical-transcription-job/${JobName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:medical-transcription-job/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetMedicalVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "medicalvocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "medicalvocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "transcriptionjob"
+    ],
+    "supportedResources": [
+      {
+        "Name": "transcriptionjob",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:transcription-job/${JobName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:transcription-job/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetVocabularyFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabularyfilter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabularyfilter",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/${VocabularyFilterName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListCallAnalyticsCategories",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListCallAnalyticsJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLanguageModels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMedicalTranscriptionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMedicalVocabularies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTranscriptionJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListVocabularies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListVocabularyFilters",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartCallAnalyticsJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartMedicalStreamTranscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartMedicalStreamTranscriptionWebSocket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartMedicalTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartStreamTranscription",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartStreamTranscriptionWebSocket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartTranscriptionJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateCallAnalyticsCategory",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateMedicalVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "medicalvocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "medicalvocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:medical-vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateVocabulary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabulary"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabulary",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary/${VocabularyName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateVocabularyFilter",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "transcribe",
+    "service": "Amazon Transcribe",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "vocabularyfilter"
+    ],
+    "supportedResources": [
+      {
+        "Name": "vocabularyfilter",
+        "ARN": "arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/${VocabularyFilterName}",
+        "RegEx": "^arn:aws:transcribe:${Region}:${Account}:vocabulary-filter/.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by requiring tag value associated with the resource"
+      }
+    ]
+  }
+]

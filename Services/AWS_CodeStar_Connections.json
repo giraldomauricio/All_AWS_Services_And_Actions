@@ -1,0 +1,590 @@
+[
+  {
+    "name": "CreateConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateHost",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteHost",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Host"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Host",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:host/${HostId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:host/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetHost",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Host"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Host",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:host/${HostId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:host/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetIndividualAccessToken",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetInstallationUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListConnections",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListHosts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListInstallationTargets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PassConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "codestar-connections:PassedToService",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html#permissions-reference-connections-passconnection",
+        "Description": "Filters access by the service to which the principal is allowed to pass a Connection"
+      }
+    ]
+  },
+  {
+    "name": "RegisterAppCode",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartAppRegistrationHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "StartOAuthHandshake",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters actions based on the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateConnectionInstallation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "codestar-connections:InstallationId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html#permissions-reference-connections-handshake",
+        "Description": "Filters access by the third-party ID (such as the Bitbucket App installation ID for CodeStar Connections) that is used to update a Connection. Allows you to restrict which third-party App installations can be used to make a Connection"
+      }
+    ]
+  },
+  {
+    "name": "UpdateHost",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Host"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Host",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:host/${HostId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:host/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UseConnection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "codestar-connections",
+    "service": "AWS CodeStar Connections",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Connection"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Connection",
+        "ARN": "arn:aws:codestar-connections:${Region}:${Account}:connection/${ConnectionId}",
+        "RegEx": "^arn:aws:codestar-connections:.+:.+:connection/.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters actions based on the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters actions based on the tags associated with the resource"
+      },
+      {
+        "Name": "codestar-connections:ProviderAction",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html#permissions-reference-connections-access",
+        "Description": "Filters access by the provider action in a UseConnection request such as ListRepositories. See documentation for all valid values"
+      },
+      {
+        "Name": "codestar-connections:FullRepositoryId",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html#permissions-reference-connections-use",
+        "Description": "Filters access by the repository that is passed in the request. Applies only to UseConnection requests for access to a specific repository"
+      },
+      {
+        "Name": "codestar-connections:ProviderPermissionsRequired",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/dtconsole/latest/userguide/security-iam.html#permissions-reference-connections-use",
+        "Description": "Filters access by the write permissions of a provider action in a UseConnection request. Valid types include read_only and read_write"
+      }
+    ]
+  }
+]

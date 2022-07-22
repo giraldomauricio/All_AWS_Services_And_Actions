@@ -1,0 +1,1775 @@
+[
+  {
+    "name": "AssociateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "apigateway",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "appsync",
+        "ARN": "arn:aws:appsync:${Region}:${Account}:apis/${GraphQLAPIId}",
+        "RegEx": "^arn:aws:appsync:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "loadbalancer/app/",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CheckCapacity",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "CreateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "managedruleset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/managedruleset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      }
+    ]
+  },
+  {
+    "name": "DeleteFirewallManagerRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeletePermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeManagedRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DisassociateFirewallManager",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "apigateway",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "appsync",
+        "ARN": "arn:aws:appsync:${Region}:${Account}:apis/${GraphQLAPIId}",
+        "RegEx": "^arn:aws:appsync:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "loadbalancer/app/",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GenerateMobileSdkReleaseUrl",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetManagedRuleSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "managedruleset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "managedruleset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/managedruleset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetMobileSdkRelease",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetPermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRateBasedStatementManagedKeys",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetSampledRequests",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "GetWebACLForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "apigateway",
+        "ARN": "arn:aws:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}",
+        "RegEx": "^arn:aws:apigateway:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "appsync",
+        "ARN": "arn:aws:appsync:${Region}:${Account}:apis/${GraphQLAPIId}",
+        "RegEx": "^arn:aws:appsync:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "loadbalancer/app/",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/app/${LoadBalancerName}/${LoadBalancerId}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListAvailableManagedRuleGroupVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListAvailableManagedRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListIPSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListLoggingConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListManagedRuleSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMobileSdkReleases",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListRegexPatternSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListResourcesForWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "ListWebACLs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutFirewallManagerRuleGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutLoggingConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutManagedRuleSetVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "managedruleset",
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "managedruleset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/managedruleset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutPermissionPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "Description": "Filters access by the allowed set of values for each of the tags"
+      },
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "Description": "Filters access by the presence of mandatory tags in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateIPSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ipset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateManagedRuleSetVersionExpiryDate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "managedruleset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "managedruleset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/managedruleset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRegexPatternSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "regexpatternset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateRuleGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "rulegroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateWebACL",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "wafv2",
+    "service": "AWS WAF V2",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "webacl"
+    ],
+    "supportedResources": [
+      {
+        "Name": "webacl",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/webacl/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "rulegroup",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/rulegroup/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ipset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "managedruleset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/managedruleset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "regexpatternset",
+        "ARN": "arn:aws:wafv2:${Region}:${Account}:${Scope}/regexpatternset/${Name}/${Id}",
+        "RegEx": "^arn:aws:wafv2:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "Description": "Filters access by tag-value associated with the resource"
+      }
+    ]
+  }
+]

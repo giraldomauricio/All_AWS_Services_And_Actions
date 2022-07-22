@@ -1,0 +1,2134 @@
+[
+  {
+    "name": "ActivateType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "BatchDescribeTypeConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CancelUpdateStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ContinueUpdateRollback",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      }
+    ]
+  },
+  {
+    "name": "CreateChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      },
+      {
+        "Name": "cloudformation:ResourceTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they create or update a stack"
+      },
+      {
+        "Name": "cloudformation:TemplateUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 template URL. Use to control which templates IAM users can use when they create or update stacks"
+      },
+      {
+        "Name": "cloudformation:ChangeSetName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete"
+      },
+      {
+        "Name": "cloudformation:StackPolicyUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 stack policy URL. Use to control which stack policies IAM users can associate with a stack during a create or update stack action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "cloudformation:ImportResourceTypes",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they want to import a resource into a stack"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      },
+      {
+        "Name": "cloudformation:ResourceTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they create or update a stack"
+      },
+      {
+        "Name": "cloudformation:TemplateUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 template URL. Use to control which templates IAM users can use when they create or update stacks"
+      },
+      {
+        "Name": "cloudformation:StackPolicyUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 stack policy URL. Use to control which stack policies IAM users can associate with a stack during a create or update stack action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStackInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "type",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:type/resource/${Type}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "stackset-target",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset-target/${StackSetTarget}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:TargetRegion",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by stack set target region. Use to control which regions IAM users can use when they create or update stack sets"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "CreateStackSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateUploadBucket",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeactivateType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:ChangeSetName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStackInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "type",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:type/resource/${Type}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "stackset-target",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset-target/${StackSetTarget}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:TargetRegion",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by stack set target region. Use to control which regions IAM users can use when they create or update stack sets"
+      }
+    ]
+  },
+  {
+    "name": "DeleteStackSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeAccountLimits",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:ChangeSetName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete"
+      }
+    ]
+  },
+  {
+    "name": "DescribeChangeSetHooks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:ChangeSetName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete"
+      }
+    ]
+  },
+  {
+    "name": "DescribePublisher",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStackDriftDetectionStatus",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeStackEvents",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackInstance",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackResourceDrifts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStackSetOperation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeStacks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTypeRegistration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DetectStackDrift",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetectStackResourceDrift",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetectStackSetDrift",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EstimateTemplateCost",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ExecuteChangeSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:ChangeSetName",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an AWS CloudFormation change set name. Use to control which change sets IAM users can execute or delete"
+      }
+    ]
+  },
+  {
+    "name": "GetStackPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetTemplateSummary",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ImportStacksToStackSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListChangeSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListExports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListImports",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListStackInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStackResources",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStackSetOperationResults",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStackSetOperations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStackSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListStacks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTypeRegistrations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTypeVersions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PublishType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RecordHandlerProgress",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterPublisher",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RegisterType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "RollbackStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      }
+    ]
+  },
+  {
+    "name": "SetStackPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:StackPolicyUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 stack policy URL. Use to control which stack policies IAM users can associate with a stack during a create or update stack action"
+      }
+    ]
+  },
+  {
+    "name": "SetTypeConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SetTypeDefaultVersion",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "SignalResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StopStackSetOperation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "changeset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:changeSet/${ChangeSetName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "TestType",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "changeset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:changeSet/${ChangeSetName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStack",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      },
+      {
+        "Name": "cloudformation:ResourceTypes",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the template resource types, such as AWS::EC2::Instance. Use to control which resource types IAM users can work with when they create or update a stack"
+      },
+      {
+        "Name": "cloudformation:TemplateUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 template URL. Use to control which templates IAM users can use when they create or update stacks"
+      },
+      {
+        "Name": "cloudformation:StackPolicyUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 stack policy URL. Use to control which stack policies IAM users can associate with a stack during a create or update stack action"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStackInstances",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "type",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:type/resource/${Type}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "stackset-target",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset-target/${StackSetTarget}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:TargetRegion",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by stack set target region. Use to control which regions IAM users can use when they create or update stack sets"
+      }
+    ]
+  },
+  {
+    "name": "UpdateStackSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stackset"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stackset",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset/${StackSetName}:${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "type",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:type/resource/${Type}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      },
+      {
+        "Name": "stackset-target",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stackset-target/${StackSetTarget}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "cloudformation:RoleArn",
+        "Type": "ARN",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the ARN of an IAM service role. Use to control which service role IAM users can use to work with stacks or change sets"
+      },
+      {
+        "Name": "cloudformation:TemplateUrl",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by an Amazon S3 template URL. Use to control which templates IAM users can use when they create or update stacks"
+      },
+      {
+        "Name": "cloudformation:TargetRegion",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by stack set target region. Use to control which regions IAM users can use when they create or update stack sets"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tag keys that are passed in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions",
+        "Description": "Filters access by the tags that are passed in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateTerminationProtection",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "stack"
+    ],
+    "supportedResources": [
+      {
+        "Name": "stack",
+        "ARN": "arn:aws:cloudformation:${Region}:${Account}:stack/${StackName}/${Id}",
+        "RegEx": "^arn:aws:cloudformation:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ValidateTemplate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "cloudformation",
+    "service": "AWS CloudFormation",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  }
+]

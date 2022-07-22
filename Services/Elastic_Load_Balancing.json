@@ -1,0 +1,850 @@
+[
+  {
+    "name": "AddTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "Description": "The list of all the tag key names associated with the resource in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "Description": "A key that is present in the request the user makes to the ELB service"
+      }
+    ]
+  },
+  {
+    "name": "ApplySecurityGroupsToLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AttachLoadBalancerToSubnets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ConfigureHealthCheck",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAppCookieStickinessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLBCookieStickinessPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "Description": "The list of all the tag key names associated with the resource in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "Description": "A key that is present in the request the user makes to the ELB service"
+      }
+    ]
+  },
+  {
+    "name": "CreateLoadBalancerListeners",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateLoadBalancerPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoadBalancerListeners",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteLoadBalancerPolicy",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeregisterInstancesFromLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DescribeInstanceHealth",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoadBalancerAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoadBalancerPolicies",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoadBalancerPolicyTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeLoadBalancers",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "noResourceARN": "*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DescribeTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DetachLoadBalancerFromSubnets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisableAvailabilityZonesForLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "EnableAvailabilityZonesForLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ModifyLoadBalancerAttributes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RegisterInstancesWithLoadBalancer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RemoveTags",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "String",
+        "Description": "The list of all the tag key names associated with the resource in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "Description": "A key that is present in the request the user makes to the ELB service"
+      }
+    ]
+  },
+  {
+    "name": "SetLoadBalancerListenerSSLCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetLoadBalancerPoliciesForBackendServer",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SetLoadBalancerPoliciesOfListener",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "elasticloadbalancing",
+    "service": "Elastic Load Balancing",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "loadbalancer"
+    ],
+    "supportedResources": [
+      {
+        "Name": "loadbalancer",
+        "ARN": "arn:aws:elasticloadbalancing:${Region}:${Account}:loadbalancer/${LoadBalancerName}",
+        "RegEx": "^arn:aws:elasticloadbalancing:.+",
+        "ContextKeys": [
+          "elasticloadbalancing:ResourceTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}",
+          "elasticloadbalancing:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,864 @@
+[
+  {
+    "name": "CancelJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "dataexchange:JobType"
+        ],
+        "ContextKeyStrings": [
+          "dataexchange:jobtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateEventAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-actions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-actions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:event-actions/${EventActionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "dataexchange:JobType"
+        ],
+        "ContextKeyStrings": [
+          "dataexchange:jobtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-sets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteEventAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-actions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-actions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:event-actions/${EventActionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "revisions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-sets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-actions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-actions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:event-actions/${EventActionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "dataexchange:JobType"
+        ],
+        "ContextKeyStrings": [
+          "dataexchange:jobtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "revisions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSetRevisions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "revisions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDataSets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-sets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListEventActions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-actions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-actions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:event-actions/${EventActionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListJobs",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "dataexchange:JobType"
+        ],
+        "ContextKeyStrings": [
+          "dataexchange:jobtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListRevisionAssets",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PublishDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-sets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "RevokeRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "revisions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendApiAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartJob",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "jobs"
+    ],
+    "supportedResources": [
+      {
+        "Name": "jobs",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:jobs/${JobId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "dataexchange:JobType"
+        ],
+        "ContextKeyStrings": [
+          "dataexchange:jobtype"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by the presence of mandatory tags in the create request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by the allowed set of values for each of the mandatory tags in the create request"
+      }
+    ]
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "DocPage": "${DocHomeURL}IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-globally-available",
+        "Description": "Filters access by the presence of mandatory tags in the create request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateAsset",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "assets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "assets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateDataSet",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "data-sets"
+    ],
+    "supportedResources": [
+      {
+        "Name": "data-sets",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEventAction",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "event-actions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "event-actions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:event-actions/${EventActionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateRevision",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "dataexchange",
+    "service": "AWS Data Exchange",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "revisions"
+    ],
+    "supportedResources": [
+      {
+        "Name": "revisions",
+        "ARN": "arn:aws:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}",
+        "RegEx": "^arn:aws:dataexchange:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]

@@ -1,0 +1,3422 @@
+[
+  {
+    "name": "AssociateAwsAccountWithPartnerAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "AssociateMulticastGroupWithFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask",
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "AssociateWirelessDeviceWithFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask",
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "AssociateWirelessDeviceWithMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice",
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "AssociateWirelessDeviceWithThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice",
+      "thing"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "thing",
+        "ARN": "arn:aws:iot:${Region}:${Account}:thing/${ThingName}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateWirelessGatewayWithCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cert",
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cert",
+        "ARN": "arn:aws:iot:${Region}:${Account}:cert/${Certificate}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "AssociateWirelessGatewayWithThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway",
+      "thing"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "thing",
+        "ARN": "arn:aws:iot:${Region}:${Account}:thing/${ThingName}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CancelMulticastGroupSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "CreateDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateDeviceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateNetworkAnalyzerConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice",
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the list of all the tag key names associated with the resource in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by a tag key that is present in the request that the user makes to IoT Wireless"
+      }
+    ]
+  },
+  {
+    "name": "CreateServiceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateWirelessGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "CreateWirelessGatewayTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "CreateWirelessGatewayTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteDeviceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DeviceProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DeviceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteNetworkAnalyzerConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "NetworkAnalyzerConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DeleteQueuedMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "DeleteServiceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ServiceProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ServiceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWirelessGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWirelessGatewayTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DeleteWirelessGatewayTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGatewayTaskDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGatewayTaskDefinition",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateAwsAccountFromPartnerAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SidewalkAccount"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateMulticastGroupFromFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask",
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateWirelessDeviceFromFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask",
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateWirelessDeviceFromMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice",
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "DisassociateWirelessDeviceFromThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice",
+      "thing"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "thing",
+        "ARN": "arn:aws:iot:${Region}:${Account}:thing/${ThingName}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateWirelessGatewayFromCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "cert",
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "cert",
+        "ARN": "arn:aws:iot:${Region}:${Account}:cert/${Certificate}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "DisassociateWirelessGatewayFromThing",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway",
+      "thing"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "thing",
+        "ARN": "arn:aws:iot:${Region}:${Account}:thing/${ThingName}",
+        "RegEx": "^arn:aws:iot:.+",
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetDeviceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "DeviceProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "DeviceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetEventConfigurationByResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "GetLogLevelsByResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "GetMulticastGroupSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "GetNetworkAnalyzerConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "NetworkAnalyzerConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "GetPartnerAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SidewalkAccount"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPosition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetPositionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourceEventConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetResourceLogLevel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetServiceEndpoint",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "GetServiceProfile",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "ServiceProfile"
+    ],
+    "supportedResources": [
+      {
+        "Name": "ServiceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessDeviceStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGatewayCertificate",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGatewayFirmwareInformation",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGatewayStatistics",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGatewayTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "GetWirelessGatewayTaskDefinition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGatewayTaskDefinition"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGatewayTaskDefinition",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListDestinations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListDeviceProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListEventConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "noResourceARN": "arn:${Partition}:iotwireless:${Region}:${Account}:{ResourceType}/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListFuotaTasks",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMulticastGroups",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListMulticastGroupsByFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListNetworkAnalyzerConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "noResourceARN": "arn:${Partition}:iotwireless:${Region}:${Account}:{ResourceType}/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPartnerAccounts",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListPositionConfigurations",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "noResourceARN": "arn:${Partition}:iotwireless:${Region}:${Account}:{ResourceType}/*",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListQueuedMessages",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListServiceProfiles",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListTagsForResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DeviceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ServiceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessGatewayTaskDefinition",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ListWirelessDevices",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWirelessGatewayTaskDefinitions",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ListWirelessGateways",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "PutPositionConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "PutResourceLogLevel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "ResetAllResourceLogLevels",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "ResetResourceLogLevel",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "SendDataToMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "SendDataToWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "StartBulkAssociateWirelessDeviceWithMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "StartBulkDisassociateWirelessDeviceFromMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "StartFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "StartMulticastGroupSession",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "StartNetworkAnalyzerStream",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "NetworkAnalyzerConfiguration"
+    ],
+    "supportedResources": [
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "TagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DeviceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ServiceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessGatewayTaskDefinition",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the list of all the tag key names associated with the resource in the request"
+      },
+      {
+        "Name": "aws:RequestTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by a tag key that is present in the request that the user makes to IoT Wireless"
+      }
+    ]
+  },
+  {
+    "name": "TestWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UntagResource",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "DeviceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:DeviceProfile/${DeviceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "ServiceProfile",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:ServiceProfile/${ServiceProfileId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessGatewayTaskDefinition",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGatewayTaskDefinition/${WirelessGatewayTaskDefinitionId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      },
+      {
+        "Name": "aws:TagKeys",
+        "Type": "ArrayOfString",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by the list of all the tag key names associated with the resource in the request"
+      }
+    ]
+  },
+  {
+    "name": "UpdateDestination",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "Destination"
+    ],
+    "supportedResources": [
+      {
+        "Name": "Destination",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:Destination/${DestinationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateEventConfigurationByResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateFuotaTask",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "FuotaTask"
+    ],
+    "supportedResources": [
+      {
+        "Name": "FuotaTask",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:FuotaTask/${FuotaTaskId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateLogLevelsByResourceTypes",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": false,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "ARN",
+        "ARN": "*",
+        "ContextKeys": [],
+        "ContextKeyStrings": [],
+        "isRequired": true,
+        "ContextKeysRef": []
+      }
+    ]
+  },
+  {
+    "name": "UpdateMulticastGroup",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "MulticastGroup"
+    ],
+    "supportedResources": [
+      {
+        "Name": "MulticastGroup",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:MulticastGroup/${MulticastGroupId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdateNetworkAnalyzerConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "NetworkAnalyzerConfiguration",
+      "WirelessDevice",
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "NetworkAnalyzerConfiguration",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:NetworkAnalyzerConfiguration/${NetworkAnalyzerConfigurationName}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      },
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": [
+      {
+        "Name": "aws:ResourceTag/${TagKey}",
+        "Type": "String",
+        "DocPageRel": "https://docs.aws.amazon.com/iot/latest/developerguide/tagging-iot-iam.html/",
+        "DocPage": "${ContextKeysDocRoot}",
+        "Description": "Filters access by tag key component of a tag attached to an IoT Wireless resource"
+      }
+    ]
+  },
+  {
+    "name": "UpdatePartnerAccount",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "SidewalkAccount"
+    ],
+    "supportedResources": [
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdatePosition",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateResourceEventConfiguration",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      },
+      {
+        "Name": "SidewalkAccount",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:SidewalkAccount/${SidewalkAccountId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": false
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWirelessDevice",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessDevice"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessDevice",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessDevice/${WirelessDeviceId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  },
+  {
+    "name": "UpdateWirelessGateway",
+    "evaluated": false,
+    "allowed": false,
+    "prefix": "iotwireless",
+    "service": "AWS IoT Core for LoRaWAN",
+    "serviceAware": true,
+    "resourceEnabled": true,
+    "deniedByOrganization": false,
+    "requiredResourceNames": [
+      "WirelessGateway"
+    ],
+    "supportedResources": [
+      {
+        "Name": "WirelessGateway",
+        "ARN": "arn:aws:iotwireless:${Region}:${Account}:WirelessGateway/${WirelessGatewayId}",
+        "RegEx": "^arn:aws:iotwireless:.+",
+        "ContextKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ],
+        "ContextKeyStrings": [
+          "aws:resourcetag/${tagkey}"
+        ],
+        "isRequired": true
+      }
+    ],
+    "scenarios": [],
+    "contextKeys": []
+  }
+]
